@@ -1,0 +1,84 @@
+/* ===================================================================
+   TimberCraft - RTL Support Stylesheet (rtl.css)
+   Right-to-Left Layout Compatibility (Arabic, Hebrew, Persian)
+   =================================================================== */
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Directional Icon Flipping */
+html[dir="rtl"] .fa-arrow-right,
+html[dir="rtl"] .fa-chevron-right,
+html[dir="rtl"] .fa-long-arrow-alt-right {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .fa-arrow-left,
+html[dir="rtl"] .fa-chevron-left,
+html[dir="rtl"] .fa-long-arrow-alt-left {
+  transform: scaleX(-1);
+}
+
+/* Alignments and Margins */
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* Form Controls */
+html[dir="rtl"] .form-input-wood,
+html[dir="rtl"] select.form-input-wood,
+html[dir="rtl"] textarea.form-input-wood {
+  text-align: right;
+}
+
+/* Toast Notifications in RTL */
+html[dir="rtl"] .wood-toast {
+  right: auto;
+  left: 1.5rem;
+  border-left: none;
+  border-right: 5px solid var(--wood-primary);
+}
+
+/* Quote/Badge styling in RTL */
+html[dir="rtl"] .border-l-4 {
+  border-left-width: 0px !important;
+  border-right-width: 4px !important;
+}
+
+html[dir="rtl"] .border-r-4 {
+  border-right-width: 0px !important;
+  border-left-width: 4px !important;
+}
+
+/* Slider line positions */
+html[dir="rtl"] .before-image-wrap {
+  right: 0;
+  left: auto;
+}
+
+/* Mobile Offcanvas Drawer */
+html[dir="rtl"] #mobileMenu {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+html[dir="rtl"] #mobileMenu.open {
+  transform: translateX(0);
+}
+
+/* Breadcrumb Divider */
+html[dir="rtl"] .breadcrumb-separator {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* Timeline Joinery Path */
+html[dir="rtl"] .timeline-step-line {
+  right: 50%;
+  left: auto;
+}

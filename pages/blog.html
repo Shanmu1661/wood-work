@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woodcraft Journal & Joinery Guides | TimberCraft Atelier</title>
+  <meta name="description" content="Explore expert woodworking guides on timber selection, custom wardrobe ergonomics, floating TV console engineering, and hardwood maintenance.">
+  <meta name="keywords" content="carpentry blog, timber guides, wood selection, wardrobe design tips, joinery journal, hardwood care">
+  <link rel="canonical" href="https://timbercraftwoodworks.example.com/pages/blog.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              50: '#fdfbf7', 100: '#f9f5ec', 200: '#f0e6d6', 300: '#e4d0b8',
+              400: '#cb9a6e', 500: '#b45309', 600: '#92400e', 700: '#78350f',
+              800: '#451a03', 900: '#23150f',
+            },
+            oak: '#c4884d', walnut: '#1d120c', brass: '#d4af37'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-amber-600 text-white px-4 py-2 rounded shadow-lg">
+    Skip to main content
+  </a>
+
+  <!-- Announcement Bar -->
+  <div class="bg-stone-900 text-stone-300 dark:bg-black dark:text-stone-400 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-tree text-amber-500 mr-1.5"></i> 100% Seasoned Kiln-Dried Hardwoods & FSC Certified</span>
+        <span class="hidden md:inline text-stone-600">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> 10-Year Structural Joinery Warranty</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+18005559663" class="hover:text-amber-400 transition-colors">
+          <i class="fa-solid fa-phone text-amber-500 mr-1"></i> (800) 555-WOOD
+        </a>
+        <span class="text-stone-600">|</span>
+        <a href="dashboard.html" class="hover:text-amber-400 text-amber-500 font-semibold transition-colors">
+          <i class="fa-solid fa-compass-drafting mr-1"></i> Client Portal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
+          <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+            TIMBER<span class="text-amber-600">CRAFT</span>
+          </span>
+          <span class="text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+            Architectural Joinery & Interiors
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
+        <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
+        <a href="blog.html" class="text-amber-600 dark:text-amber-500 font-semibold transition-colors">Journal</a>
+        <a href="dashboard.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Project Tracker</a>
+        <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
+          <i class="fa-solid fa-globe text-amber-600"></i>
+          <span class="dir-text">RTL</span>
+        </button>
+
+        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        </button>
+
+        <a href="booking.html" class="hidden sm:inline-flex btn-primary text-sm py-2.5 px-4 shadow-sm">
+          <span>Book Site Visit</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+
+        <button id="menuToggle" type="button" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200" aria-label="Open mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between hidden transition-transform duration-300 lg:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+        <span class="font-serif font-bold text-lg text-stone-900 dark:text-stone-100">TIMBERCRAFT</span>
+        <button id="closeMobileMenu" class="w-8 h-8 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <nav class="mt-6 flex flex-col gap-4 font-medium text-base text-stone-700 dark:text-stone-200">
+        <a href="index.html" class="hover:text-amber-600 py-1">Home</a>
+        <a href="about.html" class="hover:text-amber-600 py-1">About Us</a>
+        <a href="services.html" class="hover:text-amber-600 py-1">Services</a>
+        <a href="gallery.html" class="hover:text-amber-600 py-1">Portfolio</a>
+        <a href="blog.html" class="text-amber-600 font-semibold py-1">Journal</a>
+        <a href="dashboard.html" class="hover:text-amber-600 py-1">Project Tracker</a>
+        <a href="booking.html" class="hover:text-amber-600 py-1">Book Consultation</a>
+        <a href="contact.html" class="hover:text-amber-600 py-1">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+    
+    <!-- Hero Header -->
+    <section class="py-16 lg:py-20 bg-stone-900 text-white text-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-400/30 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+          The Woodcraft Journal
+        </span>
+        <h1 class="font-serif text-4xl sm:text-5xl font-bold tracking-tight mb-4">
+          Insights on Hardwood, Joinery & Bespoke Interiors
+        </h1>
+        <p class="text-base text-stone-300 max-w-xl mx-auto leading-relaxed">
+          Technical advice from our master woodworkers to help architects and homeowners plan enduring custom carpentry.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Post & Blog Archive -->
+    <section class="py-20 bg-stone-50 dark:bg-stone-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Featured Post Banner -->
+        <article class="craft-card rounded-2xl overflow-hidden mb-16 shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-7 h-80 lg:h-auto overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=1200&q=80" alt="Timber selection in wood workshop" class="w-full h-full object-cover">
+            </div>
+            <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 text-xs px-3 py-1 rounded-full font-bold">Featured Guide</span>
+                  <span class="text-xs text-stone-400">8 min read</span>
+                </div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mb-3">
+                  <a href="blog-single.html" class="hover:text-amber-600 transition-colors">
+                    Teak vs. Walnut vs. White Oak: The Master Joiner’s Wood Selection Matrix
+                  </a>
+                </h2>
+                <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 leading-relaxed">
+                  Choosing the wrong timber species for high-humidity areas can ruin an interior in under three seasons. Here is how our workshop tests grain density, silica content, and stability.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-6 border-t border-stone-200 dark:border-stone-800">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Marcus Vance avatar" class="w-9 h-9 rounded-full object-cover">
+                  <div>
+                    <span class="text-xs font-bold text-stone-900 dark:text-stone-100 block">Marcus Vance</span>
+                    <span class="text-[11px] text-stone-400">Master Joiner</span>
+                  </div>
+                </div>
+                <a href="blog-single.html" class="btn-primary text-xs py-2 px-4">
+                  <span>Read Guide</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Post 1 -->
+          <article class="craft-card rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="h-52 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Custom Wardrobe Joinery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-2">Wardrobe Engineering</span>
+                <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 mb-2">
+                  <a href="blog-single.html" class="hover:text-amber-600 transition-colors">
+                    Preventing Moisture Warp in Floor-to-Ceiling Closets
+                  </a>
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                  How backboard shadow gaps and BWP phenolic ply cores ensure sliding doors glide without binding through winter and summer.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs text-stone-400">
+              <span>Nov 02, 2026</span>
+              <a href="blog-single.html" class="text-amber-600 font-bold hover:underline">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="craft-card rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="h-52 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Floating TV Media Console" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-2">Media Console Physics</span>
+                <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 mb-2">
+                  <a href="blog-single.html" class="hover:text-amber-600 transition-colors">
+                    The Anatomy of a 200 lb Floating TV Console
+                  </a>
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                  Why French cleat steel hangers, CNC airflow chimneys, and acoustic slat backing are essential for high-end home theaters.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs text-stone-400">
+              <span>Oct 24, 2026</span>
+              <a href="blog-single.html" class="text-amber-600 font-bold hover:underline">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="craft-card rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="h-52 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Architectural Solid Door" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="p-6">
+                <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-2">Door Engineering</span>
+                <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 mb-2">
+                  <a href="blog-single.html" class="hover:text-amber-600 transition-colors">
+                    Concealed Hydraulic Pivots for 300 lb Hardwood Doors
+                  </a>
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                  How floor-mounted pivot bearings support immense architectural entrance slabs without sagging or stressing frame studs.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs text-stone-400">
+              <span>Oct 18, 2026</span>
+              <a href="blog-single.html" class="text-amber-600 font-bold hover:underline">Read Article &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Newsletter Subscription Box (ConvertKit / Mailchimp ready) -->
+        <div class="mt-20 p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-stone-900 to-stone-950 text-white border border-stone-800 text-center max-w-3xl mx-auto">
+          <i class="fa-solid fa-envelope-open-text text-amber-500 text-3xl mb-3"></i>
+          <h3 class="font-serif text-2xl font-bold mb-2">The Joiner’s Dispatch</h3>
+          <p class="text-xs text-stone-400 max-w-md mx-auto mb-6">
+            Receive quarterly timber market updates, timber moisture tables, and custom joinery detailing guides directly in your inbox.
+          </p>
+          <form data-validate="true" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input type="email" required placeholder="Enter your email address..." class="form-input-wood text-sm bg-stone-800 border-stone-700 text-white">
+            <button type="submit" class="btn-primary flex-shrink-0 text-sm py-3 px-6">
+              Subscribe Free
+            </button>
+          </form>
+          <span class="text-[10px] text-stone-500 block mt-3">Mailchimp & ConvertKit compatible. Zero spam ever.</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 dark:bg-black border-t border-stone-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-amber-700 flex items-center justify-center text-white">
+              <i class="fa-solid fa-cubes text-lg"></i>
+            </div>
+            <span class="font-serif text-2xl font-bold tracking-wider text-white">TIMBER<span class="text-amber-500">CRAFT</span></span>
+          </a>
+          <p class="text-sm text-stone-400 leading-relaxed mb-6 max-w-sm">
+            Master interior carpentry and architectural millwork. We transform raw timber into bespoke wardrobes, media units, pivot doors, and acoustically tuned wall paneling.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-stone-200 mb-4">Woodwork Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="services.html#wardrobes" class="hover:text-amber-400">Custom Wardrobes</a></li>
+            <li><a href="services.html#tv-units" class="hover:text-amber-400">Floating TV Consoles</a></li>
+            <li><a href="services.html#doors" class="hover:text-amber-400">Solid Hardwood Doors</a></li>
+            <li><a href="services.html#paneling" class="hover:text-amber-400">Acoustic Slat Walls</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-stone-200 mb-4">Explore</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-amber-400">About Our Heritage</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400">Portfolio Gallery</a></li>
+            <li><a href="dashboard.html" class="hover:text-amber-400">Project Tracker</a></li>
+            <li><a href="booking.html" class="hover:text-amber-400">Book Site Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-stone-200 mb-4">Workshop Atelier</h4>
+          <p class="text-xs text-stone-400 mb-2">148 Sawmill Road, Timber District, Craftsville, OR</p>
+          <p class="text-xs text-stone-400 mb-2">+1 (800) 555-9663</p>
+          <p class="text-xs text-stone-400">Mon - Fri: 7:30 AM – 6:00 PM</p>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2026 TimberCraft Interior Joinery & Woodwork Contractor. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="../documentation/index.html" class="text-amber-500 hover:text-amber-400 font-semibold">Documentation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" type="button" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-amber-700 text-white shadow-xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-amber-600" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

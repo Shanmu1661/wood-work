@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Command Portal & Lumber Calculator | TimberCraft</title>
+  <meta name="description" content="Client and contractor project dashboard for real-time joinery tracking, board-feet lumber calculation, and workshop milestone monitoring.">
+  <meta name="keywords" content="carpentry dashboard, woodwork project tracker, lumber calculator, board feet converter, joinery contractor portal">
+  <link rel="canonical" href="https://timbercraftwoodworks.example.com/pages/dashboard.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              50: '#fdfbf7', 100: '#f9f5ec', 200: '#f0e6d6', 300: '#e4d0b8',
+              400: '#cb9a6e', 500: '#b45309', 600: '#92400e', 700: '#78350f',
+              800: '#451a03', 900: '#23150f',
+            },
+            oak: '#c4884d', walnut: '#1d120c', brass: '#d4af37'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-stone-100 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-amber-600 text-white px-4 py-2 rounded shadow-lg">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
+          <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+            TIMBER<span class="text-amber-600">CRAFT</span>
+          </span>
+          <span class="text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+            Client & Contractor Command Portal
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
+        <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
+        <a href="dashboard.html" class="text-amber-600 dark:text-amber-500 font-semibold transition-colors">Project Tracker</a>
+        <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-globe text-amber-600"></i>
+          <span class="dir-text">RTL</span>
+        </button>
+
+        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        </button>
+
+        <div class="flex items-center gap-2 pl-3 border-l border-stone-300 dark:border-stone-700">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Active user" class="w-8 h-8 rounded-full object-cover ring-2 ring-amber-600">
+          <div class="hidden sm:block text-left">
+            <span class="block text-xs font-bold text-stone-800 dark:text-stone-200 leading-none">Marcus Vance</span>
+            <span class="text-[10px] text-amber-600 font-semibold">Master Joiner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Title & Project Switcher -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Live Joinery Status</span>
+          <h1 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100">
+            Active Site Job & Milling Tracker
+          </h1>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <label for="projectSelector" class="text-xs font-semibold text-stone-500 dark:text-stone-400 whitespace-nowrap">Select Project:</label>
+          <select id="projectSelector" class="form-input-wood text-sm font-semibold max-w-xs bg-white dark:bg-stone-900">
+            <option value="PRJ-1082" selected>PRJ-1082: Villa Aurelia (Wardrobe)</option>
+            <option value="PRJ-1085">PRJ-1085: The Crown Penthouse (Media Wall)</option>
+            <option value="PRJ-1089">PRJ-1089: Belgrave Residence (Pivot Door)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        
+        <div class="craft-card p-5 rounded-xl bg-white dark:bg-stone-900">
+          <span class="text-xs font-semibold text-stone-500 uppercase block mb-1">Current Job Status</span>
+          <div class="flex items-center justify-between">
+            <span id="dashStatusBadge" class="text-sm font-bold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-1 rounded-md border border-amber-200 dark:border-amber-900">In Workshop Assembly</span>
+            <i class="fa-solid fa-hammer text-amber-600 text-xl"></i>
+          </div>
+        </div>
+
+        <div class="craft-card p-5 rounded-xl bg-white dark:bg-stone-900">
+          <span class="text-xs font-semibold text-stone-500 uppercase block mb-1">Target On-Site Handover</span>
+          <div class="flex items-center justify-between">
+            <span id="dashHandover" class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100">Nov 24, 2026</span>
+            <i class="fa-solid fa-calendar-check text-emerald-600 text-xl"></i>
+          </div>
+        </div>
+
+        <div class="craft-card p-5 rounded-xl bg-white dark:bg-stone-900">
+          <span class="text-xs font-semibold text-stone-500 uppercase block mb-1">Certified Timber Lot</span>
+          <div class="flex items-center justify-between">
+            <span id="dashLot" class="text-xs font-mono font-bold text-stone-700 dark:text-stone-300">WAL-LOT-992</span>
+            <i class="fa-solid fa-tree text-stone-400 text-xl"></i>
+          </div>
+        </div>
+
+        <div class="craft-card p-5 rounded-xl bg-white dark:bg-stone-900">
+          <span class="text-xs font-semibold text-stone-500 uppercase block mb-1">Contract Value</span>
+          <div class="flex items-center justify-between">
+            <span id="dashBudget" class="font-serif text-xl font-bold text-amber-600 dark:text-amber-400">$18,450</span>
+            <i class="fa-solid fa-file-invoice-dollar text-stone-400 text-xl"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Project Overview & Milestone Timeline -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+        
+        <!-- Left: Project Info & Milestones -->
+        <div class="lg:col-span-8 bg-white dark:bg-stone-900 p-8 rounded-2xl shadow-lg border border-stone-200 dark:border-stone-800">
+          
+          <div class="border-b border-stone-200 dark:border-stone-800 pb-6 mb-6">
+            <h2 id="dashProjName" class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-2">
+              Villa Aurelia - Master Walk-in Wardrobe & Vanity
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-600 dark:text-stone-400">
+              <p><strong class="text-stone-800 dark:text-stone-200">Client:</strong> <span id="dashClientName">Alexander & Sophia Wright</span></p>
+              <p><strong class="text-stone-800 dark:text-stone-200">Site Address:</strong> <span id="dashAddress">742 Highland Crest Way</span></p>
+              <p><strong class="text-stone-800 dark:text-stone-200">Timber Spec:</strong> <span id="dashSpecies">American Black Walnut & Fluted Glass</span></p>
+              <p><strong class="text-stone-800 dark:text-stone-200">Lead Master Joiner:</strong> <span id="dashLead">Marcus Vance</span></p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="mt-6">
+              <div class="flex justify-between items-center text-xs font-bold mb-1.5">
+                <span class="text-stone-700 dark:text-stone-300">Fabrication & Fitting Progress</span>
+                <span id="dashProgressTxt" class="text-amber-600 dark:text-amber-400">72% Completed</span>
+              </div>
+              <div class="w-full bg-stone-200 dark:bg-stone-800 h-2.5 rounded-full overflow-hidden">
+                <div id="dashProgressBar" class="bg-gradient-to-r from-amber-600 to-amber-500 h-2.5 rounded-full transition-all duration-700" style="width: 72%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestones List -->
+          <div>
+            <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 mb-6">
+              Milestone Verification Log
+            </h3>
+            <div id="dashMilestones" class="space-y-2">
+              <!-- Dynamically populated via dashboard.js -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Lumber & Board-Feet Calculator Tool -->
+        <div class="lg:col-span-4 bg-white dark:bg-stone-900 p-8 rounded-2xl shadow-lg border border-stone-200 dark:border-stone-800">
+          
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center text-sm shadow">
+              <i class="fa-solid fa-ruler-combined"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-stone-900 dark:text-stone-100">Lumber & Board-Feet (BF) Estimator</h3>
+              <span class="text-[10px] text-stone-400">Joinery Lumber Calculator</span>
+            </div>
+          </div>
+
+          <form id="lumberCalcForm" class="space-y-4 text-xs">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="calcLength" class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Length (Inches)</label>
+                <input type="number" id="calcLength" value="96" min="1" class="form-input-wood text-xs py-2">
+              </div>
+              <div>
+                <label for="calcWidth" class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Width (Inches)</label>
+                <input type="number" id="calcWidth" value="8" min="1" class="form-input-wood text-xs py-2">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="calcThick" class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Thickness (Inches)</label>
+                <input type="number" id="calcThick" value="1.5" step="0.25" min="0.5" class="form-input-wood text-xs py-2">
+              </div>
+              <div>
+                <label for="calcQty" class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Quantity (Pieces)</label>
+                <input type="number" id="calcQty" value="12" min="1" class="form-input-wood text-xs py-2">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="calcWaste" class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Milling Waste Factor (%)</label>
+                <input type="number" id="calcWaste" value="15" min="0" max="50" class="form-input-wood text-xs py-2">
+              </div>
+              <div>
+                <label for="calcPricePerBf" class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Price per BF ($)</label>
+                <input type="number" id="calcPricePerBf" value="14" min="1" class="form-input-wood text-xs py-2">
+              </div>
+            </div>
+
+            <!-- Output Box -->
+            <div class="pt-4 mt-4 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 p-4 rounded-xl space-y-2">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-stone-500">Net Board Feet:</span>
+                <span id="calcOutNetBf" class="font-mono font-bold text-stone-900 dark:text-stone-100">96.00 BF</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-stone-500">Gross Lumber Needed (+15%):</span>
+                <span id="calcOutGrossBf" class="font-mono font-bold text-amber-600 dark:text-amber-400">110.40 BF</span>
+              </div>
+              <div class="flex justify-between items-center text-sm border-t border-stone-200 dark:border-stone-800 pt-2 font-bold">
+                <span class="text-stone-800 dark:text-stone-200">Raw Lumber Cost:</span>
+                <span id="calcOutTotalCost" class="font-serif text-lg text-amber-600 dark:text-amber-400">$1,545.60</span>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 dark:bg-black border-t border-stone-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-stone-500">
+      <p>&copy; 2026 TimberCraft Interior Joinery & Woodwork Contractor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

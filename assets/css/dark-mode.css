@@ -1,0 +1,115 @@
+/* ===================================================================
+   TimberCraft - Dark Mode Stylesheet (dark-mode.css)
+   =================================================================== */
+
+html.dark {
+  /* Dark Timber Theme Variables */
+  --bg-canvas: #0f0b09;           /* Deep Smoked Espresso */
+  --bg-surface: #191310;          /* Dark Walnut Surface */
+  --bg-surface-alt: #231b16;      /* Polished Smoked Ash */
+  --border-subtle: #342720;       /* Dark Joinery Border */
+  --border-focus: #e29547;        /* Golden Honey Glow */
+  
+  --text-main: #f7efe7;           /* Warm Off-White Linen */
+  --text-muted: #b8a79a;          /* Soft Cedar Grey */
+  --text-light: #7c6b5f;          /* Muted Bark */
+  
+  --shadow-wood: 0 12px 30px -5px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 20px 40px -8px rgba(226, 149, 71, 0.22);
+}
+
+/* Base dark container adjustments */
+html.dark body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+}
+
+/* Dark mode custom scrollbar */
+html.dark ::-webkit-scrollbar-track {
+  background: #150f0c;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3b2b22;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #c4884d;
+}
+
+/* Dark Navigation Bar */
+html.dark .nav-glass {
+  background: rgba(18, 13, 10, 0.88);
+  border-bottom: 1px solid rgba(52, 39, 32, 0.7);
+}
+
+/* Subtle pattern for dark mode */
+html.dark .wood-texture-subtle {
+  background-color: #0f0b09;
+  background-image: radial-gradient(rgba(226, 149, 71, 0.06) 1px, transparent 0);
+}
+
+/* Secondary Button in Dark */
+html.dark .btn-secondary {
+  background: #231b16;
+  color: #f7efe7;
+  border-color: #3d2e24;
+}
+html.dark .btn-secondary:hover {
+  background: #2f231b;
+  border-color: var(--wood-primary);
+  color: #f59e0b;
+}
+
+/* Form inputs in Dark */
+html.dark .form-input-wood {
+  background-color: #1a1410;
+  border-color: #382a21;
+  color: #f7efe7;
+}
+html.dark .form-input-wood:focus {
+  border-color: #e29547;
+  box-shadow: 0 0 0 3px rgba(226, 149, 71, 0.2);
+}
+html.dark .form-input-wood::placeholder {
+  color: #6b5a4f;
+}
+html.dark .form-input-wood.is-invalid {
+  background-color: #2b1111;
+  border-color: #ef4444 !important;
+}
+
+/* Dark Cards & Panels */
+html.dark .craft-card {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+html.dark .craft-card:hover {
+  border-color: rgba(226, 149, 71, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(226, 149, 71, 0.1);
+}
+
+/* Skeleton Pulse in Dark */
+html.dark .skeleton-box {
+  background: linear-gradient(90deg, #241b16 25%, #30241e 50%, #241b16 75%);
+  background-size: 200% 100%;
+}
+
+/* Dark mode Toast */
+html.dark .wood-toast {
+  background: #1f1712;
+  color: #f7efe7;
+  border-left-color: #e29547;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Badge in dark */
+html.dark .badge-gold {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.3);
+  color: #fbbf24;
+}
+
+/* Quick quote badge / stats counter background */
+html.dark .stat-card-wood {
+  background: #1d1611;
+  border-color: #342720;
+}

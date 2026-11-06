@@ -1,0 +1,6 @@
+# robots.txt for TimberCraft Interior Joinery & Woodwork Contractor
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://timbercraftwoodworks.example.com/sitemap.xml

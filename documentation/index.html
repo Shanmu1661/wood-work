@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimberCraft Documentation & Developer Guide</title>
+  <meta name="description" content="Comprehensive developer documentation, installation guide, theme customizer, and component reference for TimberCraft Interior Carpenter HTML template.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-stone-900/90 backdrop-blur border-b border-stone-200 dark:border-stone-800 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded bg-amber-700 text-white flex items-center justify-center font-bold">
+        <i class="fa-solid fa-book"></i>
+      </div>
+      <div>
+        <span class="font-serif font-bold text-lg text-stone-900 dark:text-stone-100">TimberCraft Documentation</span>
+        <span class="text-[10px] text-stone-500 block">Version 1.0.0 Production Release</span>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200" title="Toggle theme">
+        <i class="fa-solid fa-moon theme-toggle-icon"></i>
+      </button>
+      <a href="../pages/index.html" class="btn-primary text-xs py-2 px-4">
+        <span>View Live Site</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Table of Contents -->
+      <aside class="lg:col-span-3 space-y-6">
+        <div class="sticky top-28 bg-white dark:bg-stone-900 p-6 rounded-2xl border border-stone-200 dark:border-stone-800 text-xs space-y-2">
+          <span class="font-bold text-stone-400 uppercase tracking-widest block mb-3">Contents</span>
+          <a href="#quick-start" class="block font-semibold hover:text-amber-600">1. Quick Start & Setup</a>
+          <a href="#file-structure" class="block font-semibold hover:text-amber-600">2. File Structure</a>
+          <a href="#color-tokens" class="block font-semibold hover:text-amber-600">3. Color Palette & Tokens</a>
+          <a href="#typography" class="block font-semibold hover:text-amber-600">4. Typography & Fonts</a>
+          <a href="#dark-rtl" class="block font-semibold hover:text-amber-600">5. Dark Mode & RTL Support</a>
+          <a href="#form-integrations" class="block font-semibold hover:text-amber-600">6. Form Integrations</a>
+          <a href="#components" class="block font-semibold hover:text-amber-600">7. UI Components</a>
+          <a href="#credits" class="block font-semibold hover:text-amber-600">8. Credits & Licensing</a>
+        </div>
+      </aside>
+
+      <!-- Main Docs Content -->
+      <main class="lg:col-span-9 space-y-12 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+        
+        <section id="quick-start">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">1. Quick Start & Setup</h2>
+          <p class="mb-4">
+            TimberCraft is a clean, dependency-free static website template built exclusively with modern HTML5, Tailwind CSS utilities, custom modular CSS, and vanilla ES6+ JavaScript. No build step or package manager is mandatory to start customizing!
+          </p>
+          <div class="p-4 rounded-xl bg-stone-900 text-stone-200 font-mono text-xs overflow-x-auto space-y-2">
+            <p># Option A: Local preview with Python built-in server</p>
+            <p class="text-amber-400">python -m http.server 8000</p>
+            <p class="text-stone-500"># Then navigate to: http://localhost:8000</p>
+            <br>
+            <p># Option B: Node.js npx serve</p>
+            <p class="text-amber-400">npx serve .</p>
+            <br>
+            <p># Option C: VS Code Live Server extension</p>
+            <p class="text-stone-400">Right-click index.html or pages/index.html -> "Open with Live Server"</p>
+          </div>
+        </section>
+
+        <section id="file-structure">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">2. File Structure</h2>
+          <pre class="p-4 rounded-xl bg-stone-900 text-stone-200 font-mono text-xs overflow-x-auto">
+woodwork-template/
+├── assets/
+│   ├── css/
+│   │   ├── style.css         # Main woodwork typography, buttons, sliders, lightboxes
+│   │   ├── dark-mode.css     # Dark walnut theme color definitions & contrast styles
+│   │   └── rtl.css           # Right-to-Left bidirectional layout flips & icons
+│   ├── js/
+│   │   ├── main.js           # Theme toggle, RTL toggle, slider, filter, forms
+│   │   └── dashboard.js      # Milestone tracker, lumber & board-feet calculator
+│   └── images/               # High resolution woodwork photography
+├── pages/
+│   ├── index.html            # Main home page with finished interiors & estimator
+│   ├── about.html            # Heritage story, timber ethos & master joiners
+│   ├── services.html         # Wardrobes, TV units, pivot doors, paneling, kitchens
+│   ├── gallery.html          # Filterable portfolio with interactive lightbox modal
+│   ├── contact.html          # Contact form, Google map placeholder, workshop hours
+│   ├── booking.html          # 3D Laser measurement site consultation booking wizard
+│   ├── blog.html             # Woodcraft journal & timber articles archive
+│   ├── blog-single.html      # In-depth timber selection matrix article
+│   ├── dashboard.html        # Client & contractor project tracker & lumber tool
+│   ├── 404.html              # Custom woodwork-themed 404 error page
+│   └── coming-soon.html      # Workshop expansion pre-launch page with live countdown
+├── documentation/
+│   └── index.html            # Interactive developer documentation
+├── index.html                # Root entry point
+├── robots.txt                # Search engine crawler instructions
+├── sitemap.xml               # Canonical XML sitemap
+└── README.md                 # Project repository readme</pre>
+        </section>
+
+        <section id="color-tokens">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">3. Color Palette & CSS Variables</h2>
+          <p class="mb-4">
+            The color system is defined with clean CSS Custom Properties in <code class="text-amber-700 bg-amber-50 dark:bg-stone-800 px-1 py-0.5 rounded">assets/css/style.css</code> and mirrored in the Tailwind configuration:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="p-3 rounded-lg border border-stone-200 dark:border-stone-800">
+              <div class="h-10 rounded bg-[#b45309] mb-2 shadow"></div>
+              <span class="font-bold text-xs block">--wood-primary</span>
+              <span class="text-[10px] text-stone-400">#b45309 (Amber Chestnut)</span>
+            </div>
+            <div class="p-3 rounded-lg border border-stone-200 dark:border-stone-800">
+              <div class="h-10 rounded bg-[#23150f] mb-2 shadow"></div>
+              <span class="font-bold text-xs block">--wood-walnut</span>
+              <span class="text-[10px] text-stone-400">#23150f (Deep Walnut)</span>
+            </div>
+            <div class="p-3 rounded-lg border border-stone-200 dark:border-stone-800">
+              <div class="h-10 rounded bg-[#c4884d] mb-2 shadow"></div>
+              <span class="font-bold text-xs block">--wood-oak</span>
+              <span class="text-[10px] text-stone-400">#c4884d (Golden Oak)</span>
+            </div>
+            <div class="p-3 rounded-lg border border-stone-200 dark:border-stone-800">
+              <div class="h-10 rounded bg-[#d4af37] mb-2 shadow"></div>
+              <span class="font-bold text-xs block">--wood-brass</span>
+              <span class="text-[10px] text-stone-400">#d4af37 (Artisan Brass)</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="typography">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">4. Typography & Fonts</h2>
+          <p class="mb-2">TimberCraft imports two Google Fonts:</p>
+          <ul class="list-disc list-inside space-y-1 text-xs">
+            <li><strong>Cinzel (Serif):</strong> Applied to statement headings (<code class="text-amber-700 font-mono">.font-serif</code>) for that timeless luxury craftsman atelier signature.</li>
+            <li><strong>Plus Jakarta Sans (Sans-Serif):</strong> Applied to body text and technical specifications for crisp legibility across all screen sizes.</li>
+          </ul>
+        </section>
+
+        <section id="dark-rtl">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">5. Dark Mode & RTL Implementation</h2>
+          <p class="mb-3">
+            <strong>Dark Mode:</strong> Enabled by toggling the <code class="text-amber-700 font-mono">dark</code> class on <code class="font-mono">&lt;html&gt;</code>. User preference is saved in <code class="font-mono">localStorage.getItem('timbercraft_theme')</code>. It also listens automatically to the user’s operating system preference (<code class="font-mono">prefers-color-scheme</code>).
+          </p>
+          <p>
+            <strong>RTL (Right to Left):</strong> Enabled by setting <code class="text-amber-700 font-mono">dir="rtl"</code> on <code class="font-mono">&lt;html&gt;</code>. The custom <code class="font-mono">rtl.css</code> file automatically flips text alignment, arrow icons, breadcrumb chevrons, form inputs, and modal positioning for Arabic, Hebrew, or Persian languages.
+          </p>
+        </section>
+
+        <section id="form-integrations">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">6. Form Integrations (Placeholder Ready)</h2>
+          <p class="mb-3">All forms are equipped with client-side regex validation, floating error tooltips, and success toast popups:</p>
+          <div class="space-y-3 text-xs">
+            <div class="p-4 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <strong class="text-amber-700 dark:text-amber-400 block mb-1">Formspree / Netlify Forms:</strong>
+              <p>In <code class="font-mono">contact.html</code>, update <code class="font-mono">action="https://formspree.io/f/YOUR_ENDPOINT"</code>. For Netlify, the form already includes <code class="font-mono">data-netlify="true"</code>.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <strong class="text-amber-700 dark:text-amber-400 block mb-1">Mailchimp / ConvertKit:</strong>
+              <p>Newsletter forms are ready to receive an embed action URL without styling breakage.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <strong class="text-amber-700 dark:text-amber-400 block mb-1">Google Maps API:</strong>
+              <p>Replace the container in <code class="font-mono">contact.html</code> with your Google Maps embed iframe or JavaScript Map API key.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="credits">
+          <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mb-3">8. Credits & Licensing</h2>
+          <ul class="list-disc list-inside text-xs space-y-1">
+            <li><strong>Fonts:</strong> Google Fonts (Cinzel, Plus Jakarta Sans)</li>
+            <li><strong>Icons:</strong> Font Awesome 6.5.1 Free</li>
+            <li><strong>Styling Framework:</strong> Tailwind CSS & Custom CSS Variables</li>
+            <li><strong>Photography:</strong> Curated photography via Unsplash (free commercial use license)</li>
+          </ul>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="bg-stone-900 text-stone-400 dark:bg-black py-8 border-t border-stone-800 text-center text-xs">
+    <p>&copy; 2026 TimberCraft Interior Joinery & Woodwork Contractor Template. Production Ready.</p>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
