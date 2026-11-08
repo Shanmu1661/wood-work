@@ -40,7 +40,8 @@ woodwork-template/
 │   │   └── dashboard.js          # Project milestone tracker & lumber board-feet calculator
 │   └── images/                   # Curated photography and textures
 ├── pages/
-│   ├── index.html                # Home page with finished interiors, hero & estimator
+│   ├── index.html                # Home 1: Luxury Residential Interior Carpentry & Estimator
+│   ├── home-2.html               # Home 2: Commercial & Architectural Millwork Specialist
 │   ├── about.html                # Heritage story, timber ethos & master joiners
 │   ├── services.html             # Wardrobes, TV units, pivot doors, paneling, kitchens
 │   ├── gallery.html              # Filterable portfolio with interactive lightbox modal
