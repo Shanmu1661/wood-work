@@ -39,38 +39,35 @@
 
   <!-- Header -->
   <header class="w-full nav-glass">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-amber-700 flex items-center justify-center text-white shadow">
-          <i class="fa-solid fa-cubes text-lg"></i>
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none shrink-0 min-w-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-amber-700 flex items-center justify-center text-white shadow shrink-0">
+          <i class="fa-solid fa-cubes text-base sm:text-lg"></i>
         </div>
-        <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100">
+        <span class="font-serif text-lg sm:text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 truncate">
           TIMBER<span class="text-amber-600">CRAFT</span>
         </span>
       </a>
 
-      <div class="flex items-center gap-3">
-        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5">
+      <!-- Utility Controls (Theme, RTL, CTA) -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 shrink-0">
+        <!-- RTL Toggle -->
+        <button type="button" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
           <i class="fa-solid fa-globe text-amber-600"></i>
           <span class="dir-text">RTL</span>
         </button>
 
-        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        <!-- Dark/Light Theme Switcher -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors shrink-0" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
         </button>
 
         <!-- Login Button -->
-        <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm" title="Login">
+        <a href="login.html" class="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Login">
           <i class="fa-regular fa-user text-xs"></i>
           <span>Login</span>
         </a>
-
-
-        <a href="index.html" class="btn-secondary text-xs py-2 px-4">
-          <i class="fa-solid fa-home mr-1"></i> Home
-        </a>
-      </div>
-    </div>
+      </div></div>
   </header>
 
   <main class="py-20 flex-grow flex items-center justify-center">

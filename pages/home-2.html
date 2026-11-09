@@ -94,18 +94,18 @@
 
   <!-- Main Navigation Header -->
   <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- Logo -->
-      <a href="home-2.html" class="flex items-center gap-3 group focus:outline-none">
-        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-stone-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform border border-amber-600/40">
-          <i class="fa-solid fa-building-columns text-xl text-amber-400"></i>
+      <a href="home-2.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none shrink-0 min-w-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-gradient-to-br from-amber-700 to-stone-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform border border-amber-600/40 shrink-0">
+          <i class="fa-solid fa-building-columns text-base sm:text-xl text-amber-400"></i>
         </div>
-        <div>
-          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+        <div class="min-w-0">
+          <span class="font-serif text-lg sm:text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight truncate">
             TIMBER<span class="text-amber-600">CRAFT</span>
           </span>
-          <span class="text-[10px] tracking-widest uppercase text-amber-700 dark:text-amber-400 font-bold block">
+          <span class="text-[9px] sm:text-[10px] tracking-widest uppercase text-amber-700 dark:text-amber-400 font-bold hidden sm:block">
             Commercial & Architectural Millwork
           </span>
         </div>
@@ -153,39 +153,30 @@
         <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
       </nav>
 
-      <!-- Utility Controls (Theme, RTL, Commercial CTA) -->
-      <div class="flex items-center gap-3">
+      <!-- Utility Controls (Theme, RTL, CTA) -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 shrink-0">
         <!-- RTL Toggle -->
-        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
+        <button type="button" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
           <i class="fa-solid fa-globe text-amber-600"></i>
           <span class="dir-text">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Switcher -->
-        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" title="Toggle Dark/Light Mode" aria-label="Toggle visual theme">
-          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle visual theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
         </button>
 
         <!-- Login Button -->
-        <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm" title="Login">
+        <a href="login.html" class="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Login">
           <i class="fa-regular fa-user text-xs"></i>
           <span>Login</span>
         </a>
 
-
-        <!-- Commercial RFQ Tender CTA -->
-        <a href="#rfq-section" class="hidden sm:inline-flex btn-primary text-sm py-2.5 px-4 shadow-sm">
-          <span>Submit Commercial RFQ</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
-        </a>
-
         <!-- Mobile Menu Hamburger Button -->
-        <button id="menuToggle" type="button" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Open mobile menu" aria-expanded="false">
-          <i class="fa-solid fa-bars text-lg"></i>
+        <button id="menuToggle" type="button" class="lg:hidden w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500 shrink-0" aria-label="Open mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars text-sm sm:text-lg"></i>
         </button>
-      </div>
-
-    </div>
+      </div></div>
   </header>
 
   <!-- Mobile Offcanvas Menu Drawer & Backdrop -->
@@ -202,9 +193,16 @@
             <span class="text-[9px] uppercase tracking-wider text-amber-600 font-semibold block">Commercial Division</span>
           </div>
         </div>
-        <button id="closeMobileMenu" class="w-8 h-8 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-900 dark:hover:text-white" aria-label="Close menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+        <div class="flex items-center gap-2">
+          <!-- RTL Toggle for mobile drawer -->
+          <button type="button" class="dir-toggle-btn px-2.5 py-1 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 text-stone-600 dark:text-stone-300 flex items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
+            <i class="fa-solid fa-globe text-amber-600 text-xs"></i>
+            <span class="dir-text text-xs">RTL</span>
+          </button>
+          <button id="closeMobileMenu" class="w-8 h-8 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-900 dark:hover:text-white" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
       </div>
       <nav class="mt-6 flex flex-col gap-4 font-medium text-base text-stone-700 dark:text-stone-200">
         <a href="index.html" class="hover:text-amber-600 py-1">Home (Residential)</a>
@@ -246,19 +244,19 @@
           <!-- Hero Copy -->
           <div class="lg:col-span-7 space-y-6">
             <!-- Badges & Home 1 Switcher -->
-            <div class="flex items-center gap-3 flex-wrap">
-              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold tracking-wider uppercase">
-                <i class="fa-solid fa-award text-amber-400"></i>
-                <span>Architectural Woodwork Institute (AWI) Certified Manufacturer</span>
+            <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+              <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[11px] sm:text-xs font-semibold tracking-wider uppercase max-w-full">
+                <i class="fa-solid fa-award text-amber-400 shrink-0"></i>
+                <span class="truncate">AWI Certified Manufacturer</span>
               </div>
-              <a href="index.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-stone-800/80 hover:bg-stone-800 border border-stone-700 text-stone-300 hover:text-amber-300 text-xs font-semibold transition-all shadow-sm">
+              <a href="index.html" class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-stone-800/80 hover:bg-stone-800 border border-stone-700 text-stone-300 hover:text-amber-300 text-[11px] sm:text-xs font-semibold transition-all shadow-sm">
                 <i class="fa-solid fa-arrow-right-arrow-left text-[11px] text-amber-400"></i>
                 <span>Switch to Home 1: Luxury Residential</span>
                 <i class="fa-solid fa-chevron-right text-[10px] ml-0.5"></i>
               </a>
             </div>
 
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15] break-words">
               Engineered Precision. <br>
               Master Millwork. <br>
               <span class="text-amber-400 underline decoration-amber-600/70 decoration-wavy underline-offset-8">Built to Architectural Spec.</span>

@@ -44,16 +44,16 @@
 
   <!-- Header -->
   <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
-        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
-          <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none shrink-0 min-w-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform shrink-0">
+          <i class="fa-solid fa-cubes text-base sm:text-xl text-amber-300"></i>
         </div>
-        <div>
-          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+        <div class="min-w-0">
+          <span class="font-serif text-lg sm:text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight truncate">
             TIMBER<span class="text-amber-600">CRAFT</span>
           </span>
-          <span class="text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+          <span class="text-[9px] sm:text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold hidden sm:block">
             Architectural Joinery & Interiors
           </span>
         </div>
@@ -96,24 +96,25 @@
         <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5">
+      <!-- Utility Controls (Theme, RTL, CTA) -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 shrink-0">
+        <!-- RTL Toggle -->
+        <button type="button" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
           <i class="fa-solid fa-globe text-amber-600"></i>
           <span class="dir-text">RTL</span>
         </button>
 
-        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        <!-- Dark/Light Theme Switcher -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors shrink-0" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
         </button>
 
         <!-- Login Button -->
-        <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm" title="Login">
+        <a href="login.html" class="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Login">
           <i class="fa-regular fa-user text-xs"></i>
           <span>Login</span>
         </a>
-
-      </div>
-    </div>
+      </div></div>
   </header>
 
   <!-- Hero Header / Page Banner -->
