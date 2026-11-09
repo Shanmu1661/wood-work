@@ -233,57 +233,64 @@
     </section>
 
     <!-- The 5-Step Craft Journey -->
-    <section class="py-24 bg-stone-100 dark:bg-stone-950 wood-texture-subtle border-y border-stone-200 dark:border-stone-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="workflow" class="py-24 relative overflow-hidden text-white border-y border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/workflow-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Clearly Visible 5-Step Joinery Workflow & Production Line Background Image -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/workflow-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=85'" alt="Skilled master carpenters crafting custom joinery and fine woodwork on production benches" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/40"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Our Method</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow">Our Method</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white drop-shadow-md mt-2">
             The 5-Step TimberCraft Workflow
           </h2>
-          <p class="mt-3 text-stone-600 dark:text-stone-400 text-sm">
+          <p class="mt-3 text-stone-200 text-sm drop-shadow max-w-2xl mx-auto">
             From your preliminary layout to final hand-rubbed finish, every milestone is monitored for laser precision.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
           
-          <div class="craft-card p-6 rounded-xl bg-white dark:bg-stone-900 relative">
-            <span class="font-serif text-4xl font-bold text-amber-600/30 block mb-3">01</span>
-            <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 mb-2">3D Laser Scan</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
+            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors block">01</span>
+            <h3 class="font-serif text-base font-bold text-white">3D Laser Scan</h3>
+            <p class="text-xs text-stone-300 leading-relaxed">
               We map your walls with Leica laser scanners to identify slope, drywall bowed sections, and exact socket offsets.
             </p>
           </div>
 
-          <div class="craft-card p-6 rounded-xl bg-white dark:bg-stone-900 relative">
-            <span class="font-serif text-4xl font-bold text-amber-600/30 block mb-3">02</span>
-            <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 mb-2">Timber Calibration</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
-              Hardwood lumber is moisture-tested (8-10%) and visually bookmatched to guarantee uninterrupted cathedral grain flow.
+          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
+            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors block">02</span>
+            <h3 class="font-serif text-base font-bold text-white">Timber Calibration</h3>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              Hardwood lumber is moisture-tested (8–10%) and visually bookmatched to guarantee uninterrupted cathedral grain flow.
             </p>
           </div>
 
-          <div class="craft-card p-6 rounded-xl bg-white dark:bg-stone-900 relative">
-            <span class="font-serif text-4xl font-bold text-amber-600/30 block mb-3">03</span>
-            <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 mb-2">Workshop Joinery</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
+            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors block">03</span>
+            <h3 class="font-serif text-base font-bold text-white">Workshop Joinery</h3>
+            <p class="text-xs text-stone-300 leading-relaxed">
               Milled on German Altendorf sliding saws and precision mortised. Carcasses are dry-assembled and checked for square.
             </p>
           </div>
 
-          <div class="craft-card p-6 rounded-xl bg-white dark:bg-stone-900 relative">
-            <span class="font-serif text-4xl font-bold text-amber-600/30 block mb-3">04</span>
-            <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 mb-2">4-Stage PU Finish</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
+            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors block">04</span>
+            <h3 class="font-serif text-base font-bold text-white">4-Stage PU Finish</h3>
+            <p class="text-xs text-stone-300 leading-relaxed">
               Multi-coat polyurethane sealant in a positive-pressure dust-free booth, finished with hand-rubbed organic waxes.
             </p>
           </div>
 
-          <div class="craft-card p-6 rounded-xl bg-white dark:bg-stone-900 relative">
-            <span class="font-serif text-4xl font-bold text-amber-600/30 block mb-3">05</span>
-            <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 mb-2">White-Glove Fit</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
+            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors block">05</span>
+            <h3 class="font-serif text-base font-bold text-white">White-Glove Fit</h3>
+            <p class="text-xs text-stone-300 leading-relaxed">
               Our uniformed carpentry crew installs on site with HEPA dust extractors, micro-adjusting every hinge to perfection.
             </p>
           </div>
