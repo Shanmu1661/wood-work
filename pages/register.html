@@ -36,93 +36,29 @@
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
-<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col justify-center relative">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
-        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
-          <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
-        </div>
-        <div>
-          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
-            TIMBER<span class="text-amber-600">CRAFT</span>
-          </span>
-          <span class="text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
-            Architectural Joinery & Interiors
-          </span>
-        </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
-        <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home</a>
-        <a href="home-2.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home 2</a>
-        <a href="about.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">About Us</a>
-        <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
-        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
-        <a href="blog.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Journal</a>
-        <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
-        <a href="login.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Login</a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5">
-          <i class="fa-solid fa-globe text-amber-600"></i>
-          <span class="dir-text">RTL</span>
-        </button>
-
-        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon theme-toggle-icon"></i>
-        </button>
-
-        <a href="login.html" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-600/50 text-amber-600 dark:text-amber-400 hover:bg-amber-600 hover:text-white transition-all shadow-sm">
-          <i class="fa-regular fa-user text-xs"></i>
-          <span>Sign In</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Offcanvas Menu Drawer & Backdrop -->
-  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
-  <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between hidden transition-transform duration-300 lg:hidden">
-    <div>
-      <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded bg-amber-700 text-white flex items-center justify-center">
-            <i class="fa-solid fa-cubes"></i>
-          </div>
-          <span class="font-serif font-bold text-lg text-stone-900 dark:text-stone-100">TIMBERCRAFT</span>
-        </div>
-        <button id="closeMobileMenu" class="w-8 h-8 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-900 dark:hover:text-white" aria-label="Close menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <nav class="mt-6 flex flex-col gap-4 font-medium text-base text-stone-700 dark:text-stone-200">
-        <a href="index.html" class="hover:text-amber-600 py-1">Home (Residential)</a>
-        <a href="home-2.html" class="hover:text-amber-600 py-1">Home 2 (Commercial Millwork)</a>
-        <a href="about.html" class="hover:text-amber-600 py-1">About Us</a>
-        <a href="services.html" class="hover:text-amber-600 py-1">Services</a>
-        <a href="gallery.html" class="hover:text-amber-600 py-1">Portfolio</a>
-        <a href="blog.html" class="hover:text-amber-600 py-1">Journal</a>
-        <a href="booking.html" class="hover:text-amber-600 py-1">Book Consultation</a>
-        <a href="contact.html" class="hover:text-amber-600 py-1">Contact</a>
-        <a href="login.html" class="text-amber-600 font-semibold py-1 flex items-center gap-2"><i class="fa-regular fa-user text-xs text-amber-600"></i> Login</a>
-        <a href="register.html" class="hover:text-amber-600 py-1 flex items-center gap-2"><i class="fa-solid fa-user-plus text-xs text-amber-600"></i> Register</a>
-      </nav>
-    </div>
-    <div class="pt-6 border-t border-stone-200 dark:border-stone-800 space-y-3">
-      <a href="booking.html" class="btn-primary w-full text-center py-3">Book Site Measurement</a>
-      <div class="text-xs text-stone-500 dark:text-stone-400 space-y-1">
-        <p><i class="fa-solid fa-phone text-amber-600 mr-2"></i> +1 (800) 555-WOOD</p>
-        <p><i class="fa-solid fa-location-dot text-amber-600 mr-2"></i> 148 Sawmill Rd, Timber District</p>
-      </div>
-    </div>
+  <!-- Floating Top Return & Utility Controls -->
+  <div class="fixed top-5 left-5 z-30">
+    <a href="index.html" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-stone-900/85 hover:bg-stone-900 backdrop-blur-md border border-stone-800 text-stone-300 hover:text-white hover:border-amber-500/50 text-xs font-semibold transition-all shadow-xl group">
+      <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+      <span>Back to Home</span>
+    </a>
   </div>
 
+  <div class="fixed top-5 right-5 z-30 flex items-center gap-2">
+    <button type="button" class="dir-toggle-btn px-2.5 py-2 text-xs font-semibold rounded-xl bg-stone-900/85 hover:bg-stone-900 backdrop-blur-md border border-stone-800 text-stone-300 hover:text-white transition-colors flex items-center gap-1.5 shadow-xl" title="Switch Right-to-Left / Left-to-Right">
+      <i class="fa-solid fa-globe text-amber-500"></i>
+      <span class="dir-text">RTL</span>
+    </button>
+    <button type="button" class="theme-toggle-btn w-9 h-9 rounded-xl bg-stone-900/85 hover:bg-stone-900 backdrop-blur-md border border-stone-800 flex items-center justify-center text-stone-300 hover:text-white transition-colors shadow-xl" title="Toggle Theme" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon theme-toggle-icon text-amber-400"></i>
+    </button>
+  </div>
+
+
   <!-- Main Registration Section -->
-  <main id="main-content" class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <main id="main-content" class="min-h-screen w-full flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     
     <div class="max-w-4xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-2xl border border-stone-800 bg-stone-900/95 backdrop-blur-xl my-6">
       
@@ -182,9 +118,14 @@
         
         <div class="mb-6">
           <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 block mb-1">Create Account</span>
-          <h1 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100">
-            Register with TimberCraft
-          </h1>
+          <div class="flex items-center justify-between">
+            <h1 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100">
+              Register with TimberCraft
+            </h1>
+            <a href="index.html" title="TimberCraft Home" class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md hover:rotate-3 transition-transform">
+              <i class="fa-solid fa-cubes text-lg text-amber-300"></i>
+            </a>
+          </div>
           <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">
             Fill in your details below to activate your client portal access.
           </p>
@@ -324,13 +265,6 @@
     </div>
 
   </main>
-
-  <!-- Footer -->
-  <footer class="bg-stone-900 text-stone-400 dark:bg-black border-t border-stone-800 py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-stone-500">
-      <p>&copy; 2026 TimberCraft Interior Joinery & Woodwork Contractor. All rights reserved.</p>
-    </div>
-  </footer>
 
   <script src="../assets/js/main.js"></script>
   <script>
