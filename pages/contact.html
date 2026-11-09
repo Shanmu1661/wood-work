@@ -394,66 +394,86 @@
       </div>
     </section>
 
-    <!-- FAQ Accordion Section -->
-    <section class="py-20 bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FAQ Accordion Section with Clearly Visible Carpentry Background Image -->
+    <section class="py-24 relative overflow-hidden text-white border-t border-stone-800" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.50)), url('../assets/images/contact-faq-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Clearly Visible Architectural Joinery Consultation Background Image -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/contact-faq-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=85'" alt="Architectural woodwork consultation blueprints and carpentry laser measurements" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-stone-950/50"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-12">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Contractor Guidance</span>
-          <h2 class="font-serif text-3xl font-bold text-stone-900 dark:text-stone-100 mt-2">
+          <span class="inline-block px-3.5 py-1.5 bg-amber-500/20 text-amber-300 border border-amber-400/40 backdrop-blur-sm rounded-full text-xs font-semibold uppercase tracking-wider mb-3 drop-shadow">
+            Contractor Guidance
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 drop-shadow-md">
             Frequently Asked Questions
           </h2>
+          <p class="text-xs sm:text-sm text-stone-200 mt-2 max-w-xl mx-auto drop-shadow">
+            Everything you need to know about our 3D laser site surveys, timber kiln seasoning, turnaround schedules, and 10-year master joinery warranty.
+          </p>
         </div>
 
         <div class="space-y-4">
           
           <!-- FAQ 1 -->
-          <div class="craft-card rounded-xl overflow-hidden">
-            <button type="button" class="accordion-trigger w-full p-5 text-left flex items-center justify-between font-semibold text-stone-900 dark:text-stone-100 text-sm focus:outline-none" aria-expanded="false">
-              <span>What happens during our free on-site consultation?</span>
-              <i class="fa-solid fa-chevron-down accordion-icon text-amber-600 transition-transform duration-300"></i>
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">What happens during our free on-site consultation?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 text-xs text-stone-600 dark:text-stone-400">
-              <p class="pb-5 leading-relaxed">
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
                 Our Senior Joinery Consultant visits your home with Leica 3D laser scanners to measure exact wall plumb, floor pitch, and electrical socket locations. We also bring physical hardwood swatches (Burma Teak, Walnut, White Oak, Rosewood) and physical hardware samples so you can see finishes under your actual ambient lighting. Within 48 hours, you receive a full 3D CAD schematic and an itemized fixed quote.
               </p>
             </div>
           </div>
 
           <!-- FAQ 2 -->
-          <div class="craft-card rounded-xl overflow-hidden">
-            <button type="button" class="accordion-trigger w-full p-5 text-left flex items-center justify-between font-semibold text-stone-900 dark:text-stone-100 text-sm focus:outline-none" aria-expanded="false">
-              <span>How do you prevent custom wardrobes and doors from warping over time?</span>
-              <i class="fa-solid fa-chevron-down accordion-icon text-amber-600 transition-transform duration-300"></i>
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">How do you prevent custom wardrobes and doors from warping over time?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 text-xs text-stone-600 dark:text-stone-400">
-              <p class="pb-5 leading-relaxed">
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
                 Wood warps when raw timber is not properly seasoned or when interior moisture fluctuates. TimberCraft strictly uses kiln-dried lumber moisture-tested to 8-10% prior to milling. For large door leaves and paneling, we insert internal steel tension stabilizer bars (straightening rods) and employ quarter-sawn cut veneers that expand and contract predictably without twisting.
               </p>
             </div>
           </div>
 
           <!-- FAQ 3 -->
-          <div class="craft-card rounded-xl overflow-hidden">
-            <button type="button" class="accordion-trigger w-full p-5 text-left flex items-center justify-between font-semibold text-stone-900 dark:text-stone-100 text-sm focus:outline-none" aria-expanded="false">
-              <span>What is the standard lead time from 3D approval to completion?</span>
-              <i class="fa-solid fa-chevron-down accordion-icon text-amber-600 transition-transform duration-300"></i>
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">What is the standard lead time from 3D approval to completion?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 text-xs text-stone-600 dark:text-stone-400">
-              <p class="pb-5 leading-relaxed">
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
                 Single installations (like a floating TV console or pivot door) typically require 2 to 3 weeks in our workshop. Multi-room fitouts (master wardrobe suite + acoustic paneling + modular kitchen) take 4 to 6 weeks. Because we dry-assemble and pre-fit all joinery in our facility, on-site installation at your property usually takes just 1 to 3 days with minimal disruption.
               </p>
             </div>
           </div>
 
           <!-- FAQ 4 -->
-          <div class="craft-card rounded-xl overflow-hidden">
-            <button type="button" class="accordion-trigger w-full p-5 text-left flex items-center justify-between font-semibold text-stone-900 dark:text-stone-100 text-sm focus:outline-none" aria-expanded="false">
-              <span>What warranty covers your cabinetry and hardware?</span>
-              <i class="fa-solid fa-chevron-down accordion-icon text-amber-600 transition-transform duration-300"></i>
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">What warranty covers your cabinetry and hardware?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 text-xs text-stone-600 dark:text-stone-400">
-              <p class="pb-5 leading-relaxed">
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
                 We offer a comprehensive 10-Year Structural Joinery Warranty against carcass delamination, joint looseness, or timber defects. Furthermore, all Austrian Blum hinges, drawer runners, and motorized lift mechanisms carry a lifetime manufacturer warranty.
               </p>
             </div>
