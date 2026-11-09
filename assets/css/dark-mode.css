@@ -82,6 +82,13 @@ html.dark .craft-card {
   background: var(--bg-surface);
   border-color: var(--border-subtle);
 }
+/* Translucent glassmorphic cards on background images */
+html.dark .craft-card.backdrop-blur-md,
+html.dark .craft-card[class*="backdrop-blur"] {
+  background-color: rgba(15, 11, 9, 0.60) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 html.dark .craft-card:hover {
   border-color: rgba(226, 149, 71, 0.45);
   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(226, 149, 71, 0.1);
