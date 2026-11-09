@@ -295,3 +295,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline: 2px solid var(--wood-primary);
   outline-offset: 2px;
 }
+
+/* ===================================================================
+   Uniform Page Banner Section (Consistent Equal Height Across Pages)
+   =================================================================== */
+.page-hero-banner {
+  position: relative;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(87, 83, 78, 0.4);
+}
+@media (min-width: 640px) {
+  .page-hero-banner {
+    min-height: 460px;
+  }
+}
+@media (min-width: 1024px) {
+  .page-hero-banner {
+    min-height: 480px;
+  }
+}
