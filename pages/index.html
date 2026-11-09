@@ -198,12 +198,19 @@
   <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between hidden transition-transform duration-300 lg:hidden">
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded bg-amber-700 text-white flex items-center justify-center">
-            <i class="fa-solid fa-cubes"></i>
+        <a href="index.html" class="flex items-center gap-2.5 focus:outline-none">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-sm">
+            <i class="fa-solid fa-cubes text-base text-amber-300"></i>
           </div>
-          <span class="font-serif font-bold text-lg text-stone-900 dark:text-stone-100">TIMBERCRAFT</span>
-        </div>
+          <div>
+            <span class="font-serif font-bold text-lg tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+              TIMBER<span class="text-amber-600">CRAFT</span>
+            </span>
+            <span class="text-[9px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+              Architectural Joinery
+            </span>
+          </div>
+        </a>
         <button id="closeMobileMenu" class="w-8 h-8 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-900 dark:hover:text-white" aria-label="Close menu">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -1076,13 +1083,18 @@
         
         <!-- Brand Column -->
         <div class="lg:col-span-2">
-          <a href="index.html" class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-amber-700 flex items-center justify-center text-white">
-              <i class="fa-solid fa-cubes text-lg"></i>
+          <a href="index.html" class="flex items-center gap-3 mb-4 group focus:outline-none">
+            <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
+              <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
             </div>
-            <span class="font-serif text-2xl font-bold tracking-wider text-white">
-              TIMBER<span class="text-amber-500">CRAFT</span>
-            </span>
+            <div>
+              <span class="font-serif text-2xl font-bold tracking-wider text-white block leading-tight">
+                TIMBER<span class="text-amber-500">CRAFT</span>
+              </span>
+              <span class="text-[10px] tracking-widest uppercase text-stone-400 font-semibold block">
+                Architectural Joinery & Interiors
+              </span>
+            </div>
           </a>
           <p class="text-sm text-stone-400 leading-relaxed mb-6 max-w-sm">
             Master interior carpentry and architectural millwork. We transform raw timber into bespoke wardrobes, media units, pivot doors, and acoustically tuned wall paneling.
