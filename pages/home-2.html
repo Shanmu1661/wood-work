@@ -1311,54 +1311,64 @@
     <!-- ============================================================== -->
     <!-- 12. COMMERCIAL FREQUENTLY ASKED QUESTIONS                     -->
     <!-- ============================================================== -->
-    <section class="py-20 bg-stone-50 dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" class="py-24 relative overflow-hidden text-white border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/faq-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Clearly Visible Architectural Consultation Studio Background Image -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/faq-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1920&q=85'" alt="Commercial millwork consultation conference room with blueprints and timber samples" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/40"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-14">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Commercial FAQ</span>
-          <h2 class="font-serif text-3xl font-bold text-stone-900 dark:text-stone-100 mt-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow">Commercial FAQ</span>
+          <h2 class="font-serif text-3xl font-bold text-white mt-2 drop-shadow-md">
             Architect & General Contractor Questions
           </h2>
+          <p class="text-stone-200 text-sm mt-3 max-w-2xl mx-auto drop-shadow">
+            Clear technical answers regarding our shop submittals, ASTM flame compliance, union installations, and mockups.
+          </p>
         </div>
 
         <div class="space-y-4">
           
-          <div class="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-800 p-5 shadow-sm">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100 text-left">
+          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
+            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
               <span>What is your standard turnaround for commercial shop drawings and submittals?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-600 transition-transform"></i>
+              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
               Standard commercial submittals (Revit LOD 350 or AutoCAD DWG with full section elevations, joinery details, and hardware schedules) are completed within 7 to 10 business days following receipt of the architectural plan set and site laser survey.
             </div>
           </div>
 
-          <div class="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-800 p-5 shadow-sm">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100 text-left">
+          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
+            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
               <span>Do you fabricate Class-A flame retardant assemblies compliant with ASTM E84?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-600 transition-transform"></i>
+              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
               Yes. All our commercial wall cladding, linear ceiling grilles, and executive millwork can be fabricated using Class-A intumescent cores and fire-retardant clear waterborne sealers meeting ASTM E84 Flame Spread Index &lt; 25 and Smoke Developed Index &lt; 450.
             </div>
           </div>
 
-          <div class="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-800 p-5 shadow-sm">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100 text-left">
+          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
+            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
               <span>Can your installation teams coordinate with union general contractors?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-600 transition-transform"></i>
+              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
               Yes. TimberCraft maintains certified union carpenter affiliations as well as non-union specialized installation divisions. Our site leads are OSHA-30 certified, carry full \$10M commercial liability policies, and seamlessly integrate into master GC scheduling matrices.
             </div>
           </div>
 
-          <div class="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-800 p-5 shadow-sm">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100 text-left">
+          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
+            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
               <span>Do you provide physical timber finish mockups for architect approval?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-600 transition-transform"></i>
+              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
               Always. Every commercial contract includes full 12" x 12" flitch finish samples, edge profile samples, and full-scale mockups for complex features like curved counters, acoustic baffles, and heavy pivot doors prior to mass shop production.
             </div>
           </div>
