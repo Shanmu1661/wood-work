@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | TimberCraft Client & Contractor Portal</title>
+  <meta name="description" content="Register for TimberCraft's Project Command Portal to access 3D CAD joinery shop drawings, lumber moisture reports, and custom quotation tracking.">
+  <meta name="keywords" content="register timbercraft, create joinery account, contractor portal registration, woodcraft client account">
+  <link rel="canonical" href="https://timbercraftwoodworks.example.com/pages/register.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              50: '#fdfbf7', 100: '#f9f5ec', 200: '#f0e6d6', 300: '#e4d0b8',
+              400: '#cb9a6e', 500: '#b45309', 600: '#92400e', 700: '#78350f',
+              800: '#451a03', 900: '#23150f',
+            },
+            oak: '#c4884d', walnut: '#1d120c', brass: '#d4af37'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
+          <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+            TIMBER<span class="text-amber-600">CRAFT</span>
+          </span>
+          <span class="text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+            Architectural Joinery & Interiors
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
+        <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home</a>
+        <a href="home-2.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home 2</a>
+        <a href="about.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
+        <a href="blog.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Journal</a>
+        <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
+        <a href="login.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Login</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-globe text-amber-600"></i>
+          <span class="dir-text">RTL</span>
+        </button>
+
+        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        </button>
+
+        <a href="login.html" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-600/50 text-amber-600 dark:text-amber-400 hover:bg-amber-600 hover:text-white transition-all shadow-sm">
+          <i class="fa-regular fa-user text-xs"></i>
+          <span>Sign In</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu Drawer & Backdrop -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between hidden transition-transform duration-300 lg:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded bg-amber-700 text-white flex items-center justify-center">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <span class="font-serif font-bold text-lg text-stone-900 dark:text-stone-100">TIMBERCRAFT</span>
+        </div>
+        <button id="closeMobileMenu" class="w-8 h-8 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-900 dark:hover:text-white" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <nav class="mt-6 flex flex-col gap-4 font-medium text-base text-stone-700 dark:text-stone-200">
+        <a href="index.html" class="hover:text-amber-600 py-1">Home (Residential)</a>
+        <a href="home-2.html" class="hover:text-amber-600 py-1">Home 2 (Commercial Millwork)</a>
+        <a href="about.html" class="hover:text-amber-600 py-1">About Us</a>
+        <a href="services.html" class="hover:text-amber-600 py-1">Services</a>
+        <a href="gallery.html" class="hover:text-amber-600 py-1">Portfolio</a>
+        <a href="blog.html" class="hover:text-amber-600 py-1">Journal</a>
+        <a href="booking.html" class="hover:text-amber-600 py-1">Book Consultation</a>
+        <a href="contact.html" class="hover:text-amber-600 py-1">Contact</a>
+        <a href="login.html" class="text-amber-600 font-semibold py-1 flex items-center gap-2"><i class="fa-regular fa-user text-xs text-amber-600"></i> Login</a>
+        <a href="register.html" class="hover:text-amber-600 py-1 flex items-center gap-2"><i class="fa-solid fa-user-plus text-xs text-amber-600"></i> Register</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-200 dark:border-stone-800 space-y-3">
+      <a href="booking.html" class="btn-primary w-full text-center py-3">Book Site Measurement</a>
+      <div class="text-xs text-stone-500 dark:text-stone-400 space-y-1">
+        <p><i class="fa-solid fa-phone text-amber-600 mr-2"></i> +1 (800) 555-WOOD</p>
+        <p><i class="fa-solid fa-location-dot text-amber-600 mr-2"></i> 148 Sawmill Rd, Timber District</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Registration Section -->
+  <main id="main-content" class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    
+    <div class="max-w-4xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-2xl border border-stone-800 bg-stone-900/95 backdrop-blur-xl my-6">
+      
+      <!-- Left Column: Atelier Benefits (Hidden on Mobile) -->
+      <div class="hidden lg:flex lg:col-span-5 relative p-10 flex-col justify-between text-white overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(120, 53, 15, 0.85), rgba(29, 18, 12, 0.95)), url('../assets/images/credentials-bg.jpg'); background-size: cover; background-position: center;">
+        <div>
+          <span class="inline-block px-3 py-1 bg-amber-400/20 text-amber-300 border border-amber-300/30 rounded-full text-[10px] font-bold uppercase tracking-wider mb-6">
+            New Client Registration
+          </span>
+          <h2 class="font-serif text-3xl font-bold leading-tight mb-4">
+            Join the TimberCraft Atelier Network.
+          </h2>
+          <p class="text-xs text-stone-200 leading-relaxed mb-6">
+            Register your profile to unlock real-time fabrication updates, direct communication with master joiners, timber sample requests, and instant lumber estimates.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-6 border-t border-amber-500/30">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 text-sm">
+              <i class="fa-solid fa-file-contract"></i>
+            </span>
+            <div>
+              <h4 class="text-xs font-bold text-white">Revit & CAD Submittals</h4>
+              <p class="text-[11px] text-stone-300">Direct LOD 350 shop drawing download portal.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 text-sm">
+              <i class="fa-solid fa-swatchbook"></i>
+            </span>
+            <div>
+              <h4 class="text-xs font-bold text-white">Timber Specimen Library</h4>
+              <p class="text-[11px] text-stone-300">Request physical flitch box samples to your office.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 text-sm">
+              <i class="fa-solid fa-certificate"></i>
+            </span>
+            <div>
+              <h4 class="text-xs font-bold text-white">10-Year Master Warranty</h4>
+              <p class="text-[11px] text-stone-300">Automatic digital warranty registration for all works.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 text-[11px] text-stone-400">
+          Over 1,400 completed architectural commissions across North America.
+        </div>
+      </div>
+
+      <!-- Right Column: Registration Form -->
+      <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center">
+        
+        <div class="mb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 block mb-1">Create Account</span>
+          <h1 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100">
+            Register with TimberCraft
+          </h1>
+          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">
+            Fill in your details below to activate your client portal access.
+          </p>
+        </div>
+
+        <!-- Registration Form with Validation -->
+        <form id="registerForm" novalidate class="space-y-4">
+          
+          <!-- Account Type Radio Buttons -->
+          <div>
+            <label class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1.5">
+              Account Type <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/80 cursor-pointer text-xs font-semibold text-stone-800 dark:text-stone-200 hover:border-amber-500 transition-colors">
+                <input type="radio" name="accountType" value="residential" checked class="text-amber-600 focus:ring-amber-500">
+                <span>Residential Client</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/80 cursor-pointer text-xs font-semibold text-stone-800 dark:text-stone-200 hover:border-amber-500 transition-colors">
+                <input type="radio" name="accountType" value="commercial" class="text-amber-600 focus:ring-amber-500">
+                <span>Architect / GC</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Full Name Input -->
+          <div>
+            <label for="regName" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
+              Full Name <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
+                <i class="fa-regular fa-user"></i>
+              </span>
+              <input type="text" id="regName" required placeholder="Marcus Vance"
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+            </div>
+            <p id="nameError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+          </div>
+
+          <!-- Email Input -->
+          <div>
+            <label for="regEmail" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
+              Email Address <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
+                <i class="fa-regular fa-envelope"></i>
+              </span>
+              <input type="email" id="regEmail" required placeholder="contact@studio.com"
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+            </div>
+            <p id="emailError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+          </div>
+
+          <!-- Phone Number Input -->
+          <div>
+            <label for="regPhone" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
+              Phone Number <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <input type="tel" id="regPhone" required placeholder="+1 (555) 000-0000"
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+            </div>
+            <p id="phoneError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+          </div>
+
+          <!-- Password Input -->
+          <div>
+            <label for="regPassword" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
+              Create Password <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <input type="password" id="regPassword" required placeholder="Min. 8 characters"
+                     class="w-full pl-10 pr-11 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+              <button type="button" id="toggleRegPasswordBtn" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-stone-400 hover:text-amber-600 transition-colors" aria-label="Toggle password visibility">
+                <i class="fa-regular fa-eye text-sm" id="toggleRegEyeIcon"></i>
+              </button>
+            </div>
+            <!-- Password Strength Bar -->
+            <div class="mt-1.5 flex items-center gap-1.5">
+              <div class="h-1 flex-1 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+                <div id="strengthBar" class="h-full w-0 transition-all duration-300 bg-red-500"></div>
+              </div>
+              <span id="strengthText" class="text-[10px] font-bold text-stone-400 w-16 text-right">Weak</span>
+            </div>
+            <p id="passwordError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+          </div>
+
+          <!-- Confirm Password Input -->
+          <div>
+            <label for="regConfirmPassword" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
+              Confirm Password <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
+                <i class="fa-solid fa-shield-halved"></i>
+              </span>
+              <input type="password" id="regConfirmPassword" required placeholder="Re-enter password"
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+            </div>
+            <p id="confirmError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div>
+            <label class="flex items-start gap-2 text-xs text-stone-600 dark:text-stone-400 cursor-pointer">
+              <input type="checkbox" id="regTerms" class="w-4 h-4 mt-0.5 rounded border-stone-300 text-amber-600 focus:ring-amber-500 dark:bg-stone-800 dark:border-stone-700">
+              <span>I agree to TimberCraft's <a href="#" class="text-amber-600 dark:text-amber-400 hover:underline">Terms of Service</a> & <a href="#" class="text-amber-600 dark:text-amber-400 hover:underline">Privacy Policy</a>.</span>
+            </label>
+            <p id="termsError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitRegisterBtn" class="w-full btn-primary py-3 text-sm flex items-center justify-center gap-2 shadow-lg mt-2">
+            <span>Create TimberCraft Account</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+
+        </form>
+
+        <div class="mt-6 text-center text-xs text-stone-500 dark:text-stone-400">
+          Already have an account?
+          <a href="login.html" class="font-bold text-amber-600 dark:text-amber-400 hover:underline ml-1">
+            Sign In Here &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 dark:bg-black border-t border-stone-800 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-stone-500">
+      <p>&copy; 2026 TimberCraft Interior Joinery & Woodwork Contractor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Registration form client-side validation logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('registerForm');
+      const nameInput = document.getElementById('regName');
+      const emailInput = document.getElementById('regEmail');
+      const phoneInput = document.getElementById('regPhone');
+      const passwordInput = document.getElementById('regPassword');
+      const confirmInput = document.getElementById('regConfirmPassword');
+      const termsCheckbox = document.getElementById('regTerms');
+      
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const phoneError = document.getElementById('phoneError');
+      const passwordError = document.getElementById('passwordError');
+      const confirmError = document.getElementById('confirmError');
+      const termsError = document.getElementById('termsError');
+
+      const strengthBar = document.getElementById('strengthBar');
+      const strengthText = document.getElementById('strengthText');
+      const toggleRegPasswordBtn = document.getElementById('toggleRegPasswordBtn');
+      const toggleRegEyeIcon = document.getElementById('toggleRegEyeIcon');
+      const submitBtn = document.getElementById('submitRegisterBtn');
+
+      // Toggle password visibility
+      toggleRegPasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        confirmInput.type = isPassword ? 'text' : 'password';
+        toggleRegEyeIcon.classList.toggle('fa-eye', !isPassword);
+        toggleRegEyeIcon.classList.toggle('fa-eye-slash', isPassword);
+      });
+
+      // Live Password Strength Meter
+      passwordInput.addEventListener('input', () => {
+        const val = passwordInput.value;
+        clearError(passwordInput, passwordError);
+        let score = 0;
+        if (val.length >= 8) score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+
+        if (val.length === 0) {
+          strengthBar.style.width = '0%';
+          strengthText.textContent = 'Weak';
+          strengthText.className = 'text-[10px] font-bold text-stone-400 w-16 text-right';
+        } else if (score <= 1) {
+          strengthBar.style.width = '25%';
+          strengthBar.className = 'h-full transition-all duration-300 bg-red-500';
+          strengthText.textContent = 'Weak';
+          strengthText.className = 'text-[10px] font-bold text-red-500 w-16 text-right';
+        } else if (score === 2) {
+          strengthBar.style.width = '50%';
+          strengthBar.className = 'h-full transition-all duration-300 bg-amber-500';
+          strengthText.textContent = 'Fair';
+          strengthText.className = 'text-[10px] font-bold text-amber-500 w-16 text-right';
+        } else if (score === 3) {
+          strengthBar.style.width = '75%';
+          strengthBar.className = 'h-full transition-all duration-300 bg-lime-500';
+          strengthText.textContent = 'Good';
+          strengthText.className = 'text-[10px] font-bold text-lime-500 w-16 text-right';
+        } else {
+          strengthBar.style.width = '100%';
+          strengthBar.className = 'h-full transition-all duration-300 bg-emerald-500';
+          strengthText.textContent = 'Strong';
+          strengthText.className = 'text-[10px] font-bold text-emerald-500 w-16 text-right';
+        }
+      });
+
+      // Clear input errors in real time
+      nameInput.addEventListener('input', () => clearError(nameInput, nameError));
+      emailInput.addEventListener('input', () => clearError(emailInput, emailError));
+      phoneInput.addEventListener('input', () => clearError(phoneInput, phoneError));
+      confirmInput.addEventListener('input', () => clearError(confirmInput, confirmError));
+      termsCheckbox.addEventListener('change', () => {
+        if (termsCheckbox.checked) termsError.classList.add('hidden');
+      });
+
+      function showError(input, errorEl, msg) {
+        input.classList.add('border-red-500', 'focus:ring-red-500');
+        input.classList.remove('border-stone-300', 'dark:border-stone-700', 'focus:ring-amber-500');
+        errorEl.textContent = msg;
+        errorEl.classList.remove('hidden');
+      }
+
+      function clearError(input, errorEl) {
+        input.classList.remove('border-red-500', 'focus:ring-red-500');
+        input.classList.add('border-stone-300', 'dark:border-stone-700', 'focus:ring-amber-500');
+        errorEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const password = passwordInput.value;
+        const confirm = confirmInput.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+
+        if (!name) {
+          showError(nameInput, nameError, 'Full name is required');
+          isValid = false;
+        }
+
+        if (!email) {
+          showError(emailInput, emailError, 'Email address is required');
+          isValid = false;
+        } else if (!emailRegex.test(email)) {
+          showError(emailInput, emailError, 'Please enter a valid email address');
+          isValid = false;
+        }
+
+        if (!phone) {
+          showError(phoneInput, phoneError, 'Phone number is required');
+          isValid = false;
+        } else if (phone.length < 7 || !phoneRegex.test(phone)) {
+          showError(phoneInput, phoneError, 'Please enter a valid phone number');
+          isValid = false;
+        }
+
+        if (!password) {
+          showError(passwordInput, passwordError, 'Password is required');
+          isValid = false;
+        } else if (password.length < 8) {
+          showError(passwordInput, passwordError, 'Password must be at least 8 characters');
+          isValid = false;
+        }
+
+        if (!confirm) {
+          showError(confirmInput, confirmError, 'Please confirm your password');
+          isValid = false;
+        } else if (password !== confirm) {
+          showError(confirmInput, confirmError, 'Passwords do not match');
+          isValid = false;
+        }
+
+        if (!termsCheckbox.checked) {
+          termsError.textContent = 'You must agree to the Terms of Service';
+          termsError.classList.remove('hidden');
+          isValid = false;
+        }
+
+        if (isValid) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Creating Account...';
+
+          setTimeout(() => {
+            localStorage.setItem('timbercraft_user', JSON.stringify({ email: email, name: name }));
+            if (typeof showToast === 'function') {
+              showToast('Account created successfully! Welcome to TimberCraft Atelier.');
+            }
+            setTimeout(() => {
+              window.location.href = 'dashboard.html';
+            }, 800);
+          }, 1100);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
