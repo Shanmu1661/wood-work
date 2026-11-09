@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cantilever Staircases: Concealed Steel Anchors & Deflection Limits | TimberCraft Journal</title>
+  <meta name="description" content="Architectural joinery guide on engineering floating cantilever staircases with 60mm solid oak treads, concealed structural steel stringers, and structural glass.">
+  <meta name="keywords" content="cantilever staircases, floating stairs joinery, concealed steel stringer, solid oak treads, architectural staircase design">
+  <link rel="canonical" href="https://timbercraftwoodworks.example.com/pages/blog-cantilever-staircases.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              50: '#fdfbf7', 100: '#f9f5ec', 200: '#f0e6d6', 300: '#e4d0b8',
+              400: '#cb9a6e', 500: '#b45309', 600: '#92400e', 700: '#78350f',
+              800: '#451a03', 900: '#23150f',
+            },
+            oak: '#c4884d', walnut: '#1d120c', brass: '#d4af37'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-amber-600 text-white px-4 py-2 rounded shadow-lg">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform">
+          <i class="fa-solid fa-cubes text-xl text-amber-300"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+            TIMBER<span class="text-amber-600">CRAFT</span>
+          </span>
+          <span class="text-[10px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+            Architectural Joinery & Interiors
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
+        <div class="relative group py-2">
+          <a href="index.html" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          <div class="absolute left-0 top-full pt-1.5 w-64 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 rounded-xl shadow-2xl border border-stone-200 dark:border-stone-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors">
+                <div class="w-8 h-8 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Home 1 — Bespoke Residential</span>
+                  <span class="block text-[11px] text-stone-500 dark:text-stone-400 leading-tight">Wardrobes, TV consoles & joinery</span>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors">
+                <div class="w-8 h-8 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Home 2 — Commercial Millwork</span>
+                  <span class="block text-[11px] text-stone-500 dark:text-stone-400 leading-tight">AWI casework, CNC & tender</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
+        <a href="blog.html" class="text-amber-600 dark:text-amber-500 font-semibold transition-colors">Journal</a>
+        <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button type="button" class="dir-toggle-btn px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-globe text-amber-600"></i>
+          <span class="dir-text">RTL</span>
+        </button>
+
+        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 transition-colors" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        </button>
+
+        <a href="booking.html" class="hidden sm:inline-flex btn-primary text-sm py-2.5 px-4 shadow-sm">
+          <span>Book Site Visit</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header / Page Banner -->
+  <section class="page-hero-banner relative py-20 lg:py-24 text-white text-center overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.50)), url('../assets/images/staircases-service.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <img src="../assets/images/staircases-service.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85'" alt="Sculptural floating cantilever staircase in solid oak" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+      <div class="absolute inset-0 bg-stone-950/35"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-stone-950/50"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+      <nav class="flex items-center justify-center gap-2 text-xs text-stone-300 mb-4 drop-shadow">
+        <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <a href="blog.html" class="hover:text-amber-400 transition-colors">Woodcraft Journal</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="text-amber-400 font-semibold">Staircase Architecture</span>
+      </nav>
+
+      <span class="inline-block px-3.5 py-1.5 bg-amber-500/20 text-amber-300 border border-amber-400/40 backdrop-blur-sm rounded-full text-xs font-semibold uppercase tracking-wider mb-4 drop-shadow">
+        Staircase Architecture
+      </span>
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-md">
+        Cantilever Staircases: Concealed Steel Anchors & Deflection Limits
+      </h1>
+      <div class="flex items-center justify-center gap-4 text-xs text-stone-300 drop-shadow">
+        <span>By <strong class="text-white">Marcus Vance</strong> (Master Joiner)</span>
+        <span>•</span>
+        <span>Published Oct 14, 2026</span>
+        <span>•</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-16 bg-stone-50 dark:bg-stone-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Featured Image -->
+      <div class="rounded-2xl overflow-hidden shadow-2xl mb-10 h-80 sm:h-96 bg-stone-900">
+        <img src="../assets/images/staircases-service.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'" alt="Cantilevered floating wooden stairs" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-stone dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 leading-relaxed space-y-6 text-sm sm:text-base">
+        
+        <p class="text-lg font-medium text-stone-900 dark:text-stone-100 leading-relaxed">
+          Cantilevered floating staircases appear to defy gravity, projecting out from sheer plaster walls as individual floating timber slabs. However, what homeowners see as a delicate 60mm solid oak tread is actually the outer skin of an intricate structural steel cantilever system designed to absorb massive point-loads and dynamic foot-traffic vibration without detectable bounce.
+        </p>
+
+        <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mt-8 mb-4">
+          1. The Hidden Structural Spine
+        </h2>
+        <p>
+          Before drywall or timber treads are installed, our engineers fabricate a heavy 150mm x 100mm rectangular hollow section (RHS) steel stringer. This spine is either chemically anchored into a reinforced concrete shear wall or welded between structural steel floor columns. Projecting out from the spine are machined steel box spigots that sleeve deep inside each wooden tread.
+        </p>
+
+        <!-- Technical Comparison Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left text-xs sm:text-sm border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden">
+            <thead class="bg-stone-100 dark:bg-stone-900 font-bold text-stone-900 dark:text-stone-100 uppercase text-[11px]">
+              <tr>
+                <th class="p-3 border-b border-stone-200 dark:border-stone-800">Tread Projection</th>
+                <th class="p-3 border-b border-stone-200 dark:border-stone-800">Internal Steel Spigot</th>
+                <th class="p-3 border-b border-stone-200 dark:border-stone-800">Dynamic Point Load</th>
+                <th class="p-3 border-b border-stone-200 dark:border-stone-800">Deflection at Tip</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200 dark:divide-stone-800">
+              <tr>
+                <td class="p-3 font-bold text-amber-700 dark:text-amber-400">900mm (Standard Villa)</td>
+                <td class="p-3">70x50x6mm Heavy RHS Steel</td>
+                <td class="p-3">300 kg (660 lbs)</td>
+                <td class="p-3 font-semibold text-green-600 dark:text-green-400">&lt; 0.8mm (Virtually imperceptible)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-amber-700 dark:text-amber-400">1,100mm (Grand Residence)</td>
+                <td class="p-3">90x60x8mm High-Tensile Steel</td>
+                <td class="p-3">400 kg (880 lbs)</td>
+                <td class="p-3 text-stone-500">&lt; 1.2mm</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-amber-700 dark:text-amber-400">1,300mm+ (Boutique Hotel)</td>
+                <td class="p-3">Tapered Gusseted Web Assembly</td>
+                <td class="p-3">550 kg (1,210 lbs)</td>
+                <td class="p-3 text-stone-500">&lt; 1.5mm (L/500 code compliant)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mt-8 mb-4">
+          2. 60mm Solid Quarter-Sawn Oak Tread Sleeves
+        </h2>
+        <p>
+          Each wooden tread is hollowed on a 5-axis CNC router with laser-calibrated tolerances of ±0.2mm to slide over the steel spigot like a glove. We exclusively utilize Quarter-Sawn European White Oak or American Walnut. Quarter-sawing aligns vertical growth rings, reducing tangential expansion by over 50% compared to flat-sawn lumber and eliminating squeaks and binding against the steel core.
+        </p>
+
+        <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mt-8 mb-4">
+          3. Recessed 2700K LED Channels & Structural Glass
+        </h2>
+        <p>
+          Every tread features a recessed aluminum extrusion routed flush into the bottom leading edge, housing high-CRI (95+) 2700K warm LED ribbons behind opal polycarbonate diffusers. The balustrade is fabricated from 17.52mm low-iron toughened laminated architectural glass, clamp-fixed with concealed base shoe channels that provide code-compliant lateral guarding without visible stanchions.
+        </p>
+
+        <div class="p-6 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 my-8">
+          <h4 class="font-bold text-stone-900 dark:text-stone-100 text-sm mb-1">
+            <i class="fa-solid fa-lightbulb text-amber-600 mr-1.5"></i> Acoustic Decoupling Secret
+          </h4>
+          <p class="text-xs text-stone-700 dark:text-stone-300">
+            Direct metal-to-timber contact produces transmission creaks over time. At TimberCraft, each internal steel spigot is fitted with a 2mm high-density chloroprene acoustic dampening boot before the timber sleeve is vacuum-pressed into place. This decouples footsteps completely, guaranteeing whisper-quiet ascents.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Author Bio -->
+      <div class="mt-12 p-6 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex items-center gap-5">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Marcus Vance portrait" class="w-16 h-16 rounded-full object-cover ring-2 ring-amber-600">
+        <div>
+          <h4 class="font-serif font-bold text-base text-stone-900 dark:text-stone-100">About Marcus Vance</h4>
+          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+            Marcus is the Founder and Chief Craftsman at TimberCraft. Over 28 years, he has designed and installed more than 1,400 bespoke joinery installations for architectural villas and boutique hotels.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article Action / CTA -->
+      <div class="mt-10 text-center">
+        <a href="booking.html" class="btn-primary">
+          <span>Schedule Staircase Feasibility Survey</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Related Journal Articles Section -->
+  <section class="py-16 bg-stone-100 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Continue Reading</span>
+          <h3 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mt-1">Related Journal Insights</h3>
+        </div>
+        <a href="blog.html" class="mt-4 sm:mt-0 text-xs font-bold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1.5">
+          <span>View All Journal Articles</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Post 5 -->
+        <article class="craft-card rounded-2xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-stone-900">
+              <img src="../assets/images/wine-rooms-service.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80'" alt="Bespoke Sommelier Wine Cellar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-2">Cellar Microclimates</span>
+              <h4 class="font-serif text-base font-bold text-stone-900 dark:text-stone-100 mb-2">
+                <a href="blog-wine-vitrines.html" class="hover:text-amber-600 transition-colors">
+                  Thermal Barriers & Spanish Cedar: Building 55°F Wine Vitrines
+                </a>
+              </h4>
+              <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                Why zero-resin Spanish Cedar, dual magnetic compression gaskets, and triple-glazed Low-E argon panes prevent condensation.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs text-stone-400">
+            <span>Oct 08, 2026</span>
+            <a href="blog-wine-vitrines.html" class="text-amber-600 font-bold hover:underline">Read Article &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="craft-card rounded-2xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-stone-900">
+              <img src="../assets/images/acoustic-paneling-journal.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'" alt="Acoustic Timber Wall Paneling" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-2">Acoustic Engineering</span>
+              <h4 class="font-serif text-base font-bold text-stone-900 dark:text-stone-100 mb-2">
+                <a href="blog-acoustic-slatted-walls.html" class="hover:text-amber-600 transition-colors">
+                  Acoustic Slatted Walls: PET Felt Backing & NRC Absorption
+                </a>
+              </h4>
+              <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                How sequence-matched walnut and oak micro-slats bonded to 9mm PET acoustic felt eliminate room flutter echo.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs text-stone-400">
+            <span>Sep 29, 2026</span>
+            <a href="blog-acoustic-slatted-walls.html" class="text-amber-600 font-bold hover:underline">Read Article &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="craft-card rounded-2xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden bg-stone-900">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Floating TV Media Console" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider block mb-2">Media Console Physics</span>
+              <h4 class="font-serif text-base font-bold text-stone-900 dark:text-stone-100 mb-2">
+                <a href="blog-floating-tv-console.html" class="hover:text-amber-600 transition-colors">
+                  The Anatomy of a 200 lb Floating TV Console
+                </a>
+              </h4>
+              <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                Why French cleat steel hangers, CNC airflow chimneys, and acoustic slat backing are essential for media suites.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs text-stone-400">
+            <span>Oct 24, 2026</span>
+            <a href="blog-floating-tv-console.html" class="text-amber-600 font-bold hover:underline">Read Article &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 dark:bg-black border-t border-stone-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-stone-500">
+      <p>&copy; 2026 TimberCraft Interior Joinery & Woodwork Contractor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
