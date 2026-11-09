@@ -36,30 +36,26 @@
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
-<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col justify-center relative">
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased min-h-screen">
 
-  <!-- Floating Top Return & Utility Controls -->
-  <div class="fixed top-5 left-5 z-30">
-    <a href="index.html" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-stone-900/85 hover:bg-stone-900 backdrop-blur-md border border-stone-800 text-stone-300 hover:text-white hover:border-amber-500/50 text-xs font-semibold transition-all shadow-xl group">
-      <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
-      <span>Back to Home</span>
-    </a>
-  </div>
+<main id="main-content" class="min-h-screen w-full flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <!-- Non-Sticky Top Utility Bar (Scrolls with page content) -->
+    <div class="max-w-4xl w-full mx-auto flex items-center justify-between mb-6 z-10">
+      <a href="index.html" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-stone-900/85 hover:bg-stone-900 border border-stone-800 text-stone-300 hover:text-white hover:border-amber-500/50 text-xs font-semibold transition-all shadow-lg group">
+        <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+        <span>Back to Home</span>
+      </a>
 
-  <div class="fixed top-5 right-5 z-30 flex items-center gap-2">
-    <button type="button" class="dir-toggle-btn px-2.5 py-2 text-xs font-semibold rounded-xl bg-stone-900/85 hover:bg-stone-900 backdrop-blur-md border border-stone-800 text-stone-300 hover:text-white transition-colors flex items-center gap-1.5 shadow-xl" title="Switch Right-to-Left / Left-to-Right">
-      <i class="fa-solid fa-globe text-amber-500"></i>
-      <span class="dir-text">RTL</span>
-    </button>
-    <button type="button" class="theme-toggle-btn w-9 h-9 rounded-xl bg-stone-900/85 hover:bg-stone-900 backdrop-blur-md border border-stone-800 flex items-center justify-center text-stone-300 hover:text-white transition-colors shadow-xl" title="Toggle Theme" aria-label="Toggle theme">
-      <i class="fa-solid fa-moon theme-toggle-icon text-amber-400"></i>
-    </button>
-  </div>
-
-
-  <!-- Main Registration Section -->
-  <main id="main-content" class="min-h-screen w-full flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
+      <div class="flex items-center gap-2">
+        <button type="button" class="dir-toggle-btn px-2.5 py-2 text-xs font-semibold rounded-xl bg-stone-900/85 hover:bg-stone-900 border border-stone-800 text-stone-300 hover:text-white transition-colors flex items-center gap-1.5 shadow-lg" title="Switch Right-to-Left / Left-to-Right">
+          <i class="fa-solid fa-globe text-amber-500"></i>
+          <span class="dir-text">RTL</span>
+        </button>
+        <button type="button" class="theme-toggle-btn w-9 h-9 rounded-xl bg-stone-900/85 hover:bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-white transition-colors shadow-lg" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-amber-400"></i>
+        </button>
+      </div>
+    </div>
     <div class="max-w-4xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-2xl border border-stone-800 bg-stone-900/95 backdrop-blur-xl my-6">
       
       <!-- Left Column: Atelier Benefits (Hidden on Mobile) -->
