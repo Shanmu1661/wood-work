@@ -974,77 +974,98 @@
     <!-- ============================================================== -->
     <!-- 8. ARCHITECTURAL VENEER & HARDWOOD SPECIMEN LIBRARY            -->
     <!-- ============================================================== -->
-    <section class="py-24 bg-stone-50 dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="specimens" class="py-24 relative overflow-hidden text-white border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/specimens-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Clearly Visible Master Carpentry Workshop & Timber Specimen Library Background Image -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/specimens-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85'" alt="Master carpentry timber flitch library and woodworking atelier" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/40"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Sustainable Materials</span>
-          <h2 class="font-serif text-3xl font-bold text-stone-900 dark:text-stone-100 mt-2 mb-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow">Sustainable Materials</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white drop-shadow-md mt-2 mb-4">
             Commercial Hardwood & Architectural Veneer Library
           </h2>
-          <p class="text-stone-600 dark:text-stone-400 text-sm">
-            Select a commercial species below to inspect Janka hardness ratings, grain configurations, and flame spread parameters.
+          <p class="text-stone-200 text-sm drop-shadow max-w-2xl mx-auto">
+            Select an architectural timber flitch species below to inspect Janka hardness ratings, grain configurations, origin traceability, and flame spread parameters.
           </p>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
           
-          <button type="button" class="wood-swatch-item active p-4 rounded-xl bg-white dark:bg-stone-800 border-2 border-amber-600 text-center transition-all" data-wood="walnut" data-name="American Black Walnut" data-hardness="1,010 lbf" data-origin="Appalachian Mountains, USA (FSC)" data-fire="Class A Available" data-use="Executive suites, statement boardroom tables & boutique hotel lounges">
-            <div class="w-14 h-14 mx-auto rounded-full bg-[#3d271d] shadow-inner mb-3 border-2 border-stone-200 dark:border-stone-700"></div>
-            <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Black Walnut</span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400">Sequence Flitch</span>
+          <button type="button" class="wood-swatch-item active p-4 rounded-xl bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border-2 border-amber-500 text-center transition-all shadow-xl group hover:scale-[1.02]" data-wood="walnut" data-name="American Black Walnut" data-hardness="1,010 lbf" data-origin="Appalachian Mountains, USA (FSC)" data-fire="Class A Available" data-use="Executive suites, statement boardroom tables & boutique hotel lounges">
+            <div class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-amber-400/80 shadow-lg relative overflow-hidden ring-2 ring-stone-900/50" style="background: radial-gradient(ellipse at 30% 40%, #5a3825 0%, #3d2417 55%, #23140c 100%);">
+              <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:6px_6px]"></div>
+            </div>
+            <span class="block text-xs font-bold text-white group-hover:text-amber-300 transition-colors">Black Walnut</span>
+            <span class="text-[10px] text-stone-300">Sequence Flitch</span>
           </button>
 
-          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-white dark:bg-stone-800 border-2 border-transparent text-center transition-all" data-wood="oak" data-name="Quarter-Sawn White Oak" data-hardness="1,360 lbf" data-origin="Northern Michigan, USA (FSC)" data-fire="Class A Available" data-use="High-traffic retail flagships, acoustic slat walls & lobby atriums">
-            <div class="w-14 h-14 mx-auto rounded-full bg-[#a8825c] shadow-inner mb-3 border-2 border-stone-200 dark:border-stone-700"></div>
-            <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">White Oak</span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400">Rift & Quartered</span>
+          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border-2 border-transparent hover:border-amber-500/50 text-center transition-all shadow-xl group hover:scale-[1.02]" data-wood="oak" data-name="Quarter-Sawn White Oak" data-hardness="1,360 lbf" data-origin="Northern Michigan, USA (FSC)" data-fire="Class A Available" data-use="High-traffic retail flagships, acoustic slat walls & lobby atriums">
+            <div class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-stone-500/60 group-hover:border-amber-400/80 shadow-lg relative overflow-hidden ring-2 ring-stone-900/50" style="background: repeating-linear-gradient(90deg, #c9a372 0px, #b48e5e 3px, #d5b382 6px, #a88253 10px);">
+              <div class="absolute inset-0 opacity-30 bg-gradient-to-b from-white/20 to-black/30"></div>
+            </div>
+            <span class="block text-xs font-bold text-white group-hover:text-amber-300 transition-colors">White Oak</span>
+            <span class="text-[10px] text-stone-300">Rift & Quartered</span>
           </button>
 
-          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-white dark:bg-stone-800 border-2 border-transparent text-center transition-all" data-wood="eucalyptus" data-name="Smoked Fumed Eucalyptus" data-hardness="1,125 lbf" data-origin="Iberian Peninsula (Sustainably Farmed)" data-fire="Class A Available" data-use="Luxury hospitality lounges, private dining wine rooms & luxury casework">
-            <div class="w-14 h-14 mx-auto rounded-full bg-[#4a3a31] shadow-inner mb-3 border-2 border-stone-200 dark:border-stone-700"></div>
-            <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Smoked Eucalyptus</span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400">Figured Bronze</span>
+          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border-2 border-transparent hover:border-amber-500/50 text-center transition-all shadow-xl group hover:scale-[1.02]" data-wood="eucalyptus" data-name="Smoked Fumed Eucalyptus" data-hardness="1,125 lbf" data-origin="Iberian Peninsula (Sustainably Farmed)" data-fire="Class A Available" data-use="Luxury hospitality lounges, private dining wine rooms & luxury casework">
+            <div class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-stone-500/60 group-hover:border-amber-400/80 shadow-lg relative overflow-hidden ring-2 ring-stone-900/50" style="background: radial-gradient(ellipse at center, #634b3e 0%, #46342a 60%, #2b1f19 100%);">
+              <div class="absolute inset-0 opacity-35 bg-gradient-to-tr from-amber-900/40 via-transparent to-stone-900/60"></div>
+            </div>
+            <span class="block text-xs font-bold text-white group-hover:text-amber-300 transition-colors">Smoked Eucalyptus</span>
+            <span class="text-[10px] text-stone-300">Figured Bronze</span>
           </button>
 
-          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-white dark:bg-stone-800 border-2 border-transparent text-center transition-all" data-wood="teak" data-name="Sustainably Harvested Teak" data-hardness="1,070 lbf" data-origin="Managed Plantations (FSC-C012)" data-fire="Naturally Resistant" data-use="Outdoor terrace pergolas, spa millwork & grand exterior pivot portals">
-            <div class="w-14 h-14 mx-auto rounded-full bg-[#8c5931] shadow-inner mb-3 border-2 border-stone-200 dark:border-stone-700"></div>
-            <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Plantation Teak</span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400">Marine Grade</span>
+          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border-2 border-transparent hover:border-amber-500/50 text-center transition-all shadow-xl group hover:scale-[1.02]" data-wood="teak" data-name="Sustainably Harvested Teak" data-hardness="1,070 lbf" data-origin="Managed Plantations (FSC-C012)" data-fire="Naturally Resistant" data-use="Outdoor terrace pergolas, spa millwork & grand exterior pivot portals">
+            <div class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-stone-500/60 group-hover:border-amber-400/80 shadow-lg relative overflow-hidden ring-2 ring-stone-900/50" style="background: repeating-linear-gradient(45deg, #a86b3a 0px, #8f5427 4px, #bc7e46 8px, #7c4720 12px);">
+              <div class="absolute inset-0 opacity-30 bg-gradient-to-t from-black/40 via-transparent to-amber-200/20"></div>
+            </div>
+            <span class="block text-xs font-bold text-white group-hover:text-amber-300 transition-colors">Plantation Teak</span>
+            <span class="text-[10px] text-stone-300">Marine Grade</span>
           </button>
 
-          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-white dark:bg-stone-800 border-2 border-transparent text-center transition-all" data-wood="maple" data-name="Hard Rock Sugar Maple" data-hardness="1,450 lbf" data-origin="Vermont, USA (PEFC Certified)" data-fire="Class A Available" data-use="Commercial museum cases, retail cash wraps & high-wear hospitality bars">
-            <div class="w-14 h-14 mx-auto rounded-full bg-[#cbb295] shadow-inner mb-3 border-2 border-stone-200 dark:border-stone-700"></div>
-            <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Hard Maple</span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400">Fine Closed Grain</span>
+          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border-2 border-transparent hover:border-amber-500/50 text-center transition-all shadow-xl group hover:scale-[1.02]" data-wood="maple" data-name="Hard Rock Sugar Maple" data-hardness="1,450 lbf" data-origin="Vermont, USA (PEFC Certified)" data-fire="Class A Available" data-use="Commercial museum cases, retail cash wraps & high-wear hospitality bars">
+            <div class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-stone-500/60 group-hover:border-amber-400/80 shadow-lg relative overflow-hidden ring-2 ring-stone-900/50" style="background: radial-gradient(circle at 60% 40%, #e2cfb9 0%, #d1b89e 50%, #ba9e80 100%);">
+              <div class="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(135deg,#fff_0px,#fff_1px,transparent_1px,transparent_4px)]"></div>
+            </div>
+            <span class="block text-xs font-bold text-white group-hover:text-amber-300 transition-colors">Hard Maple</span>
+            <span class="text-[10px] text-stone-300">Fine Closed Grain</span>
           </button>
 
-          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-white dark:bg-stone-800 border-2 border-transparent text-center transition-all" data-wood="ash" data-name="Ebonized American White Ash" data-hardness="1,320 lbf" data-origin="Ohio River Valley, USA" data-fire="Class A Available" data-use="Michelin-star restaurant dark room dividers, modern boutique vitrines">
-            <div class="w-14 h-14 mx-auto rounded-full bg-[#201d1c] shadow-inner mb-3 border-2 border-stone-200 dark:border-stone-700"></div>
-            <span class="block text-xs font-bold text-stone-900 dark:text-stone-100">Ebonized Ash</span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400">Matte Open Grain</span>
+          <button type="button" class="wood-swatch-item p-4 rounded-xl bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border-2 border-transparent hover:border-amber-500/50 text-center transition-all shadow-xl group hover:scale-[1.02]" data-wood="ash" data-name="Ebonized American White Ash" data-hardness="1,320 lbf" data-origin="Ohio River Valley, USA" data-fire="Class A Available" data-use="Michelin-star restaurant dark room dividers, modern boutique vitrines">
+            <div class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-stone-500/60 group-hover:border-amber-400/80 shadow-lg relative overflow-hidden ring-2 ring-stone-900/50" style="background: repeating-linear-gradient(90deg, #2e2826 0px, #1a1716 3px, #3b3533 6px, #141211 9px);">
+              <div class="absolute inset-0 opacity-40 bg-gradient-to-r from-stone-950 via-transparent to-stone-900"></div>
+            </div>
+            <span class="block text-xs font-bold text-white group-hover:text-amber-300 transition-colors">Ebonized Ash</span>
+            <span class="text-[10px] text-stone-300">Matte Open Grain</span>
           </button>
 
         </div>
 
         <!-- Dynamic Specimen Display Panel -->
-        <div id="swatchDetailCard" class="bg-white dark:bg-stone-800 p-6 sm:p-8 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-lg">
+        <div id="swatchDetailCard" class="bg-stone-950/60 hover:bg-stone-950/75 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-stone-600/50 shadow-2xl transition-all">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
             <div>
-              <span class="text-xs uppercase tracking-wider text-amber-600 dark:text-amber-400 font-bold">Active Specimen</span>
-              <h3 id="swatchWoodName" class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100">American Black Walnut</h3>
+              <span class="text-xs uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5 mb-1">
+                <i class="fa-solid fa-tree text-amber-400"></i> Active Specimen
+              </span>
+              <h3 id="swatchWoodName" class="font-serif text-2xl font-bold text-white">American Black Walnut</h3>
             </div>
             <div>
-              <span class="text-xs text-stone-500 dark:text-stone-400 block">Janka Hardness Rating</span>
-              <strong id="swatchHardness" class="text-base text-stone-900 dark:text-stone-100 font-mono">1,010 lbf (Commercial Grade)</strong>
+              <span class="text-xs text-stone-300 block mb-1">Janka Hardness Rating</span>
+              <strong id="swatchHardness" class="text-base text-amber-300 font-mono">1,010 lbf (Commercial Grade)</strong>
             </div>
             <div>
-              <span class="text-xs text-stone-500 dark:text-stone-400 block">Flame Retardant / Fire Spread</span>
-              <strong id="swatchFire" class="text-base text-stone-900 dark:text-stone-100 font-mono">ASTM E84 Class-A Compliant</strong>
+              <span class="text-xs text-stone-300 block mb-1">Flame Retardant / Fire Spread</span>
+              <strong id="swatchFire" class="text-base text-amber-300 font-mono">ASTM E84 Class-A Compliant</strong>
             </div>
             <div>
-              <span class="text-xs text-stone-500 dark:text-stone-400 block">Primary Commercial Application</span>
-              <strong id="swatchUse" class="text-xs text-stone-700 dark:text-stone-300">Executive suites & boardroom tables</strong>
+              <span class="text-xs text-stone-300 block mb-1">Primary Commercial Application</span>
+              <strong id="swatchUse" class="text-xs text-stone-200 leading-relaxed block">Executive suites, statement boardroom tables & boutique hotel lounges</strong>
             </div>
           </div>
         </div>
@@ -1584,10 +1605,10 @@
       woodSwatches.forEach(swatch => {
         swatch.addEventListener('click', () => {
           woodSwatches.forEach(s => {
-            s.classList.remove('active', 'border-amber-600');
+            s.classList.remove('active', 'border-amber-500', 'border-amber-600');
             s.classList.add('border-transparent');
           });
-          swatch.classList.add('active', 'border-amber-600');
+          swatch.classList.add('active', 'border-amber-500');
           swatch.classList.remove('border-transparent');
 
           if (swatchName) swatchName.textContent = swatch.dataset.name;
