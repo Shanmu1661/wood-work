@@ -80,8 +80,39 @@
       </a>
 
       <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
-        <a href="index.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home</a>
-        <a href="home-2.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home 2</a>
+        <!-- Home Dropdown Menu -->
+        <div class="relative group py-2">
+          <a href="index.html" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          
+          <!-- Dropdown Menu -->
+          <div class="absolute left-0 top-full pt-1.5 w-64 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 rounded-xl shadow-2xl border border-stone-200 dark:border-stone-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors group/item">
+                <div class="w-8 h-8 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center shrink-0 text-sm mt-0.5 group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400">
+                  <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-stone-900 dark:text-stone-100 group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400">Home 1 — Bespoke Residential</span>
+                  <span class="block text-[11px] text-stone-500 dark:text-stone-400 leading-tight">Wardrobes, TV consoles & joinery</span>
+                </div>
+              </a>
+              
+              <a href="home-2.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors group/item">
+                <div class="w-8 h-8 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center shrink-0 text-sm mt-0.5 group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-stone-900 dark:text-stone-100 group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400">Home 2 — Commercial Millwork</span>
+                  <span class="block text-[11px] text-stone-500 dark:text-stone-400 leading-tight">AWI contract casework, CNC & tender</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <a href="about.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">About Us</a>
         <a href="services.html" class="text-amber-600 dark:text-amber-500 font-semibold transition-colors">Services</a>
         <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
