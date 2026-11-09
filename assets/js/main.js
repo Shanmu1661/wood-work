@@ -275,6 +275,8 @@ function initLightbox() {
 
   lightboxItems.forEach((el, index) => {
     el.addEventListener('click', e => {
+      // If clicking an explicit link (e.g. View Case Study button), don't block navigation
+      if (e.target.closest('a')) return;
       e.preventDefault();
       openLightbox(index);
     });
@@ -287,11 +289,21 @@ function initLightbox() {
     const title = item.getAttribute('data-lightbox-title') || 'TimberCraft Joinery';
     const desc = item.getAttribute('data-lightbox-desc') || 'Custom Interior Carpentry';
     const species = item.getAttribute('data-lightbox-species') || 'Hardwood & Natural Veneer';
+    const caseStudy = item.getAttribute('data-case-study');
+    const caseStudyBtn = document.getElementById('lightboxCaseStudyBtn');
 
     modalImg.src = src;
     if (modalTitle) modalTitle.textContent = title;
     if (modalDesc) modalDesc.textContent = desc;
     if (modalSpecies) modalSpecies.textContent = `Wood: ${species}`;
+    if (caseStudyBtn) {
+      if (caseStudy) {
+        caseStudyBtn.href = caseStudy;
+        caseStudyBtn.classList.remove('hidden');
+      } else {
+        caseStudyBtn.classList.add('hidden');
+      }
+    }
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
