@@ -422,3 +422,48 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     padding-bottom: 5rem;
   }
 }
+
+/* Global Text Highlight Selection */
+::selection {
+  background-color: #d97706;
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: #d97706;
+  color: #ffffff;
+}
+
+/* Commercial Estimator Sector Button Active & Hover State (High Visibility) */
+.sector-btn {
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(28, 25, 23, 0.85) !important;
+  border: 1.5px solid rgba(120, 113, 108, 0.45) !important;
+  color: #e7e5e4 !important; /* stone-200 */
+}
+.sector-btn i {
+  color: #f59e0b !important; /* amber-500 */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.sector-btn:hover {
+  border-color: #f59e0b !important;
+  background-color: rgba(41, 37, 36, 0.95) !important;
+  color: #ffffff !important;
+}
+.sector-btn:hover i {
+  transform: scale(1.1);
+  color: #fbbf24 !important;
+}
+.sector-btn.active-sector {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+  border-color: #fbbf24 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.45), 0 0 0 1px rgba(251, 191, 36, 0.5) !important;
+}
+.sector-btn.active-sector i {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}

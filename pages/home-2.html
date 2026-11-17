@@ -669,22 +669,22 @@
                   1. Project Sector
                 </label>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="sectorButtons">
-                  <button type="button" class="sector-btn px-3 py-2 text-xs font-semibold rounded-lg border border-amber-600 bg-amber-500/20 text-amber-300 text-center transition-all" data-sector="corporate" data-multiplier="1.15">
+                  <button type="button" class="sector-btn active-sector px-3 py-2 text-xs font-bold rounded-lg text-center transition-all" data-sector="corporate" data-multiplier="1.15">
                     <i class="fa-solid fa-briefcase block mb-1 text-sm"></i> Corporate Office
                   </button>
-                  <button type="button" class="sector-btn px-3 py-2 text-xs font-semibold rounded-lg border border-stone-700 hover:border-amber-500 bg-stone-800/80 text-stone-200 text-center transition-all" data-sector="hospitality" data-multiplier="1.30">
+                  <button type="button" class="sector-btn px-3 py-2 text-xs font-medium rounded-lg text-center transition-all" data-sector="hospitality" data-multiplier="1.30">
                     <i class="fa-solid fa-hotel block mb-1 text-sm"></i> Hotel & Lounge
                   </button>
-                  <button type="button" class="sector-btn px-3 py-2 text-xs font-semibold rounded-lg border border-stone-700 hover:border-amber-500 bg-stone-800/80 text-stone-200 text-center transition-all" data-sector="retail" data-multiplier="1.20">
+                  <button type="button" class="sector-btn px-3 py-2 text-xs font-medium rounded-lg text-center transition-all" data-sector="retail" data-multiplier="1.20">
                     <i class="fa-solid fa-store block mb-1 text-sm"></i> Luxury Retail
                   </button>
-                  <button type="button" class="sector-btn px-3 py-2 text-xs font-semibold rounded-lg border border-stone-700 hover:border-amber-500 bg-stone-800/80 text-stone-200 text-center transition-all" data-sector="restaurant" data-multiplier="1.25">
+                  <button type="button" class="sector-btn px-3 py-2 text-xs font-medium rounded-lg text-center transition-all" data-sector="restaurant" data-multiplier="1.25">
                     <i class="fa-solid fa-utensils block mb-1 text-sm"></i> Fine Dining
                   </button>
-                  <button type="button" class="sector-btn px-3 py-2 text-xs font-semibold rounded-lg border border-stone-700 hover:border-amber-500 bg-stone-800/80 text-stone-200 text-center transition-all" data-sector="residential" data-multiplier="1.40">
+                  <button type="button" class="sector-btn px-3 py-2 text-xs font-medium rounded-lg text-center transition-all" data-sector="residential" data-multiplier="1.40">
                     <i class="fa-solid fa-house-chimney block mb-1 text-sm"></i> Multi-Unit Luxury
                   </button>
-                  <button type="button" class="sector-btn px-3 py-2 text-xs font-semibold rounded-lg border border-stone-700 hover:border-amber-500 bg-stone-800/80 text-stone-200 text-center transition-all" data-sector="civic" data-multiplier="1.10">
+                  <button type="button" class="sector-btn px-3 py-2 text-xs font-medium rounded-lg text-center transition-all" data-sector="civic" data-multiplier="1.10">
                     <i class="fa-solid fa-landmark block mb-1 text-sm"></i> Civic / Museum
                   </button>
                 </div>
@@ -1632,11 +1632,9 @@
         sectorBtns.forEach(btn => {
           btn.addEventListener('click', () => {
             sectorBtns.forEach(b => {
-              b.classList.remove('border-amber-600', 'bg-amber-50', 'dark:bg-amber-950/40', 'text-amber-700', 'dark:text-amber-400');
-              b.classList.add('border-stone-300', 'dark:border-stone-700', 'text-stone-700', 'dark:text-stone-300');
+              b.classList.remove('active-sector');
             });
-            btn.classList.add('border-amber-600', 'bg-amber-50', 'dark:bg-amber-950/40', 'text-amber-700', 'dark:text-amber-400');
-            btn.classList.remove('border-stone-300', 'dark:border-stone-700', 'text-stone-700', 'dark:text-stone-300');
+            btn.classList.add('active-sector');
 
             currentSectorMultiplier = parseFloat(btn.dataset.multiplier) || 1.15;
             currentSectorName = btn.innerText.trim();
