@@ -123,45 +123,7 @@
         <button id="menuToggle" type="button" class="lg:hidden w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500 shrink-0" aria-label="Open mobile menu" aria-expanded="false">
           <i class="fa-solid fa-bars text-sm sm:text-lg"></i>
         </button>
-      </div>
-    </div>
-
-    <!-- Category Filter Bar ("KEEP THIS LABEL HEADINGS BELOW THE HEADER PART") -->
-    <div class="border-t border-stone-200/50 dark:border-stone-800/70 bg-stone-900/90 dark:bg-stone-950/95 backdrop-blur-md py-2 px-3 sm:px-6 overflow-x-auto no-scrollbar">
-      <div class="max-w-7xl mx-auto flex items-center justify-start md:justify-center gap-2 sm:gap-2.5 min-w-max">
-        <button type="button" class="gallery-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-amber-600 text-white shadow-md" data-filter="all">
-          All Works (12)
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="wardrobes">
-          <i class="fa-solid fa-door-closed text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>Wardrobes</span>
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="tv-units">
-          <i class="fa-solid fa-tv text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>TV Consoles</span>
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="doors">
-          <i class="fa-solid fa-archway text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>Pivot Doors</span>
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="paneling">
-          <i class="fa-solid fa-bars text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>Wall Paneling</span>
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="kitchens">
-          <i class="fa-solid fa-utensils text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>Kitchens</span>
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="staircases">
-          <i class="fa-solid fa-stairs text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>Staircases</span>
-        </button>
-        <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="wine-rooms">
-          <i class="fa-solid fa-wine-glass text-amber-400 group-hover:text-white transition-colors"></i>
-          <span>Wine Cellars</span>
-        </button>
-      </div>
-    </div>
+      </div></div>
   </header>
 
   <!-- Mobile Drawer -->
@@ -226,39 +188,48 @@
         </span>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white drop-shadow-md">
           Architectural Woodwork in Residence
-        </h1>
-        <p class="text-base sm:text-lg text-stone-200 max-w-2xl mx-auto leading-relaxed drop-shadow mb-6">
+        </h1>        <p class="text-base sm:text-lg text-stone-200 max-w-2xl mx-auto leading-relaxed drop-shadow">
           Explore our completed interior joinery commissions across luxury residences. Click any image to launch the high-resolution lightbox with wood species and technical hardware specifications.
         </p>
+      </div>
+    </section>
 
-        <!-- Category Filter Buttons -->
-        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4">
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-amber-600 text-white shadow-lg" data-filter="all">
+    <!-- Category Filter Bar (Positioned Directly Below the Banner Section) -->
+    <section class="py-3.5 bg-stone-900 border-b border-stone-800/80 sticky top-16 sm:top-20 z-30 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto no-scrollbar">
+        <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-2.5 min-w-max py-1">
+          <button type="button" class="gallery-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-amber-600 text-white shadow-md" data-filter="all">
             All Works (12)
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="wardrobes">
-            Wardrobes
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="wardrobes">
+            <i class="fa-solid fa-door-closed text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>Wardrobes</span>
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="tv-units">
-            TV Consoles
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="tv-units">
+            <i class="fa-solid fa-tv text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>TV Consoles</span>
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="doors">
-            Pivot Doors
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="doors">
+            <i class="fa-solid fa-archway text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>Pivot Doors</span>
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="paneling">
-            Wall Paneling
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="paneling">
+            <i class="fa-solid fa-bars text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>Wall Paneling</span>
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="kitchens">
-            Kitchens
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="kitchens">
+            <i class="fa-solid fa-utensils text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>Kitchens</span>
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="staircases">
-            Staircases
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="staircases">
+            <i class="fa-solid fa-stairs text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>Staircases</span>
           </button>
-          <button type="button" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-bold transition-all bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-600/50 text-stone-200" data-filter="wine-rooms">
-            Wine Cellars
+          <button type="button" class="gallery-filter-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-950/80 hover:bg-amber-600 text-stone-200 hover:text-white border border-stone-700/60 transition-all shadow-sm group" data-filter="wine-rooms">
+            <i class="fa-solid fa-wine-glass text-amber-400 group-hover:text-white transition-colors"></i>
+            <span>Wine Cellars</span>
           </button>
         </div>
-
       </div>
     </section>
 
