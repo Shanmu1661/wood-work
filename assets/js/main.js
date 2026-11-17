@@ -226,11 +226,16 @@ function initGalleryFilter() {
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => {
-        b.classList.remove('bg-amber-700', 'text-white', 'shadow-md');
-        b.classList.add('bg-stone-100', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
+        b.classList.remove('bg-amber-700', 'bg-amber-600', 'text-white', 'shadow-md', 'shadow-lg');
+        b.classList.add('text-stone-200');
+        if (b.classList.contains('bg-stone-950/80') || b.closest('.nav-glass')) {
+          b.classList.add('bg-stone-950/80');
+        } else {
+          b.classList.add('bg-stone-100', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
+        }
       });
-      btn.classList.add('bg-amber-700', 'text-white', 'shadow-md');
-      btn.classList.remove('bg-stone-100', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300');
+      btn.classList.add('bg-amber-600', 'text-white', 'shadow-md');
+      btn.classList.remove('bg-stone-100', 'dark:bg-stone-800', 'text-stone-700', 'dark:text-stone-300', 'bg-stone-950/80');
 
       const filter = btn.getAttribute('data-filter');
 
