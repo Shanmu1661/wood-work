@@ -44,7 +44,7 @@
 
   <!-- Header -->
   <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 h-16 sm:h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none shrink-0 min-w-0">
         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform shrink-0">
           <i class="fa-solid fa-cubes text-base sm:text-xl text-amber-300"></i>
@@ -638,6 +638,89 @@
             <a href="contact.html" class="px-6 py-3 rounded-full bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md border border-stone-500/50 text-white text-sm font-semibold transition-all shadow-lg">
               <i class="fa-solid fa-comments mr-2 text-amber-400"></i> Speak With Master Joiner
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio & Commission FAQ Accordion Section -->
+    <section id="gallery-faq" class="py-20 lg:py-24 relative overflow-hidden text-white border-t border-stone-800" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.65), rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.70)), url('../assets/images/gallery-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/gallery-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=85'" alt="Luxury bespoke residential woodwork installations and architectural portfolio" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/60"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 block mb-2 drop-shadow">Portfolio & Commissioning</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white drop-shadow-md">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-stone-200 text-xs sm:text-sm mt-3 leading-relaxed drop-shadow">
+            Details regarding adapting featured portfolio designs, matching existing architectural finishes, and CAD shop drawing requests.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Can any piece in the portfolio gallery be adapted to my home's room dimensions?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Every project displayed in our gallery was hand-built to custom architectural dimensions. If you admire a specific aesthetic—such as the Bel-Air dressing suite or the Highland Crest floating console—our design team will re-engineer its proportions, carcass divisions, and lighting channels to integrate perfectly into your specific room ceiling height and layout.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Can you match existing hardwood flooring, trim, or antique finishes in my space?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Yes. Our finishing atelier provides custom color-matching laboratory services. Simply provide a physical scrap of flooring, baseboard, or an existing furniture door, and our master finishers will create stepped stain samples on your selected timber species for your approval under daylight and warm LED illumination.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Are all portfolio case study images actual photography of TimberCraft installations?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Yes. 100% of our featured gallery showcases represent authentic private residences, penthouses, and commercial installations completed by our journeymen carpenters and joinery team. Each project can be inspected in detail through its linked case study, detailing timber species, hardware models, and fabrication schedules.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">How can architects and interior designers request high-resolution CAD submittals?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Professional trade partners can create a verified Client Portal account to download BIM/Revit LOD 350 families, AutoCAD DWG joinery details, and full hardware specification schedules for any completed portfolio typology.
+              </p>
+            </div>
           </div>
         </div>
       </div>

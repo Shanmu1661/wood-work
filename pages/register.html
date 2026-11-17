@@ -38,9 +38,9 @@
 </head>
 <body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300 font-sans antialiased min-h-screen">
 
-<main id="main-content" class="min-h-screen w-full flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<main id="main-content" class="min-h-screen w-full flex flex-col items-center justify-center py-6 sm:py-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.70), rgba(12, 10, 9, 0.85)), url('../assets/images/about-facility.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <!-- Non-Sticky Top Utility Bar (Scrolls with page content) -->
-    <div class="max-w-4xl w-full mx-auto flex items-center justify-between mb-6 z-10">
+    <div class="max-w-4xl w-full mx-auto flex items-center justify-between mb-4 z-10">
       <a href="index.html" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-stone-900/85 hover:bg-stone-900 border border-stone-800 text-stone-300 hover:text-white hover:border-amber-500/50 text-xs font-semibold transition-all shadow-lg group">
         <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
         <span>Back to Home</span>
@@ -110,37 +110,37 @@
       </div>
 
       <!-- Right Column: Registration Form -->
-      <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center">
+      <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
         
-        <div class="mb-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 block mb-1">Create Account</span>
+        <div class="mb-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 block mb-1">Create Account</span>
           <div class="flex items-center justify-between">
-            <h1 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100">
+            <h1 class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow-sm">
               Register with TimberCraft
             </h1>
             <a href="index.html" title="TimberCraft Home" class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md hover:rotate-3 transition-transform">
               <i class="fa-solid fa-cubes text-lg text-amber-300"></i>
             </a>
           </div>
-          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">
+          <p class="text-xs text-stone-300 mt-1">
             Fill in your details below to activate your client portal access.
           </p>
         </div>
 
         <!-- Registration Form with Validation -->
-        <form id="registerForm" novalidate class="space-y-4">
+        <form id="registerForm" novalidate class="space-y-3.5">
           
           <!-- Account Type Radio Buttons -->
           <div>
-            <label class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1.5">
-              Account Type <span class="text-red-500">*</span>
+            <label class="block text-xs font-bold text-stone-200 mb-1.5">
+              Account Type <span class="text-amber-500">*</span>
             </label>
             <div class="grid grid-cols-2 gap-3">
-              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/80 cursor-pointer text-xs font-semibold text-stone-800 dark:text-stone-200 hover:border-amber-500 transition-colors">
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-stone-700 bg-stone-800/90 cursor-pointer text-xs font-semibold text-stone-200 hover:border-amber-500 transition-colors">
                 <input type="radio" name="accountType" value="residential" checked class="text-amber-600 focus:ring-amber-500">
                 <span>Residential Client</span>
               </label>
-              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800/80 cursor-pointer text-xs font-semibold text-stone-800 dark:text-stone-200 hover:border-amber-500 transition-colors">
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-stone-700 bg-stone-800/90 cursor-pointer text-xs font-semibold text-stone-200 hover:border-amber-500 transition-colors">
                 <input type="radio" name="accountType" value="commercial" class="text-amber-600 focus:ring-amber-500">
                 <span>Architect / GC</span>
               </label>
@@ -149,96 +149,96 @@
 
           <!-- Full Name Input -->
           <div>
-            <label for="regName" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              Full Name <span class="text-red-500">*</span>
+            <label for="regName" class="block text-xs font-bold text-stone-200 mb-1">
+              Full Name <span class="text-amber-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
                 <i class="fa-regular fa-user"></i>
               </span>
               <input type="text" id="regName" required placeholder="Marcus Vance"
-                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-700 bg-stone-800/90 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder:text-stone-400">
             </div>
-            <p id="nameError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+            <p id="nameError" class="text-[11px] text-red-400 mt-1 hidden"></p>
           </div>
 
           <!-- Email Input -->
           <div>
-            <label for="regEmail" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              Email Address <span class="text-red-500">*</span>
+            <label for="regEmail" class="block text-xs font-bold text-stone-200 mb-1">
+              Email Address <span class="text-amber-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
                 <i class="fa-regular fa-envelope"></i>
               </span>
               <input type="email" id="regEmail" required placeholder="contact@studio.com"
-                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-700 bg-stone-800/90 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder:text-stone-400">
             </div>
-            <p id="emailError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+            <p id="emailError" class="text-[11px] text-red-400 mt-1 hidden"></p>
           </div>
 
           <!-- Phone Number Input -->
           <div>
-            <label for="regPhone" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              Phone Number <span class="text-red-500">*</span>
+            <label for="regPhone" class="block text-xs font-bold text-stone-200 mb-1">
+              Phone Number <span class="text-amber-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
                 <i class="fa-solid fa-phone"></i>
               </span>
               <input type="tel" id="regPhone" required placeholder="+1 (555) 000-0000"
-                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-700 bg-stone-800/90 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder:text-stone-400">
             </div>
-            <p id="phoneError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+            <p id="phoneError" class="text-[11px] text-red-400 mt-1 hidden"></p>
           </div>
 
           <!-- Password Input -->
           <div>
-            <label for="regPassword" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              Create Password <span class="text-red-500">*</span>
+            <label for="regPassword" class="block text-xs font-bold text-stone-200 mb-1">
+              Create Password <span class="text-amber-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
                 <i class="fa-solid fa-lock"></i>
               </span>
               <input type="password" id="regPassword" required placeholder="Min. 8 characters"
-                     class="w-full pl-10 pr-11 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
-              <button type="button" id="toggleRegPasswordBtn" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-stone-400 hover:text-amber-600 transition-colors" aria-label="Toggle password visibility">
+                     class="w-full pl-10 pr-11 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-700 bg-stone-800/90 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder:text-stone-400">
+              <button type="button" id="toggleRegPasswordBtn" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-stone-400 hover:text-amber-400 transition-colors" aria-label="Toggle password visibility">
                 <i class="fa-regular fa-eye text-sm" id="toggleRegEyeIcon"></i>
               </button>
             </div>
             <!-- Password Strength Bar -->
             <div class="mt-1.5 flex items-center gap-1.5">
-              <div class="h-1 flex-1 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+              <div class="h-1 flex-1 bg-stone-700 rounded-full overflow-hidden">
                 <div id="strengthBar" class="h-full w-0 transition-all duration-300 bg-red-500"></div>
               </div>
               <span id="strengthText" class="text-[10px] font-bold text-stone-400 w-16 text-right">Weak</span>
             </div>
-            <p id="passwordError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+            <p id="passwordError" class="text-[11px] text-red-400 mt-1 hidden"></p>
           </div>
 
           <!-- Confirm Password Input -->
           <div>
-            <label for="regConfirmPassword" class="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              Confirm Password <span class="text-red-500">*</span>
+            <label for="regConfirmPassword" class="block text-xs font-bold text-stone-200 mb-1">
+              Confirm Password <span class="text-amber-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400 text-sm">
                 <i class="fa-solid fa-shield-halved"></i>
               </span>
               <input type="password" id="regConfirmPassword" required placeholder="Re-enter password"
-                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-800/80 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all placeholder:text-stone-400">
+                     class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm border border-stone-700 bg-stone-800/90 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder:text-stone-400">
             </div>
-            <p id="confirmError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+            <p id="confirmError" class="text-[11px] text-red-400 mt-1 hidden"></p>
           </div>
 
           <!-- Terms Checkbox -->
           <div>
-            <label class="flex items-start gap-2 text-xs text-stone-600 dark:text-stone-400 cursor-pointer">
-              <input type="checkbox" id="regTerms" class="w-4 h-4 mt-0.5 rounded border-stone-300 text-amber-600 focus:ring-amber-500 dark:bg-stone-800 dark:border-stone-700">
-              <span>I agree to TimberCraft's <a href="#" class="text-amber-600 dark:text-amber-400 hover:underline">Terms of Service</a> & <a href="#" class="text-amber-600 dark:text-amber-400 hover:underline">Privacy Policy</a>.</span>
+            <label class="flex items-start gap-2 text-xs text-stone-300 cursor-pointer">
+              <input type="checkbox" id="regTerms" class="w-4 h-4 mt-0.5 rounded border-stone-700 bg-stone-800 text-amber-600 focus:ring-amber-500">
+              <span>I agree to TimberCraft's <a href="#" class="text-amber-400 hover:underline">Terms of Service</a> & <a href="#" class="text-amber-400 hover:underline">Privacy Policy</a>.</span>
             </label>
-            <p id="termsError" class="text-[11px] text-red-500 mt-1 hidden"></p>
+            <p id="termsError" class="text-[11px] text-red-400 mt-1 hidden"></p>
           </div>
 
           <!-- Submit Button -->
@@ -249,9 +249,9 @@
 
         </form>
 
-        <div class="mt-6 text-center text-xs text-stone-500 dark:text-stone-400">
+        <div class="mt-5 text-center text-xs text-stone-400">
           Already have an account?
-          <a href="login.html" class="font-bold text-amber-600 dark:text-amber-400 hover:underline ml-1">
+          <a href="login.html" class="font-bold text-amber-400 hover:text-amber-300 hover:underline ml-1">
             Sign In Here &rarr;
           </a>
         </div>

@@ -35,6 +35,12 @@ html[dir="rtl"] select.form-input-wood,
 html[dir="rtl"] textarea.form-input-wood {
   text-align: right;
 }
+html[dir="rtl"] select.form-input-wood,
+html[dir="rtl"] select {
+  background-position: left 1.25rem center;
+  padding-right: 1rem !important;
+  padding-left: 3.25rem !important;
+}
 
 /* Toast Notifications in RTL */
 html[dir="rtl"] .wood-toast {

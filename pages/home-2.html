@@ -94,7 +94,7 @@
 
   <!-- Main Navigation Header -->
   <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- Logo -->
       <a href="home-2.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none shrink-0 min-w-0">
@@ -380,25 +380,31 @@
         <p class="text-center text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400 mb-6">
           Contract Millwork Partner to Leading Architecture Studios & General Contractors
         </p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center opacity-70 grayscale hover:grayscale-0 transition-all">
-          <div class="flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 text-lg">
-            <i class="fa-solid fa-drafting-compass text-amber-600"></i> FOSTER & STONE
-          </div>
-          <div class="flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 text-lg">
-            <i class="fa-solid fa-landmark text-amber-600"></i> HIGHLINE GC
-          </div>
-          <div class="flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 text-lg">
-            <i class="fa-solid fa-city text-amber-600"></i> METROPOLITAN
-          </div>
-          <div class="flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 text-lg">
-            <i class="fa-solid fa-hotel text-amber-600"></i> SOVEREIGN LUXE
-          </div>
-          <div class="flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 text-lg">
-            <i class="fa-solid fa-gem text-amber-600"></i> VANGUARD CORP
-          </div>
-          <div class="flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 text-lg">
-            <i class="fa-solid fa-cube text-amber-600"></i> ATELIER ARCH
-          </div>
+        <div id="partnerLogosGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6 items-center justify-items-center">
+          <button type="button" class="partner-logo-btn group px-3.5 py-2.5 rounded-xl border border-transparent hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 text-sm sm:text-base lg:text-lg focus:outline-none" data-partner="Foster & Stone">
+            <i class="fa-solid fa-drafting-compass text-amber-600 transition-transform group-hover:scale-110"></i>
+            <span>FOSTER & STONE</span>
+          </button>
+          <button type="button" class="partner-logo-btn group px-3.5 py-2.5 rounded-xl border border-transparent hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 text-sm sm:text-base lg:text-lg focus:outline-none" data-partner="Highline GC">
+            <i class="fa-solid fa-landmark text-amber-600 transition-transform group-hover:scale-110"></i>
+            <span>HIGHLINE GC</span>
+          </button>
+          <button type="button" class="partner-logo-btn group px-3.5 py-2.5 rounded-xl border border-transparent hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 text-sm sm:text-base lg:text-lg focus:outline-none" data-partner="Metropolitan">
+            <i class="fa-solid fa-city text-amber-600 transition-transform group-hover:scale-110"></i>
+            <span>METROPOLITAN</span>
+          </button>
+          <button type="button" class="partner-logo-btn group px-3.5 py-2.5 rounded-xl border border-transparent hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 text-sm sm:text-base lg:text-lg focus:outline-none" data-partner="Sovereign Luxe">
+            <i class="fa-solid fa-hotel text-amber-600 transition-transform group-hover:scale-110"></i>
+            <span>SOVEREIGN LUXE</span>
+          </button>
+          <button type="button" class="partner-logo-btn group px-3.5 py-2.5 rounded-xl border border-transparent hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 text-sm sm:text-base lg:text-lg focus:outline-none" data-partner="Vanguard Corp">
+            <i class="fa-solid fa-gem text-amber-600 transition-transform group-hover:scale-110"></i>
+            <span>VANGUARD CORP</span>
+          </button>
+          <button type="button" class="partner-logo-btn group px-3.5 py-2.5 rounded-xl border border-transparent hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer flex items-center gap-2 font-serif font-bold text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 text-sm sm:text-base lg:text-lg focus:outline-none" data-partner="Atelier Arch">
+            <i class="fa-solid fa-cube text-amber-600 transition-transform group-hover:scale-110"></i>
+            <span>ATELIER ARCH</span>
+          </button>
         </div>
       </div>
     </section>
@@ -539,7 +545,7 @@
     <!-- ============================================================== -->
     <!-- 4. TECHNICAL SPECIFICATION & COMPLIANCE MATRIX                 -->
     <!-- ============================================================== -->
-    <section id="standards" class="py-24 relative overflow-hidden text-white border-y border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/standards-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section id="standards" class="py-24 relative overflow-hidden text-white border-t border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/standards-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <!-- Clearly Visible Architectural Joinery Blueprints & Engineering Background Image -->
       <div class="absolute inset-0 z-0 pointer-events-none">
         <img src="../assets/images/standards-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=85'" alt="Architectural joinery technical drafting and wood engineering blueprints" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
@@ -630,10 +636,10 @@
     <!-- ============================================================== -->
     <!-- 5. INTERACTIVE COMMERCIAL RFQ ESTIMATOR & SCOPE BUILDER       -->
     <!-- ============================================================== -->
-    <section id="estimator-section" class="py-24 relative overflow-hidden text-white border-y border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/commercial-estimator-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-      <!-- Clearly Visible Commercial Takeoff & Estimating Blueprints Background Image -->
+    <section id="estimator-section" class="py-24 relative overflow-hidden text-white border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/standards-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Matching Architectural Joinery Blueprints & Technical Drafting Background Pattern -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="../assets/images/commercial-estimator-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=85'" alt="Commercial millwork takeoff documents, blueprints and timber flitches" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <img src="../assets/images/standards-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=85'" alt="Commercial millwork takeoff documents, blueprints and timber flitches" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
         <div class="absolute inset-0 bg-stone-950/35"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/40"></div>
       </div>
@@ -885,66 +891,162 @@
     <!-- ============================================================== -->
     <!-- 7. THE 5-STAGE GENERAL CONTRACTOR & ARCHITECT PROTOCOL          -->
     <!-- ============================================================== -->
-    <section class="py-24 relative overflow-hidden text-white border-y border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/protocol-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-      <!-- Clearly Visible 5-Axis CNC & Commercial Woodworking Facility Background Image -->
+    <section id="protocol" class="py-24 relative overflow-hidden text-white border-t border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/specimens-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Master Woodworking Craftsmanship & Timber Engineering Background -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="../assets/images/protocol-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=85'" alt="High-tech 5-axis CNC timber milling machine and 3D laser scanning facility" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
-        <div class="absolute inset-0 bg-stone-950/35"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/40"></div>
+        <img src="../assets/images/specimens-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85'" alt="Master woodworking craftsmanship and timber atelier" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-stone-950/50"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow">Execution Protocol</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-4 text-white drop-shadow-md">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow flex items-center justify-center gap-2">
+            <i class="fa-solid fa-compass-drafting text-amber-400"></i>
+            Execution Protocol
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight mt-2 mb-4 text-white drop-shadow-md">
             From Blueprint Submittal to Turnkey Site Handover
           </h2>
-          <p class="text-stone-200 text-sm drop-shadow">
+          <p class="text-stone-200 text-sm drop-shadow max-w-2xl mx-auto leading-relaxed">
             Our disciplined 5-stage protocol ensures zero on-site delays, eliminated RFIs, and flawless coordination with MEP and GC trades.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <!-- Connecting Process Timeline Stepper Rail (Desktop) -->
+        <div class="relative mb-10 hidden lg:block">
+          <div class="absolute top-1/2 left-10 right-10 h-0.5 bg-gradient-to-r from-amber-600/40 via-amber-500/70 to-amber-600/40 -translate-y-1/2 z-0"></div>
+          <div class="grid grid-cols-5 relative z-10 text-center">
+            <div class="flex flex-col items-center">
+              <span id="stepNode-1" class="w-9 h-9 rounded-full bg-stone-900/90 border-2 border-amber-500/60 text-amber-400 font-bold text-xs flex items-center justify-center shadow-lg backdrop-blur-sm">01</span>
+              <span class="text-[11px] font-semibold text-stone-300 mt-2">Survey</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="stepNode-2" class="w-9 h-9 rounded-full bg-stone-900/90 border-2 border-amber-500/60 text-amber-400 font-bold text-xs flex items-center justify-center shadow-lg backdrop-blur-sm">02</span>
+              <span class="text-[11px] font-semibold text-stone-300 mt-2">BIM LOD</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="stepNode-3" class="w-9 h-9 rounded-full bg-amber-500 border-2 border-white text-stone-950 font-bold text-xs flex items-center justify-center shadow-lg shadow-amber-500/50">03</span>
+              <span class="text-[11px] font-semibold text-amber-300 mt-2">5-Axis CNC</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="stepNode-4" class="w-9 h-9 rounded-full bg-stone-900/90 border-2 border-amber-500/60 text-amber-400 font-bold text-xs flex items-center justify-center shadow-lg backdrop-blur-sm">04</span>
+              <span class="text-[11px] font-semibold text-stone-300 mt-2">Mockup</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="stepNode-5" class="w-9 h-9 rounded-full bg-stone-900/90 border-2 border-amber-500/60 text-amber-400 font-bold text-xs flex items-center justify-center shadow-lg backdrop-blur-sm">05</span>
+              <span class="text-[11px] font-semibold text-stone-300 mt-2">Turnkey</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Interactive Stage Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-5" id="protocolCardsGrid">
           
-          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
-            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors">01</span>
-            <h3 class="font-serif text-base font-bold text-white">3D Laser Site Survey</h3>
-            <p class="text-xs text-stone-300 leading-relaxed">
-              We deploy Faro 3D laser scanners to create million-point clouds of the existing slab, plumb lines, and ceiling elevations.
-            </p>
+          <!-- Stage 01 -->
+          <div class="protocol-stage-card space-y-4 group" data-step="1" data-title="3D Laser Site Survey">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-500/15 border border-amber-500/30 text-amber-300">Phase 01</span>
+              <span class="stage-num font-serif text-3xl font-bold text-stone-400 group-hover:text-amber-400 transition-colors">01</span>
+            </div>
+            <div class="w-11 h-11 rounded-lg bg-stone-900/80 border border-stone-700/80 flex items-center justify-center text-amber-400 text-lg shadow-inner group-hover:border-amber-500/50 group-hover:scale-105 transition-all">
+              <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-white group-hover:text-amber-300 transition-colors">3D Laser Site Survey</h3>
+              <p class="text-xs text-stone-300 leading-relaxed mt-2">
+                We deploy Faro 3D laser scanners to create million-point clouds of the existing slab, plumb lines, and ceiling elevations.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-700/60 flex items-center justify-between text-[11px] text-amber-400/90 font-medium">
+              <span>±0.5mm Point Cloud</span>
+              <i class="fa-solid fa-arrow-right text-[10px] opacity-70 group-hover:translate-x-1 transition-transform"></i>
+            </div>
           </div>
 
-          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
-            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors">02</span>
-            <h3 class="font-serif text-base font-bold text-white">BIM LOD 350+ Modeling</h3>
-            <p class="text-xs text-stone-300 leading-relaxed">
-              Comprehensive Revit submittals, full section details, hardware schedules, and PE-stamped structural anchorage calculations.
-            </p>
+          <!-- Stage 02 -->
+          <div class="protocol-stage-card space-y-4 group" data-step="2" data-title="BIM LOD 350+ Modeling">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-500/15 border border-amber-500/30 text-amber-300">Phase 02</span>
+              <span class="stage-num font-serif text-3xl font-bold text-stone-400 group-hover:text-amber-400 transition-colors">02</span>
+            </div>
+            <div class="w-11 h-11 rounded-lg bg-stone-900/80 border border-stone-700/80 flex items-center justify-center text-amber-400 text-lg shadow-inner group-hover:border-amber-500/50 group-hover:scale-105 transition-all">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-white group-hover:text-amber-300 transition-colors">BIM LOD 350+ Modeling</h3>
+              <p class="text-xs text-stone-300 leading-relaxed mt-2">
+                Comprehensive Revit submittals, full section details, hardware schedules, and PE-stamped structural anchorage calculations.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-700/60 flex items-center justify-between text-[11px] text-amber-400/90 font-medium">
+              <span>Revit BIM + PE Stamp</span>
+              <i class="fa-solid fa-arrow-right text-[10px] opacity-70 group-hover:translate-x-1 transition-transform"></i>
+            </div>
           </div>
 
-          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
-            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors">03</span>
-            <h3 class="font-serif text-base font-bold text-white">5-Axis CNC Milling</h3>
-            <p class="text-xs text-stone-300 leading-relaxed">
-              State-of-the-art Italian CNC milling machines cut flutes, mortises, and curved radius forms to ±0.2mm tolerance.
-            </p>
+          <!-- Stage 03 (Active by default) -->
+          <div class="protocol-stage-card active-protocol-stage space-y-4 group" data-step="3" data-title="5-Axis CNC Milling">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-500/25 border border-amber-500/50 text-amber-300">Phase 03</span>
+              <span class="stage-num font-serif text-3xl font-bold text-amber-400">03</span>
+            </div>
+            <div class="w-11 h-11 rounded-lg bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-300 text-lg shadow-inner group-hover:scale-105 transition-all">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-amber-300 transition-colors">5-Axis CNC Milling</h3>
+              <p class="text-xs text-stone-200 leading-relaxed mt-2">
+                State-of-the-art Italian CNC milling machines cut flutes, mortises, and curved radius forms to ±0.2mm tolerance.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-amber-500/40 flex items-center justify-between text-[11px] text-amber-300 font-medium">
+              <span>±0.2mm Precision Fluting</span>
+              <i class="fa-solid fa-arrow-right text-[10px] opacity-70 group-hover:translate-x-1 transition-transform"></i>
+            </div>
           </div>
 
-          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
-            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors">04</span>
-            <h3 class="font-serif text-base font-bold text-white">Mockup Bench Review</h3>
-            <p class="text-xs text-stone-300 leading-relaxed">
-              Full-scale joinery mockups and finished timber flitches delivered to the architect's office or reviewed at our Portland atelier.
-            </p>
+          <!-- Stage 04 -->
+          <div class="protocol-stage-card space-y-4 group" data-step="4" data-title="Mockup Bench Review">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-500/15 border border-amber-500/30 text-amber-300">Phase 04</span>
+              <span class="stage-num font-serif text-3xl font-bold text-stone-400 group-hover:text-amber-400 transition-colors">04</span>
+            </div>
+            <div class="w-11 h-11 rounded-lg bg-stone-900/80 border border-stone-700/80 flex items-center justify-center text-amber-400 text-lg shadow-inner group-hover:border-amber-500/50 group-hover:scale-105 transition-all">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-white group-hover:text-amber-300 transition-colors">Mockup Bench Review</h3>
+              <p class="text-xs text-stone-300 leading-relaxed mt-2">
+                Full-scale joinery mockups and finished timber flitches delivered to the architect's office or reviewed at our Portland atelier.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-700/60 flex items-center justify-between text-[11px] text-amber-400/90 font-medium">
+              <span>Physical Flitch Mockup</span>
+              <i class="fa-solid fa-arrow-right text-[10px] opacity-70 group-hover:translate-x-1 transition-transform"></i>
+            </div>
           </div>
 
-          <div class="bg-stone-950/50 hover:bg-stone-950/70 backdrop-blur-md border border-stone-600/50 hover:border-amber-500/60 p-6 rounded-xl space-y-3 relative transition-all duration-300 group shadow-2xl">
-            <span class="font-serif text-4xl font-bold text-amber-500/50 group-hover:text-amber-500/90 transition-colors">05</span>
-            <h3 class="font-serif text-base font-bold text-white">Certified Installation</h3>
-            <p class="text-xs text-stone-300 leading-relaxed">
-              OSHA-30 union & non-union installation crews handle white-glove site erection, scribing, and final punch-list commissioning.
-            </p>
+          <!-- Stage 05 -->
+          <div class="protocol-stage-card space-y-4 group" data-step="5" data-title="Certified Installation">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-500/15 border border-amber-500/30 text-amber-300">Phase 05</span>
+              <span class="stage-num font-serif text-3xl font-bold text-stone-400 group-hover:text-amber-400 transition-colors">05</span>
+            </div>
+            <div class="w-11 h-11 rounded-lg bg-stone-900/80 border border-stone-700/80 flex items-center justify-center text-amber-400 text-lg shadow-inner group-hover:border-amber-500/50 group-hover:scale-105 transition-all">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-base font-bold text-white group-hover:text-amber-300 transition-colors">Certified Installation</h3>
+              <p class="text-xs text-stone-300 leading-relaxed mt-2">
+                OSHA-30 union & non-union installation crews handle white-glove site erection, scribing, and final punch-list commissioning.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-700/60 flex items-center justify-between text-[11px] text-amber-400/90 font-medium">
+              <span>Turnkey Commissioning</span>
+              <i class="fa-solid fa-arrow-right text-[10px] opacity-70 group-hover:translate-x-1 transition-transform"></i>
+            </div>
           </div>
 
         </div>
@@ -1336,43 +1438,63 @@
 
         <div class="space-y-4">
           
-          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
-              <span>What is your standard turnaround for commercial shop drawings and submittals?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
+          <!-- FAQ 1 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">What is your standard turnaround for commercial shop drawings and submittals?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
-              Standard commercial submittals (Revit LOD 350 or AutoCAD DWG with full section elevations, joinery details, and hardware schedules) are completed within 7 to 10 business days following receipt of the architectural plan set and site laser survey.
+            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-5 sm:pb-6 leading-relaxed">
+                Standard commercial submittals (Revit LOD 350 or AutoCAD DWG with full section elevations, joinery details, and hardware schedules) are completed within 7 to 10 business days following receipt of the architectural plan set and site laser survey.
+              </p>
             </div>
           </div>
 
-          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
-              <span>Do you fabricate Class-A flame retardant assemblies compliant with ASTM E84?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
+          <!-- FAQ 2 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Do you fabricate Class-A flame retardant assemblies compliant with ASTM E84?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
-              Yes. All our commercial wall cladding, linear ceiling grilles, and executive millwork can be fabricated using Class-A intumescent cores and fire-retardant clear waterborne sealers meeting ASTM E84 Flame Spread Index &lt; 25 and Smoke Developed Index &lt; 450.
+            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-5 sm:pb-6 leading-relaxed">
+                Yes. All our commercial wall cladding, linear ceiling grilles, and executive millwork can be fabricated using Class-A intumescent cores and fire-retardant clear waterborne sealers meeting ASTM E84 Flame Spread Index &lt; 25 and Smoke Developed Index &lt; 450.
+              </p>
             </div>
           </div>
 
-          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
-              <span>Can your installation teams coordinate with union general contractors?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
+          <!-- FAQ 3 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Can your installation teams coordinate with union general contractors?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
-              Yes. TimberCraft maintains certified union carpenter affiliations as well as non-union specialized installation divisions. Our site leads are OSHA-30 certified, carry full \$10M commercial liability policies, and seamlessly integrate into master GC scheduling matrices.
+            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-5 sm:pb-6 leading-relaxed">
+                Yes. TimberCraft maintains certified union carpenter affiliations as well as non-union specialized installation divisions. Our site leads are OSHA-30 certified, carry full $10M commercial liability policies, and seamlessly integrate into master GC scheduling matrices.
+              </p>
             </div>
           </div>
 
-          <div class="rounded-xl border border-stone-600/50 bg-stone-950/60 hover:bg-stone-950/80 backdrop-blur-md p-5 shadow-2xl transition-all duration-300">
-            <button type="button" class="accordion-trigger w-full flex items-center justify-between font-serif text-base sm:text-lg font-bold text-white text-left">
-              <span>Do you provide physical timber finish mockups for architect approval?</span>
-              <i class="fa-solid fa-chevron-down text-xs text-amber-400 transition-transform"></i>
+          <!-- FAQ 4 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Do you provide physical timber finish mockups for architect approval?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
             </button>
-            <div class="accordion-content mt-3 text-xs sm:text-sm text-stone-200 leading-relaxed">
-              Always. Every commercial contract includes full 12" x 12" flitch finish samples, edge profile samples, and full-scale mockups for complex features like curved counters, acoustic baffles, and heavy pivot doors prior to mass shop production.
+            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-5 sm:pb-6 leading-relaxed">
+                Always. Every commercial contract includes full 12" x 12" flitch finish samples, edge profile samples, and full-scale mockups for complex features like curved counters, acoustic baffles, and heavy pivot doors prior to mass shop production.
+              </p>
             </div>
           </div>
 
@@ -1610,6 +1732,67 @@
           rfqForm.reset();
         });
       }
+
+      // 4. Partner Logos Individual Selection Handler
+      const partnerBtns = document.querySelectorAll('.partner-logo-btn');
+      partnerBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isAlreadyActive = btn.classList.contains('active-partner');
+          partnerBtns.forEach(b => {
+            b.classList.remove('active-partner');
+            b.classList.add('opacity-60', 'grayscale');
+          });
+          if (!isAlreadyActive) {
+            btn.classList.add('active-partner');
+            btn.classList.remove('opacity-60', 'grayscale');
+            const name = btn.getAttribute('data-partner') || btn.textContent.trim();
+            if (typeof showToast === 'function') {
+              showToast(`Selected Partner: ${name}`);
+            }
+          }
+        });
+      });
+
+      // 5. Execution Protocol Interactive Stage Selection Handler
+      const protocolCards = document.querySelectorAll('.protocol-stage-card');
+      protocolCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const stepNum = card.getAttribute('data-step');
+          const stepTitle = card.getAttribute('data-title') || 'Execution Stage';
+
+          // Update cards active state
+          protocolCards.forEach(c => {
+            c.classList.remove('active-protocol-stage');
+            const num = c.querySelector('.stage-num');
+            if (num) {
+              num.classList.remove('text-amber-400');
+              num.classList.add('text-stone-400');
+            }
+          });
+          card.classList.add('active-protocol-stage');
+          const activeNum = card.querySelector('.stage-num');
+          if (activeNum) {
+            activeNum.classList.remove('text-stone-400');
+            activeNum.classList.add('text-amber-400');
+          }
+
+          // Update timeline nodes if present
+          for (let i = 1; i <= 5; i++) {
+            const node = document.getElementById(`stepNode-${i}`);
+            if (node) {
+              if (i === parseInt(stepNum)) {
+                node.className = "w-9 h-9 rounded-full bg-amber-500 border-2 border-white text-stone-950 font-bold text-xs flex items-center justify-center shadow-lg shadow-amber-500/50";
+              } else {
+                node.className = "w-9 h-9 rounded-full bg-stone-900/90 border-2 border-amber-500/60 text-amber-400 font-bold text-xs flex items-center justify-center shadow-lg backdrop-blur-sm";
+              }
+            }
+          }
+
+          if (typeof showToast === 'function') {
+            showToast(`Stage 0${stepNum}: ${stepTitle}`);
+          }
+        });
+      });
     });
   </script>
 

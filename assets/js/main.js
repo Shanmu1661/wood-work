@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initCountdown();
   initBackToTop();
+  initCategoryNavSpy();
 });
 
 /* --------------------------------------------------
@@ -410,15 +411,19 @@ function initWoodSwatches() {
   const previewImg = document.getElementById('swatchPreviewImg');
   const previewName = document.getElementById('swatchPreviewName');
   const previewGrain = document.getElementById('swatchPreviewGrain');
-  const previewHardness = document.getElementById('swatchPreviewHardness');
-  const previewUsage = document.getElementById('swatchPreviewUsage');
+  const previewHardness = document.getElementById('swatchPreviewHardness') || document.getElementById('previewHardness');
+  const previewUsage = document.getElementById('swatchPreviewUsage') || document.getElementById('previewUsage');
 
   if (!swatches.length) return;
 
   swatches.forEach(swatch => {
     swatch.addEventListener('click', () => {
-      swatches.forEach(s => s.classList.remove('active', 'ring-2', 'ring-amber-600'));
-      swatch.classList.add('active', 'ring-2', 'ring-amber-600');
+      swatches.forEach(s => {
+        s.classList.remove('active', 'border-amber-500', 'ring-2', 'ring-amber-500', 'ring-amber-600');
+        s.classList.add('border-stone-700/60');
+      });
+      swatch.classList.remove('border-stone-700/60');
+      swatch.classList.add('active', 'border-amber-500', 'ring-2', 'ring-amber-500');
 
       const name = swatch.getAttribute('data-name');
       const grain = swatch.getAttribute('data-grain');
@@ -441,31 +446,49 @@ function initWoodSwatches() {
 function initAccordion() {
   const triggers = document.querySelectorAll('.accordion-trigger');
   triggers.forEach(btn => {
+    const content = btn.nextElementSibling;
+    const isInitiallyOpen = btn.getAttribute('aria-expanded') === 'true';
+    const icon = btn.querySelector('.accordion-icon') || btn.querySelector('i');
+
+    if (!btn.hasAttribute('aria-expanded')) {
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    if (content) {
+      if (isInitiallyOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.style.maxHeight = '0px';
+        content.style.overflow = 'hidden';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
     btn.addEventListener('click', () => {
-      const content = btn.nextElementSibling;
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      const icon = btn.querySelector('.accordion-icon');
+      const currentIcon = btn.querySelector('.accordion-icon') || btn.querySelector('i');
 
       // Close all other accordions in same group if desired
       triggers.forEach(otherBtn => {
         if (otherBtn !== btn) {
           otherBtn.setAttribute('aria-expanded', 'false');
           if (otherBtn.nextElementSibling) {
-            otherBtn.nextElementSibling.style.maxHeight = null;
+            otherBtn.nextElementSibling.style.maxHeight = '0px';
           }
-          const otherIcon = otherBtn.querySelector('.accordion-icon');
+          const otherIcon = otherBtn.querySelector('.accordion-icon') || otherBtn.querySelector('i');
           if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
         }
       });
 
       if (isOpen) {
         btn.setAttribute('aria-expanded', 'false');
-        content.style.maxHeight = null;
-        if (icon) icon.style.transform = 'rotate(0deg)';
+        if (content) content.style.maxHeight = '0px';
+        if (currentIcon) currentIcon.style.transform = 'rotate(0deg)';
       } else {
         btn.setAttribute('aria-expanded', 'true');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        if (icon) icon.style.transform = 'rotate(180deg)';
+        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        if (currentIcon) currentIcon.style.transform = 'rotate(180deg)';
       }
     });
   });
@@ -651,4 +674,53 @@ function initBackToTop() {
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+}
+
+/* --------------------------------------------------
+ * 15. CATEGORY SUB-NAV SCROLL SPY & INTERACTION
+ * -------------------------------------------------- */
+function initCategoryNavSpy() {
+  const pills = document.querySelectorAll('.category-pill');
+  if (!pills.length) return;
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+
+  const sectionIds = Array.from(pills).map(pill => pill.getAttribute('href')).filter(href => href && href.startsWith('#'));
+  const sections = sectionIds.map(id => document.querySelector(id)).filter(Boolean);
+  if (!sections.length) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -65% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = '#' + entry.target.id;
+        pills.forEach(pill => {
+          if (pill.getAttribute('href') === id) {
+            pill.classList.add('active');
+            if (pill.parentElement) {
+              const pillRect = pill.getBoundingClientRect();
+              const containerRect = pill.parentElement.getBoundingClientRect();
+              if (pillRect.left < containerRect.left || pillRect.right > containerRect.right) {
+                pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              }
+            }
+          } else {
+            pill.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
 }

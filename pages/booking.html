@@ -44,7 +44,7 @@
 
   <!-- Header -->
   <header class="sticky top-0 z-40 w-full nav-glass transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 h-16 sm:h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none shrink-0 min-w-0">
         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-md group-hover:rotate-3 transition-transform shrink-0">
           <i class="fa-solid fa-cubes text-base sm:text-xl text-amber-300"></i>
@@ -377,6 +377,89 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- Consultation & 3D Site Survey FAQ Accordion Section -->
+    <section id="booking-faq" class="py-20 lg:py-24 relative overflow-hidden text-white border-t border-stone-800" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.65), rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.70)), url('../assets/images/contact-faq-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/contact-faq-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=85'" alt="3D laser site survey and architectural joinery measurements" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
+        <div class="absolute inset-0 bg-stone-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/60"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 block mb-2 drop-shadow">Booking & Site Survey</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white drop-shadow-md">
+            Consultation FAQs
+          </h2>
+          <p class="text-stone-200 text-xs sm:text-sm mt-3 leading-relaxed drop-shadow">
+            Everything you need to know about preparing for your site measurement, our 3D laser scanning equipment, and proposal deliverables.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Is the initial in-home 3D laser survey completely complimentary?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Yes. Within our standard 50-mile workshop service radius, your private in-home joinery consultation and 3D laser room scan are 100% complimentary with zero purchase commitment. We evaluate your space, inspect electrical socket access, and provide initial feasibility guidance free of charge.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">What preparations are required prior to the joiner's visit?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Simply ensure the target walls or rooms are clear of large obstructions so our Leica laser scanner has an unobstructed line of sight. If you already have architectural drawings, rough appliance dimensions (for kitchens or bars), or Pinterest inspirational mood boards, having them available helps us tailor your 3D concept faster.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">How quickly will I receive my 3D CAD design layout and fixed quote?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Within 48 to 72 hours of our site visit, our technical design team compiles your scan into a full 3D layout rendering with elevations and a line-item fixed-quote proposal. You will review interior drawer configurations, timber grain orientations, and LED lighting layouts before making any financial commitment.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-stone-900/85 hover:bg-stone-900/95 backdrop-blur-md border border-stone-700/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-xl">
+            <button type="button" class="accordion-trigger w-full p-5 sm:p-6 text-left flex items-center justify-between font-semibold text-white text-sm sm:text-base focus:outline-none" aria-expanded="false">
+              <span class="pr-4">Can you coordinate directly with my general contractor or interior designer?</span>
+              <span class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 transition-colors">
+                <i class="fa-solid fa-chevron-down accordion-icon text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-stone-300">
+              <p class="pb-6 leading-relaxed border-t border-stone-800/80 pt-4">
+                Yes. More than 60% of our residential commissions are coordinated directly alongside homeowner-appointed architects, interior designers, and general contractors. We provide full trade-level CAD/Revit submittals, electrical conduit drop specifications, and integrate smoothly into your master construction schedule.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
