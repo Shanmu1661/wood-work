@@ -467,3 +467,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   color: #ffffff !important;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
+
+.accordion-trigger {
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}

@@ -450,36 +450,46 @@ function initWoodSwatches() {
  * -------------------------------------------------- */
 function initAccordion() {
   const triggers = document.querySelectorAll('.accordion-trigger');
+  if (!triggers.length) return;
+
   triggers.forEach(btn => {
+    if (btn.dataset.accordionBound === 'true') return;
+    btn.dataset.accordionBound = 'true';
+
     const content = btn.nextElementSibling;
     const isInitiallyOpen = btn.getAttribute('aria-expanded') === 'true';
     const icon = btn.querySelector('.accordion-icon') || btn.querySelector('i');
 
-    if (!btn.hasAttribute('aria-expanded')) {
-      btn.setAttribute('aria-expanded', 'false');
-    }
-
     if (content) {
       if (isInitiallyOpen) {
-        content.style.maxHeight = content.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = (content.scrollHeight + 40) + 'px';
+        content.classList.remove('max-h-0');
         if (icon) icon.style.transform = 'rotate(180deg)';
       } else {
+        btn.setAttribute('aria-expanded', 'false');
         content.style.maxHeight = '0px';
         content.style.overflow = 'hidden';
+        content.classList.add('max-h-0');
         if (icon) icon.style.transform = 'rotate(0deg)';
       }
     }
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
       const currentIcon = btn.querySelector('.accordion-icon') || btn.querySelector('i');
 
-      // Close all other accordions in same group if desired
-      triggers.forEach(otherBtn => {
+      const parentContainer = btn.closest('.space-y-4') || btn.closest('.space-y-3') || btn.closest('.accordion-group') || document;
+      const groupTriggers = parentContainer.querySelectorAll('.accordion-trigger');
+
+      groupTriggers.forEach(otherBtn => {
         if (otherBtn !== btn) {
           otherBtn.setAttribute('aria-expanded', 'false');
-          if (otherBtn.nextElementSibling) {
-            otherBtn.nextElementSibling.style.maxHeight = '0px';
+          const otherContent = otherBtn.nextElementSibling;
+          if (otherContent) {
+            otherContent.style.maxHeight = '0px';
+            otherContent.classList.add('max-h-0');
           }
           const otherIcon = otherBtn.querySelector('.accordion-icon') || otherBtn.querySelector('i');
           if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
@@ -488,11 +498,17 @@ function initAccordion() {
 
       if (isOpen) {
         btn.setAttribute('aria-expanded', 'false');
-        if (content) content.style.maxHeight = '0px';
+        if (content) {
+          content.style.maxHeight = '0px';
+          content.classList.add('max-h-0');
+        }
         if (currentIcon) currentIcon.style.transform = 'rotate(0deg)';
       } else {
         btn.setAttribute('aria-expanded', 'true');
-        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        if (content) {
+          content.classList.remove('max-h-0');
+          content.style.maxHeight = (content.scrollHeight + 40) + 'px';
+        }
         if (currentIcon) currentIcon.style.transform = 'rotate(180deg)';
       }
     });

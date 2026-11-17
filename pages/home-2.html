@@ -1760,37 +1760,6 @@
         });
       });
 
-      // 6. Robust Commercial FAQ Accordion Toggle Handler
-      const faqTriggers = document.querySelectorAll('#faq .accordion-trigger');
-      faqTriggers.forEach(btn => {
-        const content = btn.nextElementSibling;
-        if (content) {
-          content.style.maxHeight = '0px';
-          content.style.overflow = 'hidden';
-        }
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-
-          faqTriggers.forEach(otherBtn => {
-            otherBtn.setAttribute('aria-expanded', 'false');
-            const otherContent = otherBtn.nextElementSibling;
-            if (otherContent) {
-              otherContent.style.maxHeight = '0px';
-            }
-            const otherIcon = otherBtn.querySelector('.accordion-icon');
-            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-          });
-
-          if (!isExpanded && content) {
-            btn.setAttribute('aria-expanded', 'true');
-            content.style.maxHeight = content.scrollHeight + 'px';
-            const icon = btn.querySelector('.accordion-icon');
-            if (icon) icon.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-
       // 5. Execution Protocol Interactive Stage Selection Handler
       const protocolCards = document.querySelectorAll('.protocol-stage-card');
       protocolCards.forEach(card => {
