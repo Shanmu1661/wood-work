@@ -578,8 +578,8 @@
       </div>
     </section>
 
-    <!-- Master Joinery in Motion Video Showcase Section -->
-    <section id="workshop-video" class="py-20 lg:py-28 bg-stone-950 text-white relative overflow-hidden border-y border-stone-800/80">
+    <!-- Master Furniture Making Video Showcase Section -->
+    <section id="furniture-video" class="py-20 lg:py-28 bg-stone-950 text-white relative overflow-hidden border-y border-stone-800/80">
       <!-- Ambient Lighting & Workshop Atmosphere -->
       <div class="absolute inset-0 pointer-events-none z-0">
         <div class="absolute -top-32 -right-32 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
@@ -592,14 +592,14 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
-            <i class="fa-solid fa-film text-amber-400"></i>
-            <span>Inside The Timber Atelier</span>
+            <i class="fa-solid fa-chair text-amber-400"></i>
+            <span>Bespoke Furniture Making Film</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            Witness Master Joinery <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">In Motion</span>
+            The Art of Making Furniture: <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">From Raw Timber to Heirloom</span>
           </h2>
           <p class="mt-4 text-sm sm:text-base text-stone-300 leading-relaxed max-w-2xl mx-auto">
-            Take a private cinematic journey behind our saw blades, drying kilns, and bench chisels. Discover how raw felled trunks transform into architectural living art.
+            Step into our artisan workshop. Watch master cabinetmakers hand-plane solid American walnut, cut interlocking mortise-and-tenon joints, and hand-oil bespoke luxury credenzas, dining tables, and cabinetry.
           </p>
         </div>
 
@@ -610,139 +610,142 @@
           <div class="relative aspect-video w-full max-h-[580px] bg-black overflow-hidden flex items-center justify-center">
             
             <!-- Poster Image -->
-            <img id="atelierVideoPoster" src="../assets/images/video-showcase-poster.jpg" onerror="this.onerror=null; this.src='../assets/images/workshop-bg.jpg'" alt="Master carpenter hand-planing walnut slab in TimberCraft workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] filter brightness-95">
+            <img id="furnitureVideoPoster" src="../assets/images/video-showcase-poster.jpg" onerror="this.onerror=null; this.src='../assets/images/workshop-bg.jpg'" alt="Master carpenter making bespoke walnut furniture in workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] filter brightness-95">
             
             <!-- Cinematic Vignette Overlay -->
-            <div id="atelierVideoVignette" class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-stone-950/40 pointer-events-none transition-opacity duration-300"></div>
+            <div id="furnitureVideoVignette" class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/25 to-stone-950/45 pointer-events-none transition-opacity duration-300"></div>
 
-            <!-- Embedded HTML5 Video Player -->
-            <video id="atelierVideoPlayer" class="absolute inset-0 w-full h-full object-cover hidden" playsinline controls preload="metadata">
-              <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <!-- YouTube Video Embed Container -->
+            <div id="furnitureIframeWrap" class="absolute inset-0 w-full h-full hidden">
+              <iframe id="furnitureIframe" class="w-full h-full" src="" title="Master Furniture Making Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
 
             <!-- Video Quality & Meta Badges (Top) -->
-            <div id="videoTopBadges" class="absolute top-4 sm:top-6 left-4 sm:left-6 flex items-center gap-2 pointer-events-none z-10 transition-opacity duration-300">
+            <div id="furnitureTopBadges" class="absolute top-4 sm:top-6 left-4 sm:left-6 flex items-center gap-2 pointer-events-none z-10 transition-opacity duration-300">
               <span class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-white tracking-wider flex items-center gap-1.5 shadow-md">
                 <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                4K ULTRA HD
+                4K UHD
               </span>
-              <span class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-stone-300 shadow-md">
-                04:28 MIN
+              <span id="currentFilmDuration" class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-stone-300 shadow-md">
+                18:24 MIN
               </span>
             </div>
 
-            <div id="videoAudioBadge" class="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none z-10 hidden sm:flex items-center gap-2 transition-opacity duration-300">
+            <div id="furnitureAudioBadge" class="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none z-10 hidden sm:flex items-center gap-2 transition-opacity duration-300">
               <span class="px-3 py-1 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/40 text-[11px] font-semibold text-amber-300 shadow-md">
                 <i class="fa-solid fa-volume-high mr-1"></i> Studio Sound
               </span>
             </div>
 
             <!-- Big Pulsing Play Button -->
-            <button id="mainVideoPlayBtn" type="button" aria-label="Play Master Joinery Video" class="absolute inset-0 m-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center shadow-2xl shadow-amber-600/50 hover:scale-110 active:scale-95 transition-all duration-300 z-20 group/btn focus:outline-none cursor-pointer">
+            <button id="mainFurniturePlayBtn" type="button" aria-label="Play Furniture Making Video" class="absolute inset-0 m-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center shadow-2xl shadow-amber-600/50 hover:scale-110 active:scale-95 transition-all duration-300 z-20 group/btn focus:outline-none cursor-pointer">
               <span class="absolute inset-0 rounded-full bg-amber-400/40 animate-ping pointer-events-none"></span>
               <span class="absolute -inset-2 rounded-full border-2 border-amber-400/60 pointer-events-none"></span>
               <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1 text-white group-hover/btn:text-amber-100 transition-colors"></i>
             </button>
 
             <!-- Bottom Floating Description Overlay (Visible over poster) -->
-            <div id="videoPosterBottomBar" class="absolute bottom-0 inset-x-0 p-5 sm:p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 z-10 transition-opacity duration-300 pointer-events-none">
+            <div id="furniturePosterBottomBar" class="absolute bottom-0 inset-x-0 p-5 sm:p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 z-10 transition-opacity duration-300 pointer-events-none">
               <div class="max-w-xl">
-                <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-1">Featured Atelier Film</span>
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">The Living Timber: Handcrafted Precision at 0.5mm</h3>
-                <p class="text-xs sm:text-sm text-stone-300 mt-1 line-clamp-1">Narrated walkthrough of our joinery philosophy, moisture kiln stabilization, and architectural installation.</p>
+                <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-1">Featured Furniture Build</span>
+                <h3 id="currentFilmTitle" class="font-serif text-xl sm:text-2xl font-bold text-white">Sculpted Walnut Credenza & Cabinet Build</h3>
+                <p id="currentFilmDesc" class="text-xs sm:text-sm text-stone-300 mt-1 line-clamp-1">Watch master cabinetmaker shape, dovetail, and hand-oil a luxury sculpted walnut credenza from solid raw timber slabs.</p>
               </div>
               <div class="flex items-center gap-3 pointer-events-auto">
-                <button id="startFilmBtn" type="button" class="btn-primary text-xs sm:text-sm py-2.5 px-5 shadow-lg flex items-center gap-2 cursor-pointer">
+                <button id="startFurnitureFilmBtn" type="button" class="btn-primary text-xs sm:text-sm py-2.5 px-5 shadow-lg flex items-center gap-2 cursor-pointer">
                   <i class="fa-solid fa-play text-xs"></i>
-                  <span>Play Film</span>
+                  <span>Watch Build</span>
                 </button>
               </div>
             </div>
 
           </div>
 
-          <!-- Interactive Video Chapters Strip -->
-          <div class="bg-stone-900 border-t border-stone-800 p-4 sm:p-6 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <!-- Interactive Furniture Film Selector Strip -->
+          <div class="bg-stone-900 border-t border-stone-800 p-4 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
             
-            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="0">
+            <button type="button" class="furniture-film-btn active-film text-left p-3.5 rounded-xl bg-stone-800 border-2 border-amber-500 transition-all group cursor-pointer" data-video-id="Vevw2IOV7CE" data-title="Sculpted Walnut Credenza & Cabinet Build" data-duration="18:24 MIN" data-desc="Watch master cabinetmaker shape, dovetail, and hand-oil a luxury sculpted walnut credenza from solid raw timber slabs.">
               <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span>Chapter 01</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">00:00</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 01: Cabinetry</span>
+                <span class="text-[10px] text-stone-300 bg-stone-950/70 px-2 py-0.5 rounded">18:24</span>
               </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">3D Laser Site Survey</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Capturing wall plumb & ceiling angles</div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Sculpted Walnut Credenza</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Hand-carved curves, dovetails & flush hinges</div>
             </button>
 
-            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="45">
+            <button type="button" class="furniture-film-btn text-left p-3.5 rounded-xl bg-stone-950/60 hover:bg-stone-800 border-2 border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-video-id="lZyRmPfpJ5E" data-title="Solid Hardwood Dining Table Build" data-duration="14:15 MIN" data-desc="Traditional Japanese mortise-and-tenon table joinery, slab flattening, hand-planing, and organic oil buffing.">
               <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span>Chapter 02</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">00:45</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 02: Dining Tables</span>
+                <span class="text-[10px] text-stone-400 bg-stone-950/70 px-2 py-0.5 rounded">14:15</span>
               </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Hardwood Kiln Grading</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">8-10% moisture content calibration</div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Solid Hardwood Dining Table</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Twin tenon joinery & flawless slab flattening</div>
             </button>
 
-            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="90">
+            <button type="button" class="furniture-film-btn text-left p-3.5 rounded-xl bg-stone-950/60 hover:bg-stone-800 border-2 border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-video-id="3cxJXsmIGzY" data-title="Three-Drawer Walnut Console Table" data-duration="16:50 MIN" data-desc="Precision drawer box dovetailing, undermount Blum runners, and hand-rubbed oil satin finish.">
               <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span>Chapter 03</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">01:30</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 03: Consoles</span>
+                <span class="text-[10px] text-stone-400 bg-stone-950/70 px-2 py-0.5 rounded">16:50</span>
               </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Bench Dovetail Joinery</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Traditional mortise-and-tenon assembly</div>
-            </button>
-
-            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="150">
-              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span>Chapter 04</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">02:30</span>
-              </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Hand-Buffed Satin Finish</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Organic hardwax oil application</div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Three-Drawer Walnut Console</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Half-blind dovetails & velvet lined drawers</div>
             </button>
 
           </div>
 
         </div>
 
-        <!-- Workshop Proof Stats Strip -->
+        <!-- 4-Step Furniture Making Process Strip -->
         <div class="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">12,000 sq ft</div>
-            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">Dedicated Millwork Studio</div>
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">01 • Lumber</div>
+            <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">Live-Edge Slab Grading</div>
+            <p class="text-[11px] text-stone-400 mt-1">Kiln-dried 8-10% moisture calibration</p>
           </div>
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">5-Axis CNC</div>
-            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">German Precision Tooling</div>
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">02 • Joinery</div>
+            <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">Hand-Cut Dovetails</div>
+            <p class="text-[11px] text-stone-400 mt-1">Traditional interlocking wood joints</p>
           </div>
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">100% Seasoned</div>
-            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">FSC-Certified Hardwoods</div>
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">03 • Planing</div>
+            <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">Japanese Block Planes</div>
+            <p class="text-[11px] text-stone-400 mt-1">Glass-smooth surface without sanding dust</p>
           </div>
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">10-Year</div>
-            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">Structural Warranty</div>
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">04 • Finishing</div>
+            <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">4-Stage Organic Oil</div>
+            <p class="text-[11px] text-stone-400 mt-1">Hand-buffed satin sheen & grain protection</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Inline Video Controller Script -->
+    <!-- Inline Furniture Video Controller Script -->
     <script>
       (function() {
-        const playBtn = document.getElementById('mainVideoPlayBtn');
-        const startBtn = document.getElementById('startFilmBtn');
-        const video = document.getElementById('atelierVideoPlayer');
-        const poster = document.getElementById('atelierVideoPoster');
-        const vignette = document.getElementById('atelierVideoVignette');
-        const topBadges = document.getElementById('videoTopBadges');
-        const audioBadge = document.getElementById('videoAudioBadge');
-        const bottomBar = document.getElementById('videoPosterBottomBar');
-        const chapterBtns = document.querySelectorAll('.video-chapter-btn');
+        const playBtn = document.getElementById('mainFurniturePlayBtn');
+        const startBtn = document.getElementById('startFurnitureFilmBtn');
+        const iframeWrap = document.getElementById('furnitureIframeWrap');
+        const iframe = document.getElementById('furnitureIframe');
+        const poster = document.getElementById('furnitureVideoPoster');
+        const vignette = document.getElementById('furnitureVideoVignette');
+        const topBadges = document.getElementById('furnitureTopBadges');
+        const audioBadge = document.getElementById('furnitureAudioBadge');
+        const bottomBar = document.getElementById('furniturePosterBottomBar');
+        const filmBtns = document.querySelectorAll('.furniture-film-btn');
+        const titleEl = document.getElementById('currentFilmTitle');
+        const descEl = document.getElementById('currentFilmDesc');
+        const durationEl = document.getElementById('currentFilmDuration');
 
-        function startVideo(seekTime) {
-          if (!video) return;
+        let currentVideoId = 'Vevw2IOV7CE';
+
+        function loadAndPlayFilm(videoId) {
+          if (!iframe || !iframeWrap) return;
+          currentVideoId = videoId || currentVideoId;
+          iframe.src = 'https://www.youtube-nocookie.com/embed/' + currentVideoId + '?autoplay=1&rel=0&modestbranding=1';
+          
           if (poster) poster.classList.add('hidden');
           if (vignette) vignette.classList.add('hidden');
           if (playBtn) playBtn.classList.add('hidden');
@@ -750,26 +753,31 @@
           if (audioBadge) audioBadge.classList.add('hidden');
           if (bottomBar) bottomBar.classList.add('hidden');
 
-          video.classList.remove('hidden');
-          if (typeof seekTime === 'number') {
-            video.currentTime = seekTime;
-          }
-          video.play().catch(function(err) {
-            console.log('Video play triggered:', err);
-          });
+          iframeWrap.classList.remove('hidden');
         }
 
-        if (playBtn) playBtn.addEventListener('click', function() { startVideo(0); });
-        if (startBtn) startBtn.addEventListener('click', function() { startVideo(0); });
+        if (playBtn) playBtn.addEventListener('click', function() { loadAndPlayFilm(currentVideoId); });
+        if (startBtn) startBtn.addEventListener('click', function() { loadAndPlayFilm(currentVideoId); });
 
-        chapterBtns.forEach(function(btn) {
+        filmBtns.forEach(function(btn) {
           btn.addEventListener('click', function() {
-            const time = parseFloat(this.getAttribute('data-timestamp') || '0');
-            chapterBtns.forEach(function(b) {
-              b.classList.remove('border-amber-500', 'bg-stone-800');
+            const vid = this.getAttribute('data-video-id');
+            const title = this.getAttribute('data-title');
+            const desc = this.getAttribute('data-desc');
+            const duration = this.getAttribute('data-duration');
+
+            filmBtns.forEach(function(b) {
+              b.classList.remove('bg-stone-800', 'border-amber-500');
+              b.classList.add('bg-stone-950/60', 'border-stone-800');
             });
-            this.classList.add('border-amber-500', 'bg-stone-800');
-            startVideo(time);
+            this.classList.remove('bg-stone-950/60', 'border-stone-800');
+            this.classList.add('bg-stone-800', 'border-amber-500');
+
+            if (titleEl && title) titleEl.textContent = title;
+            if (descEl && desc) descEl.textContent = desc;
+            if (durationEl && duration) durationEl.textContent = duration;
+
+            loadAndPlayFilm(vid);
           });
         });
       })();
