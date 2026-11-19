@@ -328,9 +328,9 @@
 
         </div>
 
-        <!-- Floating Architectural Guarantee Badge (Desktop Accent) -->
-        <div class="hidden xl:flex absolute right-8 2xl:right-16 bottom-8 items-center gap-3.5 px-4 py-3 rounded-2xl bg-stone-950/80 backdrop-blur-md border border-stone-800/90 shadow-2xl hover:border-amber-500/40 transition-all duration-300 max-w-xs pointer-events-auto">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+        <!-- Floating Architectural Guarantee Badge (Visible on right side on small & large screens) -->
+        <div class="hidden sm:flex absolute right-4 sm:right-6 md:right-8 bottom-6 sm:bottom-8 items-center gap-3 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-2xl bg-stone-950/85 backdrop-blur-md border border-stone-800/90 shadow-2xl hover:border-amber-500/40 transition-all duration-300 max-w-[260px] sm:max-w-xs pointer-events-auto">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
             <i class="fa-solid fa-ruler-combined text-sm"></i>
           </div>
           <div>
@@ -579,7 +579,7 @@
     </section>
 
     <!-- Master Furniture Making Video Showcase Section -->
-    <section id="furniture-video" class="py-20 lg:py-28 bg-stone-950 text-white relative overflow-hidden border-y border-stone-800/80">
+    <section id="furniture-video" class="py-16 sm:py-20 lg:py-24 bg-stone-950 text-white relative overflow-hidden border-y border-stone-800/80">
       <!-- Ambient Lighting & Workshop Atmosphere -->
       <div class="absolute inset-0 pointer-events-none z-0">
         <div class="absolute -top-32 -right-32 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
@@ -589,133 +589,150 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
-            <i class="fa-solid fa-chair text-amber-400"></i>
-            <span>Bespoke Furniture Making Film</span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            The Art of Making Furniture: <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">From Raw Timber to Heirloom</span>
-          </h2>
-          <p class="mt-4 text-sm sm:text-base text-stone-300 leading-relaxed max-w-2xl mx-auto">
-            Step into our artisan workshop. Watch master cabinetmakers hand-plane solid American walnut, cut interlocking mortise-and-tenon joints, and hand-oil bespoke luxury credenzas, dining tables, and cabinetry.
-          </p>
-        </div>
-
-        <!-- Video Player Display Card -->
-        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-stone-700/80 bg-stone-900 group">
+        <!-- 2-Column Split Layout: Left = Content & Film Switcher, Right = Video Player (On Right Side Even on Small Screens sm: & md:) -->
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          <!-- Screen Area with 16:9 Aspect Ratio -->
-          <div class="relative aspect-video w-full max-h-[580px] bg-black overflow-hidden flex items-center justify-center">
+          <!-- Left Column: Copy & Furniture Film Selector -->
+          <div class="sm:col-span-5 md:col-span-5 lg:col-span-5 space-y-6">
             
-            <!-- Poster Image -->
-            <img id="furnitureVideoPoster" src="../assets/images/video-showcase-poster.jpg" onerror="this.onerror=null; this.src='../assets/images/workshop-bg.jpg'" alt="Master carpenter making bespoke walnut furniture in workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] filter brightness-95">
-            
-            <!-- Cinematic Vignette Overlay -->
-            <div id="furnitureVideoVignette" class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/25 to-stone-950/45 pointer-events-none transition-opacity duration-300"></div>
-
-            <!-- YouTube Video Embed Container -->
-            <div id="furnitureIframeWrap" class="absolute inset-0 w-full h-full hidden">
-              <iframe id="furnitureIframe" class="w-full h-full" src="" title="Master Furniture Making Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            <!-- Video Quality & Meta Badges (Top) -->
-            <div id="furnitureTopBadges" class="absolute top-4 sm:top-6 left-4 sm:left-6 flex items-center gap-2 pointer-events-none z-10 transition-opacity duration-300">
-              <span class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-white tracking-wider flex items-center gap-1.5 shadow-md">
-                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                4K UHD
-              </span>
-              <span id="currentFilmDuration" class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-stone-300 shadow-md">
-                18:24 MIN
-              </span>
-            </div>
-
-            <div id="furnitureAudioBadge" class="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none z-10 hidden sm:flex items-center gap-2 transition-opacity duration-300">
-              <span class="px-3 py-1 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/40 text-[11px] font-semibold text-amber-300 shadow-md">
-                <i class="fa-solid fa-volume-high mr-1"></i> Studio Sound
-              </span>
-            </div>
-
-            <!-- Big Pulsing Play Button -->
-            <button id="mainFurniturePlayBtn" type="button" aria-label="Play Furniture Making Video" class="absolute inset-0 m-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center shadow-2xl shadow-amber-600/50 hover:scale-110 active:scale-95 transition-all duration-300 z-20 group/btn focus:outline-none cursor-pointer">
-              <span class="absolute inset-0 rounded-full bg-amber-400/40 animate-ping pointer-events-none"></span>
-              <span class="absolute -inset-2 rounded-full border-2 border-amber-400/60 pointer-events-none"></span>
-              <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1 text-white group-hover/btn:text-amber-100 transition-colors"></i>
-            </button>
-
-            <!-- Bottom Floating Description Overlay (Visible over poster) -->
-            <div id="furniturePosterBottomBar" class="absolute bottom-0 inset-x-0 p-5 sm:p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 z-10 transition-opacity duration-300 pointer-events-none">
-              <div class="max-w-xl">
-                <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-1">Featured Furniture Build</span>
-                <h3 id="currentFilmTitle" class="font-serif text-xl sm:text-2xl font-bold text-white">Sculpted Walnut Credenza & Cabinet Build</h3>
-                <p id="currentFilmDesc" class="text-xs sm:text-sm text-stone-300 mt-1 line-clamp-1">Watch master cabinetmaker shape, dovetail, and hand-oil a luxury sculpted walnut credenza from solid raw timber slabs.</p>
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-3 backdrop-blur-md">
+                <i class="fa-solid fa-chair text-amber-400"></i>
+                <span>Furniture Making Cinema</span>
               </div>
-              <div class="flex items-center gap-3 pointer-events-auto">
-                <button id="startFurnitureFilmBtn" type="button" class="btn-primary text-xs sm:text-sm py-2.5 px-5 shadow-lg flex items-center gap-2 cursor-pointer">
-                  <i class="fa-solid fa-play text-xs"></i>
-                  <span>Watch Build</span>
-                </button>
+              <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+                The Art of Making Furniture: <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">From Raw Timber to Heirloom</span>
+              </h2>
+              <p class="mt-3 text-xs sm:text-sm text-stone-300 leading-relaxed">
+                Step inside our artisan workshop. Watch master cabinetmakers hand-plane solid American walnut, cut interlocking mortise-and-tenon joints, and hand-oil bespoke credenzas, dining tables, and consoles.
+              </p>
+            </div>
+
+            <!-- Interactive Furniture Film Selector (Stacked on the left side) -->
+            <div class="space-y-2.5">
+              <span class="text-[11px] font-bold text-stone-400 uppercase tracking-wider block mb-1">Select Furniture Build Film:</span>
+              
+              <button type="button" class="furniture-film-btn active-film w-full text-left p-3 rounded-xl bg-stone-800 border-2 border-amber-500 transition-all group cursor-pointer shadow-sm" data-video-id="Vevw2IOV7CE" data-title="Sculpted Walnut Credenza & Cabinet Build" data-duration="18:24 MIN" data-desc="Watch master cabinetmaker shape, dovetail, and hand-oil a luxury sculpted walnut credenza from solid raw timber slabs.">
+                <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-0.5">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 01: Cabinetry</span>
+                  <span class="text-[10px] text-stone-300 bg-stone-950/70 px-2 py-0.5 rounded">18:24</span>
+                </div>
+                <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Sculpted Walnut Credenza</div>
+                <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Hand-carved curves, dovetails & flush hinges</div>
+              </button>
+
+              <button type="button" class="furniture-film-btn w-full text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border-2 border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer shadow-sm" data-video-id="lZyRmPfpJ5E" data-title="Solid Hardwood Dining Table Build" data-duration="14:15 MIN" data-desc="Traditional Japanese mortise-and-tenon table joinery, slab flattening, hand-planing, and organic oil buffing.">
+                <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-0.5">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 02: Dining Tables</span>
+                  <span class="text-[10px] text-stone-400 bg-stone-950/70 px-2 py-0.5 rounded">14:15</span>
+                </div>
+                <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Solid Hardwood Dining Table</div>
+                <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Twin tenon joinery & slab flattening</div>
+              </button>
+
+              <button type="button" class="furniture-film-btn w-full text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border-2 border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer shadow-sm" data-video-id="3cxJXsmIGzY" data-title="Three-Drawer Walnut Console Table" data-duration="16:50 MIN" data-desc="Precision drawer box dovetailing, undermount Blum runners, and hand-rubbed oil satin finish.">
+                <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-0.5">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 03: Consoles</span>
+                  <span class="text-[10px] text-stone-400 bg-stone-950/70 px-2 py-0.5 rounded">16:50</span>
+                </div>
+                <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Three-Drawer Walnut Console</div>
+                <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Half-blind dovetails & velvet lined drawers</div>
+              </button>
+            </div>
+
+            <!-- Quick Workshop Metric -->
+            <div class="pt-2 flex items-center gap-4 text-xs text-stone-300">
+              <div class="flex items-center gap-1.5">
+                <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                <span>10-Yr Warranty</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i class="fa-solid fa-tree text-amber-400"></i>
+                <span>100% Solid Hardwood</span>
               </div>
             </div>
 
           </div>
 
-          <!-- Interactive Furniture Film Selector Strip -->
-          <div class="bg-stone-900 border-t border-stone-800 p-4 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-            
-            <button type="button" class="furniture-film-btn active-film text-left p-3.5 rounded-xl bg-stone-800 border-2 border-amber-500 transition-all group cursor-pointer" data-video-id="Vevw2IOV7CE" data-title="Sculpted Walnut Credenza & Cabinet Build" data-duration="18:24 MIN" data-desc="Watch master cabinetmaker shape, dovetail, and hand-oil a luxury sculpted walnut credenza from solid raw timber slabs.">
-              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 01: Cabinetry</span>
-                <span class="text-[10px] text-stone-300 bg-stone-950/70 px-2 py-0.5 rounded">18:24</span>
-              </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Sculpted Walnut Credenza</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Hand-carved curves, dovetails & flush hinges</div>
-            </button>
+          <!-- Right Column: Video Player on the RIGHT side of the screen -->
+          <div class="sm:col-span-7 md:col-span-7 lg:col-span-7 w-full">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-stone-700/80 bg-stone-900 group">
+              
+              <!-- Screen Area with 16:9 Aspect Ratio -->
+              <div class="relative aspect-video w-full bg-black overflow-hidden flex items-center justify-center">
+                
+                <!-- Poster Image -->
+                <img id="furnitureVideoPoster" src="../assets/images/video-showcase-poster.jpg" onerror="this.onerror=null; this.src='../assets/images/workshop-bg.jpg'" alt="Master carpenter making bespoke walnut furniture in workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] filter brightness-95">
+                
+                <!-- Cinematic Vignette Overlay -->
+                <div id="furnitureVideoVignette" class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-stone-950/40 pointer-events-none transition-opacity duration-300"></div>
 
-            <button type="button" class="furniture-film-btn text-left p-3.5 rounded-xl bg-stone-950/60 hover:bg-stone-800 border-2 border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-video-id="lZyRmPfpJ5E" data-title="Solid Hardwood Dining Table Build" data-duration="14:15 MIN" data-desc="Traditional Japanese mortise-and-tenon table joinery, slab flattening, hand-planing, and organic oil buffing.">
-              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 02: Dining Tables</span>
-                <span class="text-[10px] text-stone-400 bg-stone-950/70 px-2 py-0.5 rounded">14:15</span>
-              </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Solid Hardwood Dining Table</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Twin tenon joinery & flawless slab flattening</div>
-            </button>
+                <!-- YouTube Video Embed Container -->
+                <div id="furnitureIframeWrap" class="absolute inset-0 w-full h-full hidden">
+                  <iframe id="furnitureIframe" class="w-full h-full" src="" title="Master Furniture Making Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
 
-            <button type="button" class="furniture-film-btn text-left p-3.5 rounded-xl bg-stone-950/60 hover:bg-stone-800 border-2 border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-video-id="3cxJXsmIGzY" data-title="Three-Drawer Walnut Console Table" data-duration="16:50 MIN" data-desc="Precision drawer box dovetailing, undermount Blum runners, and hand-rubbed oil satin finish.">
-              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-play text-[10px]"></i> Film 03: Consoles</span>
-                <span class="text-[10px] text-stone-400 bg-stone-950/70 px-2 py-0.5 rounded">16:50</span>
-              </div>
-              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Three-Drawer Walnut Console</div>
-              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Half-blind dovetails & velvet lined drawers</div>
-            </button>
+                <!-- Video Quality & Meta Badges (Top) -->
+                <div id="furnitureTopBadges" class="absolute top-3 sm:top-4 left-3 sm:left-4 flex items-center gap-2 pointer-events-none z-10 transition-opacity duration-300">
+                  <span class="px-2.5 py-0.5 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[10px] sm:text-[11px] font-semibold text-white tracking-wider flex items-center gap-1.5 shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                    4K UHD
+                  </span>
+                  <span id="currentFilmDuration" class="px-2.5 py-0.5 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[10px] sm:text-[11px] font-semibold text-stone-300 shadow-md">
+                    18:24 MIN
+                  </span>
+                </div>
 
+                <!-- Center Pulsing Play Button -->
+                <button id="mainFurniturePlayBtn" type="button" aria-label="Play Furniture Making Video" class="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center shadow-2xl shadow-amber-600/50 hover:scale-110 active:scale-95 transition-all duration-300 z-20 group/btn focus:outline-none cursor-pointer">
+                  <span class="absolute inset-0 rounded-full bg-amber-400/40 animate-ping pointer-events-none"></span>
+                  <span class="absolute -inset-2 rounded-full border-2 border-amber-400/60 pointer-events-none"></span>
+                  <i class="fa-solid fa-play text-xl sm:text-2xl ml-1 text-white group-hover/btn:text-amber-100 transition-colors"></i>
+                </button>
+
+                <!-- Bottom Floating Description Overlay (Visible over poster) -->
+                <div id="furniturePosterBottomBar" class="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex items-end justify-between gap-3 z-10 transition-opacity duration-300 pointer-events-none">
+                  <div class="max-w-md">
+                    <span class="text-[10px] sm:text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-0.5">Active Furniture Build</span>
+                    <h3 id="currentFilmTitle" class="font-serif text-base sm:text-lg font-bold text-white line-clamp-1">Sculpted Walnut Credenza Build</h3>
+                    <p id="currentFilmDesc" class="text-[11px] text-stone-300 line-clamp-1">Shaping, dovetailing, and hand-oiling solid walnut slabs.</p>
+                  </div>
+                  <div class="pointer-events-auto shrink-0">
+                    <button id="startFurnitureFilmBtn" type="button" class="btn-primary text-xs py-2 px-3.5 shadow-lg flex items-center gap-1.5 cursor-pointer">
+                      <i class="fa-solid fa-play text-[10px]"></i>
+                      <span>Watch</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
           </div>
 
         </div>
 
-        <!-- 4-Step Furniture Making Process Strip -->
-        <div class="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
-          <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">01 • Lumber</div>
+        <!-- 4-Step Furniture Making Process Strip (Below) -->
+        <div class="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
+          <div class="p-3.5 sm:p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
+            <div class="font-serif text-lg sm:text-xl font-bold text-amber-400">01 • Lumber</div>
             <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">Live-Edge Slab Grading</div>
-            <p class="text-[11px] text-stone-400 mt-1">Kiln-dried 8-10% moisture calibration</p>
+            <p class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Kiln-dried 8-10% moisture calibration</p>
           </div>
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">02 • Joinery</div>
+            <div class="font-serif text-lg sm:text-xl font-bold text-amber-400">02 • Joinery</div>
             <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">Hand-Cut Dovetails</div>
-            <p class="text-[11px] text-stone-400 mt-1">Traditional interlocking wood joints</p>
+            <p class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Traditional interlocking wood joints</p>
           </div>
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">03 • Planing</div>
+            <div class="font-serif text-lg sm:text-xl font-bold text-amber-400">03 • Planing</div>
             <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">Japanese Block Planes</div>
-            <p class="text-[11px] text-stone-400 mt-1">Glass-smooth surface without sanding dust</p>
+            <p class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Glass-smooth surface without sanding dust</p>
           </div>
           <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
-            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">04 • Finishing</div>
+            <div class="font-serif text-lg sm:text-xl font-bold text-amber-400">04 • Finishing</div>
             <div class="text-[11px] sm:text-xs text-stone-300 mt-1 uppercase tracking-wider font-semibold">4-Stage Organic Oil</div>
-            <p class="text-[11px] text-stone-400 mt-1">Hand-buffed satin sheen & grain protection</p>
+            <p class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Hand-buffed satin sheen & protection</p>
           </div>
         </div>
 
