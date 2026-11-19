@@ -578,80 +578,202 @@
       </div>
     </section>
 
-    <!-- Interactive Before / After Renovation Comparison Slider -->
-    <section class="py-20 bg-white dark:bg-stone-900 border-y border-stone-200 dark:border-stone-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Master Joinery in Motion Video Showcase Section -->
+    <section id="workshop-video" class="py-20 lg:py-28 bg-stone-950 text-white relative overflow-hidden border-y border-stone-800/80">
+      <!-- Ambient Lighting & Workshop Atmosphere -->
+      <div class="absolute inset-0 pointer-events-none z-0">
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl"></div>
+        <div class="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-stone-950/80"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
+            <i class="fa-solid fa-film text-amber-400"></i>
+            <span>Inside The Timber Atelier</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            Witness Master Joinery <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">In Motion</span>
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-stone-300 leading-relaxed max-w-2xl mx-auto">
+            Take a private cinematic journey behind our saw blades, drying kilns, and bench chisels. Discover how raw felled trunks transform into architectural living art.
+          </p>
+        </div>
+
+        <!-- Video Player Display Card -->
+        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-stone-700/80 bg-stone-900 group">
           
-          <div class="lg:col-span-5">
-            <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Real Site Transformation</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-2 mb-4">
-              From Raw Bare Walls to Master Joinery
-            </h2>
-            <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6">
-              Drag the interactive slider knob to see the transformation of the <em>Highland Crest Villa</em> master suite. We replaced uneven masonry and exposed conduits with bookmatched walnut paneling and an integrated media console.
-            </p>
+          <!-- Screen Area with 16:9 Aspect Ratio -->
+          <div class="relative aspect-video w-full max-h-[580px] bg-black overflow-hidden flex items-center justify-center">
+            
+            <!-- Poster Image -->
+            <img id="atelierVideoPoster" src="../assets/images/video-showcase-poster.jpg" onerror="this.onerror=null; this.src='../assets/images/workshop-bg.jpg'" alt="Master carpenter hand-planing walnut slab in TimberCraft workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] filter brightness-95">
+            
+            <!-- Cinematic Vignette Overlay -->
+            <div id="atelierVideoVignette" class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-stone-950/40 pointer-events-none transition-opacity duration-300"></div>
 
-            <div class="space-y-4 mb-8">
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <div>
-                  <h4 class="text-sm font-bold text-stone-900 dark:text-stone-100">Zero Visible Fasteners</h4>
-                  <p class="text-xs text-stone-500 dark:text-stone-400">All paneling anchored using precision split-batten French cleats.</p>
-                </div>
+            <!-- Embedded HTML5 Video Player -->
+            <video id="atelierVideoPlayer" class="absolute inset-0 w-full h-full object-cover hidden" playsinline controls preload="metadata">
+              <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Video Quality & Meta Badges (Top) -->
+            <div id="videoTopBadges" class="absolute top-4 sm:top-6 left-4 sm:left-6 flex items-center gap-2 pointer-events-none z-10 transition-opacity duration-300">
+              <span class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-white tracking-wider flex items-center gap-1.5 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                4K ULTRA HD
+              </span>
+              <span class="px-3 py-1 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-700 text-[11px] font-semibold text-stone-300 shadow-md">
+                04:28 MIN
+              </span>
+            </div>
+
+            <div id="videoAudioBadge" class="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none z-10 hidden sm:flex items-center gap-2 transition-opacity duration-300">
+              <span class="px-3 py-1 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/40 text-[11px] font-semibold text-amber-300 shadow-md">
+                <i class="fa-solid fa-volume-high mr-1"></i> Studio Sound
+              </span>
+            </div>
+
+            <!-- Big Pulsing Play Button -->
+            <button id="mainVideoPlayBtn" type="button" aria-label="Play Master Joinery Video" class="absolute inset-0 m-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center shadow-2xl shadow-amber-600/50 hover:scale-110 active:scale-95 transition-all duration-300 z-20 group/btn focus:outline-none cursor-pointer">
+              <span class="absolute inset-0 rounded-full bg-amber-400/40 animate-ping pointer-events-none"></span>
+              <span class="absolute -inset-2 rounded-full border-2 border-amber-400/60 pointer-events-none"></span>
+              <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1 text-white group-hover/btn:text-amber-100 transition-colors"></i>
+            </button>
+
+            <!-- Bottom Floating Description Overlay (Visible over poster) -->
+            <div id="videoPosterBottomBar" class="absolute bottom-0 inset-x-0 p-5 sm:p-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 z-10 transition-opacity duration-300 pointer-events-none">
+              <div class="max-w-xl">
+                <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-1">Featured Atelier Film</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">The Living Timber: Handcrafted Precision at 0.5mm</h3>
+                <p class="text-xs sm:text-sm text-stone-300 mt-1 line-clamp-1">Narrated walkthrough of our joinery philosophy, moisture kiln stabilization, and architectural installation.</p>
               </div>
-
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <div>
-                  <h4 class="text-sm font-bold text-stone-900 dark:text-stone-100">Integrated Thermal & Acoustic Buffer</h4>
-                  <p class="text-xs text-stone-500 dark:text-stone-400">Rebated perimeter shadow lines permit seasonal timber breathing.</p>
-                </div>
+              <div class="flex items-center gap-3 pointer-events-auto">
+                <button id="startFilmBtn" type="button" class="btn-primary text-xs sm:text-sm py-2.5 px-5 shadow-lg flex items-center gap-2 cursor-pointer">
+                  <i class="fa-solid fa-play text-xs"></i>
+                  <span>Play Film</span>
+                </button>
               </div>
             </div>
 
-            <a href="gallery.html" class="btn-primary text-sm">
-              <span>See More Site Transformations</span>
-              <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
           </div>
 
-          <!-- Slider Container -->
-          <div class="lg:col-span-7">
-            <div class="before-after-container h-[420px] sm:h-[480px] w-full rounded-2xl shadow-2xl relative">
-              
-              <!-- After Image (Background) -->
-              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="Completed master suite with custom walnut joinery" class="w-full h-full object-cover">
-              <span class="absolute bottom-4 right-4 z-10 bg-stone-950/80 text-white text-xs px-3 py-1 rounded-md font-semibold tracking-wider">AFTER: TimberCraft Finished</span>
-
-              <!-- Before Image (Clipped Overlay) -->
-              <div class="before-image-wrap">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Raw construction wall before carpentry" class="w-full h-full object-cover">
-                <span class="absolute bottom-4 left-4 z-10 bg-stone-950/80 text-white text-xs px-3 py-1 rounded-md font-semibold tracking-wider">BEFORE: Raw Site</span>
+          <!-- Interactive Video Chapters Strip -->
+          <div class="bg-stone-900 border-t border-stone-800 p-4 sm:p-6 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            
+            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="0">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+                <span>Chapter 01</span>
+                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">00:00</span>
               </div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">3D Laser Site Survey</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Capturing wall plumb & ceiling angles</div>
+            </button>
 
-              <!-- Draggable Divider Line & Knob -->
-              <div class="slider-handle-line">
-                <div class="slider-handle-knob" aria-label="Drag slider to compare before and after">
-                  <i class="fa-solid fa-arrows-left-right"></i>
-                </div>
+            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="45">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+                <span>Chapter 02</span>
+                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">00:45</span>
               </div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Hardwood Kiln Grading</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">8-10% moisture content calibration</div>
+            </button>
 
-            </div>
-            <p class="text-center text-xs text-stone-500 dark:text-stone-400 mt-3">
-              <i class="fa-solid fa-hand-pointer mr-1 text-amber-500"></i> Click & drag the amber center handle horizontally to compare
-            </p>
+            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="90">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+                <span>Chapter 03</span>
+                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">01:30</span>
+              </div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Bench Dovetail Joinery</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Traditional mortise-and-tenon assembly</div>
+            </button>
+
+            <button type="button" class="video-chapter-btn text-left p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="150">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+                <span>Chapter 04</span>
+                <span class="text-[10px] text-stone-400 group-hover:text-amber-300">02:30</span>
+              </div>
+              <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">Hand-Buffed Satin Finish</div>
+              <div class="text-[11px] text-stone-400 line-clamp-1 mt-0.5">Organic hardwax oil application</div>
+            </button>
+
           </div>
 
         </div>
 
+        <!-- Workshop Proof Stats Strip -->
+        <div class="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
+          <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">12,000 sq ft</div>
+            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">Dedicated Millwork Studio</div>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">5-Axis CNC</div>
+            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">German Precision Tooling</div>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">100% Seasoned</div>
+            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">FSC-Certified Hardwoods</div>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/80 backdrop-blur-sm">
+            <div class="font-serif text-xl sm:text-2xl font-bold text-amber-400">10-Year</div>
+            <div class="text-[11px] sm:text-xs text-stone-400 mt-1 uppercase tracking-wider">Structural Warranty</div>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <!-- Inline Video Controller Script -->
+    <script>
+      (function() {
+        const playBtn = document.getElementById('mainVideoPlayBtn');
+        const startBtn = document.getElementById('startFilmBtn');
+        const video = document.getElementById('atelierVideoPlayer');
+        const poster = document.getElementById('atelierVideoPoster');
+        const vignette = document.getElementById('atelierVideoVignette');
+        const topBadges = document.getElementById('videoTopBadges');
+        const audioBadge = document.getElementById('videoAudioBadge');
+        const bottomBar = document.getElementById('videoPosterBottomBar');
+        const chapterBtns = document.querySelectorAll('.video-chapter-btn');
+
+        function startVideo(seekTime) {
+          if (!video) return;
+          if (poster) poster.classList.add('hidden');
+          if (vignette) vignette.classList.add('hidden');
+          if (playBtn) playBtn.classList.add('hidden');
+          if (topBadges) topBadges.classList.add('hidden');
+          if (audioBadge) audioBadge.classList.add('hidden');
+          if (bottomBar) bottomBar.classList.add('hidden');
+
+          video.classList.remove('hidden');
+          if (typeof seekTime === 'number') {
+            video.currentTime = seekTime;
+          }
+          video.play().catch(function(err) {
+            console.log('Video play triggered:', err);
+          });
+        }
+
+        if (playBtn) playBtn.addEventListener('click', function() { startVideo(0); });
+        if (startBtn) startBtn.addEventListener('click', function() { startVideo(0); });
+
+        chapterBtns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            const time = parseFloat(this.getAttribute('data-timestamp') || '0');
+            chapterBtns.forEach(function(b) {
+              b.classList.remove('border-amber-500', 'bg-stone-800');
+            });
+            this.classList.add('border-amber-500', 'bg-stone-800');
+            startVideo(time);
+          });
+        });
+      })();
+    </script>
 
     <!-- Interactive Wood Species & Instant Estimate Calculator -->
     <section id="estimator" class="py-24 relative overflow-hidden text-white border-y border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.45), rgba(12, 10, 9, 0.25), rgba(12, 10, 9, 0.45)), url('../assets/images/estimator-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
