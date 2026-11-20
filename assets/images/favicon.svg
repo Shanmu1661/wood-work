@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient (Rich Wood Tones: Amber-Mahogany to Deep Walnut) -->
+    <linearGradient id="bg-wood" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#92400e" />
+      <stop offset="35%" stop-color="#78350f" />
+      <stop offset="70%" stop-color="#451a03" />
+      <stop offset="100%" stop-color="#1c0b05" />
+    </linearGradient>
+
+    <!-- Brass / Gold Rim Gradient -->
+    <linearGradient id="brass-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#fbbf24" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#d4af37" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#92400e" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow for 3D Timber Cubes -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0a0402" flood-opacity="0.8" />
+    </filter>
+
+    <!-- Top Faces Gradients (Honey Oak / Warm Maple) -->
+    <linearGradient id="grad-top-top" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="grad-top-bl" x1="40%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="grad-top-br" x1="60%" y1="0%" x2="40%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Left Faces Gradients (Warm Cedar / Amber Teak) -->
+    <linearGradient id="grad-left-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="grad-left-bl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="grad-left-br" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+
+    <!-- Right Faces Gradients (Roasted Walnut / Espresso) -->
+    <linearGradient id="grad-right-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c2410c" />
+      <stop offset="100%" stop-color="#602306" />
+    </linearGradient>
+    <linearGradient id="grad-right-bl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#54200a" />
+    </linearGradient>
+    <linearGradient id="grad-right-br" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9a3412" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Badge: Polished Wood Plate with Chamfered Golden Rim -->
+  <rect x="20" y="20" width="472" height="472" rx="112" fill="url(#bg-wood)" />
+  <rect x="20" y="20" width="472" height="472" rx="112" fill="none" stroke="url(#brass-rim)" stroke-width="8" />
+  <rect x="32" y="32" width="448" height="448" rx="100" fill="none" stroke="#fef08a" stroke-opacity="0.15" stroke-width="2.5" />
+
+  <!-- 3D Interlocking Timber Joinery Cubes -->
+  <g filter="url(#shadow)">
+
+    <!-- Cube: top -->
+    <g class="cube cube-top">
+      <!-- Left Face (Warm Amber / Fine Teak) -->
+      <polygon points="165.9,104.5 256.0,156.5 256.0,260.5 165.9,208.5" fill="url(#grad-left-top)" stroke="#9a3412" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Right Face (Deep Walnut / Roasted Mahogany) -->
+      <polygon points="256.0,156.5 346.1,104.5 346.1,208.5 256.0,260.5" fill="url(#grad-right-top)" stroke="#451a03" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Top Face (Sunlit Golden Honey Oak) -->
+      <polygon points="256.0,52.5 346.1,104.5 256.0,156.5 165.9,104.5" fill="url(#grad-top-top)" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Bevel Edge Highlights -->
+      <line x1="165.9" y1="104.5" x2="256.0" y2="52.5" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+      <line x1="256.0" y1="52.5" x2="346.1" y2="104.5" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+      <line x1="165.9" y1="104.5" x2="256.0" y2="156.5" stroke="#fef08a" stroke-width="2.2" stroke-linecap="round" opacity="0.85" />
+      <line x1="256.0" y1="156.5" x2="346.1" y2="104.5" stroke="#fef08a" stroke-width="2.2" stroke-linecap="round" opacity="0.75" />
+      <line x1="256.0" y1="156.5" x2="256.0" y2="260.5" stroke="#2d1206" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
+    </g>
+    <!-- Cube: bl -->
+    <g class="cube cube-bl">
+      <!-- Left Face (Warm Amber / Fine Teak) -->
+      <polygon points="72.8,265.8 162.9,317.8 162.9,421.8 72.8,369.8" fill="url(#grad-left-bl)" stroke="#9a3412" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Right Face (Deep Walnut / Roasted Mahogany) -->
+      <polygon points="162.9,317.8 253.0,265.8 253.0,369.8 162.9,421.8" fill="url(#grad-right-bl)" stroke="#451a03" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Top Face (Sunlit Golden Honey Oak) -->
+      <polygon points="162.9,213.8 253.0,265.8 162.9,317.8 72.8,265.8" fill="url(#grad-top-bl)" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Bevel Edge Highlights -->
+      <line x1="72.8" y1="265.8" x2="162.9" y2="213.8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+      <line x1="162.9" y1="213.8" x2="253.0" y2="265.8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+      <line x1="72.8" y1="265.8" x2="162.9" y2="317.8" stroke="#fef08a" stroke-width="2.2" stroke-linecap="round" opacity="0.85" />
+      <line x1="162.9" y1="317.8" x2="253.0" y2="265.8" stroke="#fef08a" stroke-width="2.2" stroke-linecap="round" opacity="0.75" />
+      <line x1="162.9" y1="317.8" x2="162.9" y2="421.8" stroke="#2d1206" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
+    </g>
+    <!-- Cube: br -->
+    <g class="cube cube-br">
+      <!-- Left Face (Warm Amber / Fine Teak) -->
+      <polygon points="259.0,265.8 349.1,317.8 349.1,421.8 259.0,369.8" fill="url(#grad-left-br)" stroke="#9a3412" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Right Face (Deep Walnut / Roasted Mahogany) -->
+      <polygon points="349.1,317.8 439.2,265.8 439.2,369.8 349.1,421.8" fill="url(#grad-right-br)" stroke="#451a03" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Top Face (Sunlit Golden Honey Oak) -->
+      <polygon points="349.1,213.8 439.2,265.8 349.1,317.8 259.0,265.8" fill="url(#grad-top-br)" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round" />
+      <!-- Bevel Edge Highlights -->
+      <line x1="259.0" y1="265.8" x2="349.1" y2="213.8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+      <line x1="349.1" y1="213.8" x2="439.2" y2="265.8" stroke="#fffbeb" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+      <line x1="259.0" y1="265.8" x2="349.1" y2="317.8" stroke="#fef08a" stroke-width="2.2" stroke-linecap="round" opacity="0.85" />
+      <line x1="349.1" y1="317.8" x2="439.2" y2="265.8" stroke="#fef08a" stroke-width="2.2" stroke-linecap="round" opacity="0.75" />
+      <line x1="349.1" y1="317.8" x2="349.1" y2="421.8" stroke="#2d1206" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
+    </g>
+  </g>
+</svg>
