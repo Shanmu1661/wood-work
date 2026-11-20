@@ -715,111 +715,230 @@
     </section>
 
     <!-- Timber Species Palette Interactive Showcase -->
-    <section class="py-14 sm:py-16 relative overflow-hidden text-white border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(14, 10, 8, 0.65), rgba(14, 10, 8, 0.45), rgba(14, 10, 8, 0.70)), url('../assets/images/specimens-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-      <!-- Clearly Visible Architectural Joinery Workshop & Timber Specimen Library Background -->
+    <section id="hardwood-specimens" class="py-16 sm:py-20 lg:py-24 relative overflow-hidden text-white border-b border-stone-800/80" style="background-image: linear-gradient(to bottom, rgba(14, 10, 8, 0.75), rgba(14, 10, 8, 0.55), rgba(14, 10, 8, 0.80)), url('../assets/images/specimens-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Architectural Joinery Workshop & Timber Specimen Library Background -->
       <div class="absolute inset-0 z-0 pointer-events-none">
         <img src="../assets/images/specimens-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85'" alt="Master carpentry timber flitch library and woodworking atelier" class="w-full h-full object-cover object-center filter brightness-100 contrast-105">
-        <div class="absolute inset-0 bg-stone-950/45"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-stone-950/50"></div>
+        <div class="absolute inset-0 bg-stone-950/50 backdrop-blur-[1px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/60"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="max-w-2xl mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow">Material Mastery</span>
-          <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-1 drop-shadow-md">
-            Select Your Hardwood Species
-          </h2>
-          <p class="text-stone-200 text-sm mt-1.5 drop-shadow">
-            Click on any timber swatch to inspect its natural grain density, Janka hardness scale, and ideal interior applications.
-          </p>
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 sm:mb-12">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-3 backdrop-blur-md">
+              <i class="fa-solid fa-tree text-amber-400"></i>
+              <span>Material Mastery</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+              Select Your <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">Hardwood Species</span>
+            </h2>
+            <p class="text-stone-300 text-xs sm:text-sm md:text-base mt-2 leading-relaxed">
+              Touch and explore our premier architectural hardwoods. Inspect natural cathedral grain density, Janka structural hardness, and curated interior applications.
+            </p>
+          </div>
+          <div class="shrink-0 flex items-center gap-3 text-xs text-stone-300 bg-stone-900/70 border border-stone-800 px-4 py-2 rounded-xl backdrop-blur-md">
+            <i class="fa-solid fa-award text-amber-400 text-sm"></i>
+            <span>100% Seasoned Kiln-Dried (8–10% Moisture)</span>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+        <!-- 2-Column Split: Swatch Grid & Master Specimen Inspector -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          <!-- Swatches Grid -->
-          <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-3.5">
-            
-            <div class="wood-swatch-item active p-3 bg-stone-950/70 hover:bg-stone-950/90 backdrop-blur-md rounded-xl text-center border-2 border-amber-500 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]" 
-                 data-name="American Black Walnut"
-                 data-grain="Deep swirling cathedral grain with chocolate & purple undertones"
-                 data-hardness="1,010 Janka (Medium-Hard stability)"
-                 data-usage="Floating TV consoles, executive library paneling, luxury walk-in wardrobes"
-                 data-img="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80">
-              <div class="h-20 sm:h-24 w-full rounded-lg overflow-hidden mb-2 shadow-md border border-stone-700/50">
-                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=80" alt="American Black Walnut grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <!-- Left Column: Interactive Timber Swatch Grid -->
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-bold text-stone-400 uppercase tracking-wider block mb-3.5 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-amber-400 text-xs"></i>
+                <span>Click a Hardwood Sample to Inspect:</span>
+              </span>
+
+              <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
+                
+                <!-- Swatch 1: American Walnut -->
+                <div class="wood-swatch-item active p-4 bg-stone-950/80 hover:bg-stone-900/90 backdrop-blur-md rounded-2xl border-2 border-amber-500 ring-2 ring-amber-500/40 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]" 
+                     data-name="American Black Walnut"
+                     data-botanical="Juglans nigra • North America"
+                     data-grain="Deep swirling cathedral grain with dark espresso, chocolate, and subtle warm undertones."
+                     data-hardness="1,010 Janka (Medium-Hard Stability)"
+                     data-meter="52"
+                     data-finish="Hand-buffed satin hardwax oil or matte clear lacquer"
+                     data-usage="Floating TV consoles, executive library paneling, bespoke walk-in wardrobes"
+                     data-wood-val="1.25"
+                     data-img="../assets/images/wood-walnut.jpg">
+                  <div class="h-28 sm:h-32 w-full rounded-xl overflow-hidden mb-3 shadow-md border border-stone-700/60 relative">
+                    <img src="../assets/images/wood-walnut.jpg" alt="American Black Walnut lumber grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <span class="absolute top-2 left-2 bg-stone-950/80 backdrop-blur-md text-[10px] font-mono text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">1,010 Janka</span>
+                    <span class="swatch-check absolute top-2 right-2 w-5 h-5 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center text-[10px] shadow font-bold">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="font-serif text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors">American Walnut</span>
+                    <span class="text-[11px] text-amber-400 font-semibold bg-amber-950/60 border border-amber-800/40 px-2 py-0.5 rounded">Rich Espresso</span>
+                  </div>
+                  <span class="text-[11px] text-stone-400 block mt-1 line-clamp-1">Flowing cathedral grain, premier luxury casework</span>
+                </div>
+
+                <!-- Swatch 2: Burma Golden Teak -->
+                <div class="wood-swatch-item p-4 bg-stone-950/80 hover:bg-stone-900/90 backdrop-blur-md rounded-2xl border-2 border-stone-700/60 hover:border-amber-500/60 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
+                     data-name="Burma Golden Teak"
+                     data-botanical="Tectona grandis • Southeast Asia"
+                     data-grain="Tight linear straight grain rich in natural silica oils, inherently water & pest repellant."
+                     data-hardness="1,155 Janka (Superior Weather & Moisture Resilience)"
+                     data-meter="60"
+                     data-finish="Natural teak oil buff or raw satin seal"
+                     data-usage="Heavy exterior pivot doors, bathroom vanities, master island joinery"
+                     data-wood-val="1.40"
+                     data-img="../assets/images/wood-teak.jpg">
+                  <div class="h-28 sm:h-32 w-full rounded-xl overflow-hidden mb-3 shadow-md border border-stone-700/60 relative">
+                    <img src="../assets/images/wood-teak.jpg" alt="Burma Golden Teak wood grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <span class="absolute top-2 left-2 bg-stone-950/80 backdrop-blur-md text-[10px] font-mono text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">1,155 Janka</span>
+                    <span class="swatch-check absolute top-2 right-2 w-5 h-5 rounded-full bg-amber-500 text-stone-950 hidden items-center justify-center text-[10px] shadow font-bold">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="font-serif text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors">Burma Teak</span>
+                    <span class="text-[11px] text-amber-400 font-semibold bg-amber-950/60 border border-amber-800/40 px-2 py-0.5 rounded">Golden Amber</span>
+                  </div>
+                  <span class="text-[11px] text-stone-400 block mt-1 line-clamp-1">Natural silica oils, waterproof resilience</span>
+                </div>
+
+                <!-- Swatch 3: European White Oak -->
+                <div class="wood-swatch-item p-4 bg-stone-950/80 hover:bg-stone-900/90 backdrop-blur-md rounded-2xl border-2 border-stone-700/60 hover:border-amber-500/60 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
+                     data-name="European White Oak"
+                     data-botanical="Quercus alba / robur • Central Europe"
+                     data-grain="Refined medullary ray flecks with clean, light Scandinavian modern aesthetic and uniform density."
+                     data-hardness="1,360 Janka (Heavy-Duty Commercial Toughness)"
+                     data-meter="70"
+                     data-finish="Zero-VOC matte clear poly or Scandinavian white oil"
+                     data-usage="Fluted acoustic slat walls, minimalist kitchen millwork, dining credenzas"
+                     data-wood-val="1.15"
+                     data-img="../assets/images/wood-oak.jpg">
+                  <div class="h-28 sm:h-32 w-full rounded-xl overflow-hidden mb-3 shadow-md border border-stone-700/60 relative">
+                    <img src="../assets/images/wood-oak.jpg" alt="European White Oak wood grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <span class="absolute top-2 left-2 bg-stone-950/80 backdrop-blur-md text-[10px] font-mono text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">1,360 Janka</span>
+                    <span class="swatch-check absolute top-2 right-2 w-5 h-5 rounded-full bg-amber-500 text-stone-950 hidden items-center justify-center text-[10px] shadow font-bold">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="font-serif text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors">White Oak</span>
+                    <span class="text-[11px] text-amber-400 font-semibold bg-amber-950/60 border border-amber-800/40 px-2 py-0.5 rounded">Honey Straw</span>
+                  </div>
+                  <span class="text-[11px] text-stone-400 block mt-1 line-clamp-1">Medullary rays, Scandinavian slat walls</span>
+                </div>
+
+                <!-- Swatch 4: Santos Rosewood -->
+                <div class="wood-swatch-item p-4 bg-stone-950/80 hover:bg-stone-900/90 backdrop-blur-md rounded-2xl border-2 border-stone-700/60 hover:border-amber-500/60 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
+                     data-name="Santos Rosewood (Sheesham)"
+                     data-botanical="Dalbergia nigra / latifolia • South America & India"
+                     data-grain="Striking contrasting dark espresso and rich ruby-amber ribbons with dense, glassy hardness."
+                     data-hardness="1,780 Janka (Ultra-Dense Heirloom Hardwood)"
+                     data-meter="90"
+                     data-finish="Hand-rubbed organic oil or high-gloss piano polish"
+                     data-usage="Statement entrance door frames, carved architectural panels, bespoke dining tables"
+                     data-wood-val="1.40"
+                     data-img="../assets/images/wood-rosewood.jpg">
+                  <div class="h-28 sm:h-32 w-full rounded-xl overflow-hidden mb-3 shadow-md border border-stone-700/60 relative">
+                    <img src="../assets/images/wood-rosewood.jpg" alt="Santos Rosewood timber grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <span class="absolute top-2 left-2 bg-stone-950/80 backdrop-blur-md text-[10px] font-mono text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">1,780 Janka</span>
+                    <span class="swatch-check absolute top-2 right-2 w-5 h-5 rounded-full bg-amber-500 text-stone-950 hidden items-center justify-center text-[10px] shadow font-bold">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="font-serif text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors">Rosewood</span>
+                    <span class="text-[11px] text-amber-400 font-semibold bg-amber-950/60 border border-amber-800/40 px-2 py-0.5 rounded">Ruby Chocolate</span>
+                  </div>
+                  <span class="text-[11px] text-stone-400 block mt-1 line-clamp-1">Exotic contrasting ribbons, ultra-dense strength</span>
+                </div>
+
               </div>
-              <span class="text-xs sm:text-sm font-bold text-white block leading-snug">American Walnut</span>
-              <span class="text-[11px] text-amber-400 font-semibold block mt-0.5">Rich Espresso</span>
             </div>
 
-            <div class="wood-swatch-item p-3 bg-stone-950/70 hover:bg-stone-950/90 backdrop-blur-md rounded-xl text-center border-2 border-stone-700/60 hover:border-amber-500/60 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
-                 data-name="Burma Golden Teak"
-                 data-grain="Tight linear grain rich in natural silica oils, impervious to water"
-                 data-hardness="1,155 Janka (Superior all-weather resilience)"
-                 data-usage="Heavy exterior pivot doors, bathroom vanities, master bedroom joinery"
-                 data-img="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=800&q=80">
-              <div class="h-20 sm:h-24 w-full rounded-lg overflow-hidden mb-2 shadow-md border border-stone-700/50">
-                <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=400&q=80" alt="Burma Golden Teak wood grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-              </div>
-              <span class="text-xs sm:text-sm font-bold text-white block leading-snug">Burma Teak</span>
-              <span class="text-[11px] text-amber-400 font-semibold block mt-0.5">Golden Amber</span>
+            <!-- Timber Grading Guarantee Note -->
+            <div class="mt-4 p-3 rounded-xl bg-stone-950/60 border border-stone-800/80 flex items-center gap-3 text-xs text-stone-300">
+              <i class="fa-solid fa-circle-check text-amber-400 text-base shrink-0"></i>
+              <span>All species sourced from certified sustainable forestry and inspected with digital pinless moisture meters prior to joint cutting.</span>
             </div>
-
-            <div class="wood-swatch-item p-3 bg-stone-950/70 hover:bg-stone-950/90 backdrop-blur-md rounded-xl text-center border-2 border-stone-700/60 hover:border-amber-500/60 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
-                 data-name="European White Oak"
-                 data-grain="Refined medullary ray flecks with clean Scandinavian modern vibe"
-                 data-hardness="1,360 Janka (Heavy duty resistance)"
-                 data-usage="Fluted acoustic slat walls, minimalist kitchen millwork, dining credenzas"
-                 data-img="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80">
-              <div class="h-20 sm:h-24 w-full rounded-lg overflow-hidden mb-2 shadow-md border border-stone-700/50">
-                <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=400&q=80" alt="European White Oak wood grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-              </div>
-              <span class="text-xs sm:text-sm font-bold text-white block leading-snug">White Oak</span>
-              <span class="text-[11px] text-amber-400 font-semibold block mt-0.5">Honey Straw</span>
-            </div>
-
-            <div class="wood-swatch-item p-3 bg-stone-950/70 hover:bg-stone-950/90 backdrop-blur-md rounded-xl text-center border-2 border-stone-700/60 hover:border-amber-500/60 shadow-xl transition-all duration-300 cursor-pointer group hover:scale-[1.02]"
-                 data-name="Indian Rosewood (Sheesham)"
-                 data-grain="Striking contrasting dark and golden ribbons with exceptional hardness"
-                 data-hardness="1,780 Janka (Ultra-dense hardwood)"
-                 data-usage="Statement entrance door frames, carved panels, bespoke dining tables"
-                 data-img="https://images.unsplash.com/photo-1502005229762-ee1b2b8ab98f?auto=format&fit=crop&w=800&q=80">
-              <div class="h-20 sm:h-24 w-full rounded-lg overflow-hidden mb-2 shadow-md border border-stone-700/50">
-                <img src="https://images.unsplash.com/photo-1502005229762-ee1b2b8ab98f?auto=format&fit=crop&w=400&q=80" alt="Rosewood timber grain" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-              </div>
-              <span class="text-xs sm:text-sm font-bold text-white block leading-snug">Rosewood</span>
-              <span class="text-[11px] text-amber-400 font-semibold block mt-0.5">Ruby Chocolate</span>
-            </div>
-
           </div>
 
-          <!-- Swatch Detail Preview Card -->
-          <div class="lg:col-span-5 bg-stone-950/70 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-stone-600/60 shadow-2xl flex flex-col justify-between text-white">
+          <!-- Right Column: Master Timber Inspector Display Card -->
+          <div class="lg:col-span-5 bg-stone-950/85 backdrop-blur-md p-6 sm:p-7 rounded-2xl sm:rounded-3xl border border-stone-700/80 shadow-2xl flex flex-col justify-between text-white relative">
             <div>
-              <div class="h-40 sm:h-44 w-full rounded-xl overflow-hidden mb-3.5 shadow-lg border border-stone-700/60 relative group">
-                <img id="swatchPreviewImg" src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Selected wood species texture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <span class="absolute top-3 right-3 bg-stone-900/85 backdrop-blur text-amber-400 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border border-amber-500/30">
+              <!-- Macro Texture Window -->
+              <div class="h-48 sm:h-56 w-full rounded-2xl overflow-hidden mb-5 shadow-2xl border border-stone-700/70 relative group">
+                <img id="swatchPreviewImg" src="../assets/images/wood-walnut.jpg" alt="Selected timber grain texture macro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-3 left-3 flex items-center gap-2">
+                  <span class="bg-stone-900/90 backdrop-blur text-white text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded-full border border-stone-700 flex items-center gap-1.5 shadow">
+                    <i class="fa-solid fa-magnifying-glass-plus text-amber-400"></i> Macro Grain 1:1
+                  </span>
+                </div>
+                <span class="absolute top-3 right-3 bg-stone-900/90 backdrop-blur text-amber-400 text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-full border border-amber-500/40 shadow">
                   Kiln-Dried Hardwood
                 </span>
+                <!-- Grain Overlay Caption -->
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-stone-300 pointer-events-none">
+                  <span id="swatchPreviewBotanical" class="font-mono text-amber-300 font-semibold drop-shadow">Juglans nigra • North America</span>
+                  <span class="text-[10px] text-stone-400 drop-shadow">Quarter & Crown Cut</span>
+                </div>
               </div>
-              <h3 id="swatchPreviewName" class="font-serif text-xl sm:text-2xl font-bold text-white mb-1">
+
+              <!-- Title & Grain Description -->
+              <h3 id="swatchPreviewName" class="font-serif text-2xl sm:text-3xl font-bold text-white mb-1.5 tracking-tight">
                 American Black Walnut
               </h3>
-              <p id="swatchPreviewGrain" class="text-xs text-stone-200 mb-3 leading-relaxed">
-                Deep swirling cathedral grain with chocolate & purple undertones
+              <p id="swatchPreviewGrain" class="text-xs sm:text-sm text-stone-300 mb-5 leading-relaxed">
+                Deep swirling cathedral grain with dark espresso, chocolate, and subtle warm undertones.
               </p>
-            </div>
-            <div class="space-y-2 text-xs border-t border-stone-700/70 pt-3">
-              <div class="flex justify-between items-center">
-                <span class="text-stone-300">Hardness Rating:</span>
-                <span id="swatchPreviewHardness" class="font-bold text-amber-400 font-mono text-sm">1,010 Janka</span>
+
+              <!-- Janka Hardness Scale Visual Meter -->
+              <div class="mb-5 p-3.5 rounded-xl bg-stone-900/70 border border-stone-800">
+                <div class="flex justify-between items-center text-xs mb-1.5">
+                  <span class="text-stone-300 font-semibold flex items-center gap-1.5">
+                    <i class="fa-solid fa-weight-hanging text-amber-400 text-[11px]"></i> Janka Hardness Scale
+                  </span>
+                  <span id="swatchPreviewHardness" class="font-bold text-amber-400 font-mono text-xs sm:text-sm">1,010 Janka (Medium-Hard Stability)</span>
+                </div>
+                <!-- Visual Meter Bar -->
+                <div class="w-full bg-stone-800 h-2 rounded-full overflow-hidden relative">
+                  <div id="swatchPreviewMeter" class="h-full bg-gradient-to-r from-amber-600 via-amber-500 to-amber-300 rounded-full transition-all duration-500" style="width: 52%;"></div>
+                </div>
+                <div class="flex justify-between text-[9px] text-stone-500 font-mono mt-1">
+                  <span>Soft (Pine ~400)</span>
+                  <span>Standard Hardwood (~1,200)</span>
+                  <span>Ironwood (2,000+)</span>
+                </div>
               </div>
-              <div class="flex justify-between items-start gap-4">
-                <span class="text-stone-300 shrink-0">Recommended For:</span>
-                <span id="swatchPreviewUsage" class="font-medium text-stone-100 text-right">Floating TV consoles, wardrobes</span>
+
+              <!-- Key Specifications List -->
+              <div class="space-y-2.5 text-xs border-t border-stone-800 pt-4">
+                <div class="flex justify-between items-start gap-4">
+                  <span class="text-stone-400 shrink-0 font-medium">Recommended Joinery:</span>
+                  <span id="swatchPreviewUsage" class="font-semibold text-stone-100 text-right">Floating TV consoles, executive library paneling, luxury walk-in wardrobes</span>
+                </div>
+                <div class="flex justify-between items-center gap-4">
+                  <span class="text-stone-400 shrink-0 font-medium">Recommended Finish:</span>
+                  <span id="swatchPreviewFinish" class="font-medium text-amber-300 text-right">Hand-buffed satin hardwax oil or matte clear lacquer</span>
+                </div>
               </div>
             </div>
+
+            <!-- Direct CTA to Cost Estimator -->
+            <div class="mt-6 pt-4 border-t border-stone-800">
+              <a id="swatchApplyToEstimator" href="#estimator" class="btn-primary w-full py-3 text-xs sm:text-sm flex items-center justify-center gap-2 rounded-xl shadow-lg cursor-pointer">
+                <i class="fa-solid fa-calculator text-amber-300"></i>
+                <span>Use Selected Timber in Cost Estimator</span>
+                <i class="fa-solid fa-arrow-down text-xs ml-1"></i>
+              </a>
+            </div>
+
           </div>
 
         </div>

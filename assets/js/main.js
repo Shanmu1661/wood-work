@@ -415,34 +415,62 @@ function initWoodSwatches() {
   const swatches = document.querySelectorAll('.wood-swatch-item');
   const previewImg = document.getElementById('swatchPreviewImg');
   const previewName = document.getElementById('swatchPreviewName');
+  const previewBotanical = document.getElementById('swatchPreviewBotanical');
   const previewGrain = document.getElementById('swatchPreviewGrain');
   const previewHardness = document.getElementById('swatchPreviewHardness') || document.getElementById('previewHardness');
+  const previewMeter = document.getElementById('swatchPreviewMeter');
   const previewUsage = document.getElementById('swatchPreviewUsage') || document.getElementById('previewUsage');
+  const previewFinish = document.getElementById('swatchPreviewFinish');
+  const applyBtn = document.getElementById('swatchApplyToEstimator');
 
   if (!swatches.length) return;
 
   swatches.forEach(swatch => {
     swatch.addEventListener('click', () => {
       swatches.forEach(s => {
-        s.classList.remove('active', 'border-amber-500', 'ring-2', 'ring-amber-500', 'ring-amber-600');
+        s.classList.remove('active', 'border-amber-500', 'ring-2', 'ring-amber-500/40');
         s.classList.add('border-stone-700/60');
+        const check = s.querySelector('.swatch-check');
+        if (check) check.classList.add('hidden');
       });
       swatch.classList.remove('border-stone-700/60');
-      swatch.classList.add('active', 'border-amber-500', 'ring-2', 'ring-amber-500');
+      swatch.classList.add('active', 'border-amber-500', 'ring-2', 'ring-amber-500/40');
+      const activeCheck = swatch.querySelector('.swatch-check');
+      if (activeCheck) activeCheck.classList.remove('hidden');
 
       const name = swatch.getAttribute('data-name');
+      const botanical = swatch.getAttribute('data-botanical');
       const grain = swatch.getAttribute('data-grain');
       const hardness = swatch.getAttribute('data-hardness');
+      const meter = swatch.getAttribute('data-meter');
       const usage = swatch.getAttribute('data-usage');
+      const finish = swatch.getAttribute('data-finish');
       const img = swatch.getAttribute('data-img');
 
-      if (previewName) previewName.textContent = name;
-      if (previewGrain) previewGrain.textContent = grain;
-      if (previewHardness) previewHardness.textContent = hardness;
-      if (previewUsage) previewUsage.textContent = usage;
+      if (previewName && name) previewName.textContent = name;
+      if (previewBotanical && botanical) previewBotanical.textContent = botanical;
+      if (previewGrain && grain) previewGrain.textContent = grain;
+      if (previewHardness && hardness) previewHardness.textContent = hardness;
+      if (previewMeter && meter) previewMeter.style.width = meter + '%';
+      if (previewUsage && usage) previewUsage.textContent = usage;
+      if (previewFinish && finish) previewFinish.textContent = finish;
       if (previewImg && img) previewImg.src = img;
     });
   });
+
+  if (applyBtn) {
+    applyBtn.addEventListener('click', () => {
+      const activeSwatch = document.querySelector('.wood-swatch-item.active');
+      if (activeSwatch) {
+        const woodVal = activeSwatch.getAttribute('data-wood-val');
+        const woodSelect = document.getElementById('estimatorWood');
+        if (woodSelect && woodVal) {
+          woodSelect.value = woodVal;
+          woodSelect.dispatchEvent(new Event('change'));
+        }
+      }
+    });
+  }
 }
 
 /* --------------------------------------------------
