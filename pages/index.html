@@ -574,15 +574,15 @@
     </section>
 
     <!-- Interactive Wood Species & Instant Estimate Calculator -->
-    <section id="estimator" class="py-24 relative overflow-hidden bg-stone-950 text-white border-y border-stone-800/80 scroll-mt-28">
+    <section id="estimator" class="py-24 relative overflow-hidden bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-100 border-y border-stone-200 dark:border-stone-800 scroll-mt-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 drop-shadow">Budget Transparency</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 drop-shadow-md">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Budget Transparency</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mt-2">
             Interactive Woodwork Cost Estimator
           </h2>
-          <p class="mt-3 text-stone-200 text-sm drop-shadow">
+          <p class="mt-3 text-stone-600 dark:text-stone-400 text-sm">
             Get an instant ballpark estimate for your interior carpentry project based on room dimensions, wood species, and finish grades.
           </p>
         </div>
@@ -590,11 +590,11 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           <!-- Estimator Inputs Form -->
-          <div class="lg:col-span-7 bg-stone-900/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-stone-800">
+          <div class="lg:col-span-7 bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-stone-200/80 dark:border-stone-800">
             <form id="woodEstimatorForm" class="space-y-6">
               
               <div>
-                <label for="estimatorProject" class="block text-sm font-semibold text-stone-200 mb-2">
+                <label for="estimatorProject" class="block text-sm font-semibold text-stone-800 dark:text-stone-200 mb-2">
                   1. Select Woodwork Type
                 </label>
                 <select id="estimatorProject" class="form-input-wood">
@@ -607,7 +607,7 @@
               </div>
 
               <div>
-                <label for="estimatorWood" class="block text-sm font-semibold text-stone-200 mb-2">
+                <label for="estimatorWood" class="block text-sm font-semibold text-stone-800 dark:text-stone-200 mb-2">
                   2. Select Timber & Core Material
                 </label>
                 <select id="estimatorWood" class="form-input-wood">
@@ -620,7 +620,7 @@
               </div>
 
               <div>
-                <label for="estimatorFinish" class="block text-sm font-semibold text-stone-200 mb-2">
+                <label for="estimatorFinish" class="block text-sm font-semibold text-stone-800 dark:text-stone-200 mb-2">
                   3. Protective Coating & Sheen
                 </label>
                 <select id="estimatorFinish" class="form-input-wood">
@@ -632,7 +632,7 @@
 
               <div>
                 <div class="flex justify-between items-center mb-2">
-                  <label for="estimatorArea" class="text-sm font-semibold text-stone-200">
+                  <label for="estimatorArea" class="text-sm font-semibold text-stone-800 dark:text-stone-200">
                     4. Approximate Surface Area / Wall Width
                   </label>
                   <span id="estimatorAreaDisplay" class="font-mono text-amber-600 dark:text-amber-400 font-bold text-sm bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-900">
@@ -640,7 +640,7 @@
                   </span>
                 </div>
                 <input id="estimatorArea" type="range" min="20" max="400" step="5" value="80" class="w-full h-2 bg-stone-200 dark:bg-stone-800 rounded-lg cursor-pointer">
-                <div class="flex justify-between text-[11px] text-stone-400 mt-1">
+                <div class="flex justify-between text-[11px] text-stone-500 dark:text-stone-400 mt-1">
                   <span>20 sq.ft (Compact console)</span>
                   <span>200 sq.ft (Full wardrobe wall)</span>
                   <span>400 sq.ft (Master suite millwork)</span>
@@ -651,40 +651,40 @@
           </div>
 
           <!-- Estimator Output Card -->
-          <div class="lg:col-span-5 bg-stone-900/90 backdrop-blur-md text-white p-8 rounded-2xl shadow-2xl border border-stone-800">
-            <div class="flex items-center gap-2 text-amber-400 text-xs font-semibold tracking-wider uppercase mb-4">
+          <div class="lg:col-span-5 bg-white dark:bg-stone-900 text-stone-900 dark:text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-stone-200/80 dark:border-stone-800">
+            <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-xs font-semibold tracking-wider uppercase mb-4">
               <i class="fa-solid fa-calculator"></i>
               <span>Calculated Estimate</span>
             </div>
 
             <div class="mb-6">
-              <div class="text-stone-400 text-xs mb-1">Estimated Investment Range</div>
+              <div class="text-stone-500 dark:text-stone-400 text-xs mb-1">Estimated Investment Range</div>
               <div class="flex items-baseline gap-2">
-                <span id="costEstimateLow" class="font-serif text-3xl sm:text-4xl font-bold text-amber-400">$7,220</span>
-                <span class="text-stone-500 font-bold">-</span>
-                <span id="costEstimateHigh" class="font-serif text-3xl sm:text-4xl font-bold text-amber-400">$8,740</span>
+                <span id="costEstimateLow" class="font-serif text-3xl sm:text-4xl font-bold text-amber-600 dark:text-amber-400">$7,220</span>
+                <span class="text-stone-400 dark:text-stone-500 font-bold">-</span>
+                <span id="costEstimateHigh" class="font-serif text-3xl sm:text-4xl font-bold text-amber-600 dark:text-amber-400">$8,740</span>
               </div>
-              <p class="text-[11px] text-stone-400 mt-1.5">*Includes precision 3D CAD design, workshop joinery fabrication, Blum hardware, and on-site fitting.</p>
+              <p class="text-[11px] text-stone-500 dark:text-stone-400 mt-1.5">*Includes precision 3D CAD design, workshop joinery fabrication, Blum hardware, and on-site fitting.</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 py-4 border-y border-stone-800 mb-6">
+            <div class="grid grid-cols-2 gap-4 py-4 border-y border-stone-200 dark:border-stone-800 mb-6">
               <div>
-                <span class="text-[11px] text-stone-400 block uppercase">Lumber Requirement</span>
-                <span id="estimateBoardFeet" class="font-bold text-stone-200 font-mono text-sm">108 BF</span>
+                <span class="text-[11px] text-stone-500 dark:text-stone-400 block uppercase">Lumber Requirement</span>
+                <span id="estimateBoardFeet" class="font-bold text-stone-900 dark:text-stone-200 font-mono text-sm">108 BF</span>
               </div>
               <div>
-                <span class="text-[11px] text-stone-400 block uppercase">Workshop Lead Time</span>
-                <span id="estimateDuration" class="font-bold text-stone-200 font-mono text-sm">3 - 4 Weeks</span>
+                <span class="text-[11px] text-stone-500 dark:text-stone-400 block uppercase">Workshop Lead Time</span>
+                <span id="estimateDuration" class="font-bold text-stone-900 dark:text-stone-200 font-mono text-sm">3 - 4 Weeks</span>
               </div>
             </div>
 
             <div class="space-y-3">
-              <a href="booking.html" class="btn-primary w-full text-center py-3.5 shadow-amber-900/40">
+              <a href="booking.html" class="btn-primary w-full text-center py-3.5 shadow-amber-900/20">
                 <i class="fa-solid fa-calendar-check mr-2"></i>
                 <span>Confirm Estimate With Site Visit</span>
               </a>
-              <p class="text-[11px] text-stone-400 text-center">
-                <i class="fa-solid fa-lock text-stone-500 mr-1"></i> No commitment required. Free laser measurement.
+              <p class="text-[11px] text-stone-500 dark:text-stone-400 text-center">
+                <i class="fa-solid fa-lock text-stone-400 mr-1"></i> No commitment required. Free laser measurement.
               </p>
             </div>
           </div>
@@ -927,33 +927,33 @@
     </section>
 
     <!-- Master Workshop & Craftsmen Story Section -->
-    <section class="py-24 relative overflow-hidden bg-stone-950 text-white border-y border-stone-800/80">
+    <section class="py-24 relative overflow-hidden bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-100 border-y border-stone-200 dark:border-stone-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-800/60 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
-              <i class="fa-solid fa-fire text-amber-500"></i> The TimberCraft Workshop
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800/60 text-amber-700 dark:text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+              <i class="fa-solid fa-fire text-amber-600 dark:text-amber-500"></i> The TimberCraft Workshop
             </div>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-6">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 leading-tight mb-6">
               Where Precision Engineering Meets Old-World Bench Carpentry
             </h2>
-            <p class="text-stone-300 text-sm leading-relaxed mb-6">
+            <p class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed mb-6">
               Modern factories stamp out modular particle-board boxes with plastic edge-banding. At TimberCraft, our journeymen woodworkers spend decades refining their eye for grain orientation, hand-planed chamfers, and whisper-quiet drawer closures.
             </p>
-            <p class="text-stone-400 text-sm leading-relaxed mb-8">
+            <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-8">
               Every carcass is dry-fitted and checked for square in our 14,000 sq.ft facility before it ever arrives at your home. When our crew installs on site, dust and disruption are minimized to hours, not weeks.
             </p>
 
-            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-stone-800">
+            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-stone-200 dark:border-stone-800">
               <div>
-                <div class="text-amber-400 font-serif text-2xl font-bold">14,000 sq.ft</div>
-                <div class="text-xs text-stone-400 mt-1">Dedicated Joinery Facility</div>
+                <div class="text-amber-600 dark:text-amber-400 font-serif text-2xl font-bold">14,000 sq.ft</div>
+                <div class="text-xs text-stone-500 dark:text-stone-400 mt-1">Dedicated Joinery Facility</div>
               </div>
               <div>
-                <div class="text-amber-400 font-serif text-2xl font-bold">Zero Formaldehyde</div>
-                <div class="text-xs text-stone-400 mt-1">Eco-Friendly Resins & Finishes</div>
+                <div class="text-amber-600 dark:text-amber-400 font-serif text-2xl font-bold">Zero Formaldehyde</div>
+                <div class="text-xs text-stone-500 dark:text-stone-400 mt-1">Eco-Friendly Resins & Finishes</div>
               </div>
             </div>
 
@@ -968,14 +968,14 @@
           <!-- Workshop Image Grid -->
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-4">
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700/60 group">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/80 dark:border-stone-700/60 group">
                 <img src="../assets/images/about-facility.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80'" alt="Master carpenter inspecting timber slab inside 14,000 sq ft joinery facility" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-3 left-3 bg-stone-900/90 backdrop-blur-md text-amber-300 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-amber-500/30">
                   14,000 sq.ft Bench Facility
                 </span>
               </div>
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700/60 group">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/80 dark:border-stone-700/60 group">
                 <img src="../assets/images/workflow-bg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80'" alt="Skilled master carpenters hand-planing custom joinery on workbench" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-3 left-3 bg-stone-900/90 backdrop-blur-md text-amber-300 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-amber-500/30">
@@ -984,14 +984,14 @@
               </div>
             </div>
             <div class="space-y-4 pt-8">
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700/60 group">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/80 dark:border-stone-700/60 group">
                 <img src="../assets/images/journal-pivot-door.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'" alt="Handcrafted solid teak pivot entrance door with custom joinery" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-3 left-3 bg-stone-900/90 backdrop-blur-md text-amber-300 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-amber-500/30">
                   Solid Hardwood Doors
                 </span>
               </div>
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700/60 group">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/80 dark:border-stone-700/60 group">
                 <img src="../assets/images/journal-tv-console.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Precision floating media console with bookmatched walnut and acoustic slats" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none"></div>
                 <span class="absolute bottom-3 left-3 bg-stone-900/90 backdrop-blur-md text-amber-300 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-amber-500/30">
