@@ -364,29 +364,49 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Execution Protocol Interactive Stage Cards */
 .protocol-stage-card {
   position: relative;
-  background: rgba(18, 14, 12, 0.65);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1.5px solid rgba(120, 113, 108, 0.35);
+  background: #ffffff;
+  border: 1.5px solid #e7e5e4;
   border-radius: 1rem;
   padding: 1.5rem;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05);
 }
 .protocol-stage-card:hover {
-  border-color: rgba(245, 158, 11, 0.65);
-  background: rgba(28, 21, 17, 0.82);
+  border-color: rgba(217, 119, 6, 0.5);
+  background: #fafaf9;
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 12px 24px -6px rgba(217, 119, 6, 0.15);
 }
 .protocol-stage-card.active-protocol-stage {
-  border-color: #f59e0b !important;
-  background: linear-gradient(165deg, rgba(38, 28, 20, 0.92) 0%, rgba(20, 15, 12, 0.95) 100%) !important;
-  box-shadow: 0 16px 36px -6px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.4) !important;
+  border-color: #d97706 !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 28px -6px rgba(217, 119, 6, 0.2), 0 0 0 1.5px rgba(217, 119, 6, 0.4) !important;
   transform: translateY(-4px);
 }
 .protocol-stage-card.active-protocol-stage .stage-num {
+  color: #d97706 !important;
+  text-shadow: none;
+}
+
+html.dark .protocol-stage-card {
+  background: rgba(18, 14, 12, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-color: rgba(120, 113, 108, 0.35);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+html.dark .protocol-stage-card:hover {
+  border-color: rgba(245, 158, 11, 0.65);
+  background: rgba(28, 21, 17, 0.82);
+  box-shadow: 0 16px 32px -8px rgba(245, 158, 11, 0.2);
+}
+html.dark .protocol-stage-card.active-protocol-stage {
+  border-color: #f59e0b !important;
+  background: linear-gradient(165deg, rgba(38, 28, 20, 0.92) 0%, rgba(20, 15, 12, 0.95) 100%) !important;
+  box-shadow: 0 16px 36px -6px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.4) !important;
+}
+html.dark .protocol-stage-card.active-protocol-stage .stage-num {
   color: #f59e0b !important;
   text-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
 }
@@ -444,29 +464,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: all 0.25s ease;
   user-select: none;
   -webkit-user-select: none;
+  background-color: #f5f5f4 !important; /* stone-100 */
+  border: 1.5px solid #d6d3d1 !important; /* stone-300 */
+  color: #292524 !important; /* stone-800 */
+}
+html.dark .sector-btn {
   background-color: rgba(28, 25, 23, 0.85) !important;
   border: 1.5px solid rgba(120, 113, 108, 0.45) !important;
   color: #e7e5e4 !important; /* stone-200 */
 }
 .sector-btn i {
-  color: #f59e0b !important; /* amber-500 */
+  color: #d97706 !important; /* amber-600 */
   transition: transform 0.2s ease, color 0.2s ease;
 }
+html.dark .sector-btn i {
+  color: #f59e0b !important; /* amber-500 */
+}
 .sector-btn:hover {
+  border-color: #d97706 !important;
+  background-color: #ffffff !important;
+  color: #1c1917 !important;
+}
+html.dark .sector-btn:hover {
   border-color: #f59e0b !important;
   background-color: rgba(41, 37, 36, 0.95) !important;
   color: #ffffff !important;
 }
 .sector-btn:hover i {
   transform: scale(1.1);
-  color: #fbbf24 !important;
+  color: #b45309 !important;
 }
 .sector-btn.active-sector {
   background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
-  border-color: #fbbf24 !important;
+  border-color: #d97706 !important;
   color: #ffffff !important;
   font-weight: 700 !important;
-  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.45), 0 0 0 1px rgba(251, 191, 36, 0.5) !important;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35), 0 0 0 1px rgba(251, 191, 36, 0.5) !important;
 }
 .sector-btn.active-sector i {
   color: #ffffff !important;
@@ -479,4 +512,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .accordion-trigger[aria-expanded="true"] .accordion-icon {
   transform: rotate(180deg);
+}
+
+/* ===================================================================
+   Infinite Partner Marquee Animation
+   =================================================================== */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+    overflow-x: auto;
+  }
 }

@@ -88,3 +88,8 @@ html[dir="rtl"] .timeline-step-line {
   right: 50%;
   left: auto;
 }
+
+/* Marquee Direction in RTL */
+html[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
