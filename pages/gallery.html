@@ -101,7 +101,24 @@
           </div>
         </div>
         <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
-        <a href="gallery.html" class="text-amber-600 dark:text-amber-500 font-semibold transition-colors">Portfolio</a>
+        <div class="relative group py-2">
+          <a href="gallery.html" class="text-amber-600 dark:text-amber-500 font-semibold flex items-center gap-1.5 transition-colors">
+            <span>Portfolio</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          <div class="absolute left-0 top-full pt-1.5 w-56 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 rounded-xl shadow-2xl border border-stone-200 dark:border-stone-800 p-2 space-y-1">
+              <a href="case-studies.html" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-medium">
+                <i class="fa-solid fa-folder-open text-xs text-amber-600"></i>
+                <span>All Case Studies (12)</span>
+              </a>
+              <a href="gallery.html" class="flex items-center gap-2.5 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-xs font-bold">
+                <i class="fa-solid fa-images text-xs"></i>
+                <span>Masterpiece Gallery</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="specimens.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Timber Library</a>
         <a href="blog.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Journal</a>
         <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
@@ -199,6 +216,20 @@
         </p>
       </div>
     </section>
+
+    <!-- Switcher Strip between Lightbox Gallery and In-Depth Case Studies -->
+    <div class="bg-amber-950/40 border-b border-amber-600/30 py-2.5 px-4 text-center">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs text-amber-200">
+        <span class="inline-flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-book-open text-amber-400"></i>
+          <span>Looking for technical joinery calculations and client challenge reports?</span>
+        </span>
+        <a href="case-studies.html" class="inline-flex items-center gap-1.5 font-bold text-white bg-amber-600 hover:bg-amber-500 px-3.5 py-1 rounded-full text-[11px] shadow-sm transition-colors">
+          <span>View All 12 Technical Case Studies</span>
+          <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        </a>
+      </div>
+    </div>
 
     <!-- Category Filter Bar (Positioned Directly Below the Banner Section) -->
     <section class="py-3.5 bg-stone-900 border-b border-stone-800/80 relative shadow-md">
@@ -827,10 +858,11 @@
         <div>
           <h4 class="text-sm font-bold uppercase tracking-wider text-stone-200 mb-4">Explore</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="home-2.html" class="hover:text-amber-400">Commercial Millwork (Home 2)</a></li>
-            <li><a href="about.html" class="hover:text-amber-400">About Our Heritage</a></li>
+            <li><a href="case-studies.html" class="hover:text-amber-400">All Case Studies (12)</a></li>
             <li><a href="gallery.html" class="text-amber-500">Portfolio Gallery</a></li>
             <li><a href="specimens.html" class="hover:text-amber-400 transition-colors">Timber & Material Library</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About Our Heritage</a></li>
+            <li><a href="home-2.html" class="hover:text-amber-400">Commercial Millwork (Home 2)</a></li>
             <li><a href="dashboard.html" class="hover:text-amber-400">Project Tracker</a></li>
             <li><a href="booking.html" class="hover:text-amber-400">Book Site Visit</a></li>
           </ul>
