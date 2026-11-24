@@ -122,12 +122,12 @@
 
       <!-- Utility Controls -->
       <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 shrink-0">
-        <button type="button" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
+        <button type="button" class="dir-toggle-btn hidden lg:flex px-2 sm:px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
           <i class="fa-solid fa-globe text-amber-600"></i>
           <span class="dir-text">RTL</span>
         </button>
 
-        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors shrink-0" title="Toggle Theme" aria-label="Toggle theme">
+        <button type="button" class="theme-toggle-btn hidden lg:flex w-8 h-8 sm:w-9 sm:h-9 rounded-md border border-stone-300 dark:border-stone-700 flex items-center justify-center text-stone-700 dark:text-stone-200 hover:text-amber-600 dark:hover:text-amber-400 transition-colors shrink-0" title="Toggle Theme" aria-label="Toggle theme">
           <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
         </button>
 
@@ -135,9 +135,67 @@
         <a href="about.html" class="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Know More About Us">
           <span>Know More</span>
         </a>
+      
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="menuToggle" type="button" class="lg:hidden w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500 shrink-0" aria-label="Open mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars text-sm sm:text-lg"></i>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Offcanvas Menu Drawer & Backdrop -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between hidden transition-transform duration-300 lg:hidden">
+    <div>
+            <div class="flex items-center justify-between pb-5 border-b border-stone-200 dark:border-stone-800">
+        <a href="index.html" class="flex items-center gap-2.5 focus:outline-none">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center text-white shadow-sm shrink-0">
+            <i class="fa-solid fa-cubes text-base text-amber-300"></i>
+          </div>
+          <div>
+            <span class="font-serif font-bold text-base tracking-wider text-stone-900 dark:text-stone-100 block leading-tight">
+              TIMBER<span class="text-amber-600">CRAFT</span>
+            </span>
+            <span class="text-[8px] tracking-widest uppercase text-stone-500 dark:text-stone-400 font-semibold block">
+              Architectural Joinery
+            </span>
+          </div>
+        </a>
+        <button id="closeMobileMenu" class="w-9 h-9 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-900 dark:hover:text-white shrink-0" aria-label="Close menu">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Controls: RTL and Dark Mode Bar inside Hamburger Menu -->
+      <div class="grid grid-cols-2 gap-2.5 pt-4 pb-4 border-b border-stone-100 dark:border-stone-800">
+        <button type="button" class="dir-toggle-btn py-2 px-3 text-xs font-semibold rounded-lg border border-stone-200 dark:border-stone-700 hover:border-amber-600 text-stone-700 dark:text-stone-300 flex items-center justify-center gap-2 bg-stone-50 dark:bg-stone-800/60 transition-colors shadow-sm" title="Switch Right-to-Left / Left-to-Right">
+          <i class="fa-solid fa-globe text-amber-600 text-xs"></i>
+          <span class="dir-text text-xs">RTL</span>
+        </button>
+        <button type="button" class="theme-toggle-btn py-2 px-3 text-xs font-semibold rounded-lg border border-stone-200 dark:border-stone-700 hover:border-amber-600 text-stone-700 dark:text-stone-200 flex items-center justify-center gap-2 bg-stone-50 dark:bg-stone-800/60 transition-colors shadow-sm" title="Toggle Dark/Light Mode" aria-label="Toggle visual theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs"></i>
+          <span class="text-xs">Theme</span>
+        </button>
+      </div>
+      <nav class="mt-6 flex flex-col gap-4 font-medium text-base text-stone-700 dark:text-stone-200">
+        <a href="index.html" class="hover:text-amber-600 py-1">Home (Residential)</a>
+        <a href="home-2.html" class="hover:text-amber-600 py-1">Home 2 (Commercial Millwork)</a>
+        <a href="about.html" class="hover:text-amber-600 py-1">Know More</a>
+        <a href="services.html" class="hover:text-amber-600 py-1">Services</a>
+        <a href="case-studies.html" class="hover:text-amber-600 py-1">All Case Studies (12)</a>
+        <a href="gallery.html" class="hover:text-amber-600 py-1">Portfolio Gallery</a>
+        <a href="specimens.html" class="hover:text-amber-600 py-1">Timber & Material Library</a>
+        <a href="blog.html" class="hover:text-amber-600 py-1">Journal</a>
+        <a href="booking.html" class="hover:text-amber-600 py-1">Book Consultation</a>
+        <a href="contact.html" class="hover:text-amber-600 py-1">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-200 dark:border-stone-800 space-y-3">
+      <a href="booking.html" class="btn-primary w-full text-center py-3">Book Laser Survey</a>
+    </div>
+  </div>
+
 
   <!-- Hero Header / Page Banner -->
   <section class="page-hero-banner relative py-10 sm:py-12 lg:py-14 text-white text-center overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(12, 10, 9, 0.55), rgba(12, 10, 9, 0.35), rgba(12, 10, 9, 0.70)), url('../assets/images/journal-tv-console.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
