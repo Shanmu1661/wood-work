@@ -170,7 +170,24 @@
           </div>
         </div>
         <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
-        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
+        <div class="relative group py-2">
+          <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 flex items-center gap-1.5 transition-colors">
+            <span>Portfolio</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          <div class="absolute left-0 top-full pt-1.5 w-56 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 rounded-xl shadow-2xl border border-stone-200 dark:border-stone-800 p-2 space-y-1">
+              <a href="case-studies.html" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-medium">
+                <i class="fa-solid fa-folder-open text-xs text-amber-600"></i>
+                <span>All Case Studies (12)</span>
+              </a>
+              <a href="gallery.html" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-medium">
+                <i class="fa-solid fa-images text-xs text-stone-400"></i>
+                <span>Masterpiece Gallery</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="specimens.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Timber Library</a>
         <a href="blog.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Journal</a>
         <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>

@@ -72,7 +72,7 @@
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700 dark:text-stone-200">
         <!-- Home Dropdown Menu -->
         <div class="relative group py-2">
           <a href="index.html" class="flex items-center gap-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
@@ -105,13 +105,30 @@
           </div>
         </div>
         <a href="services.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
-        <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Portfolio</a>
+        <div class="relative group py-2">
+          <a href="gallery.html" class="hover:text-amber-600 dark:hover:text-amber-400 flex items-center gap-1.5 transition-colors">
+            <span>Portfolio</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </a>
+          <div class="absolute left-0 top-full pt-1.5 w-56 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-stone-900 rounded-xl shadow-2xl border border-stone-200 dark:border-stone-800 p-2 space-y-1">
+              <a href="case-studies.html" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-medium">
+                <i class="fa-solid fa-folder-open text-xs text-amber-600"></i>
+                <span>All Case Studies (12)</span>
+              </a>
+              <a href="gallery.html" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-medium">
+                <i class="fa-solid fa-images text-xs text-stone-400"></i>
+                <span>Masterpiece Gallery</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="specimens.html" class="text-amber-600 dark:text-amber-500 font-semibold transition-colors">Timber Library</a>
         <a href="blog.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Journal</a>
         <a href="contact.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
       </nav>
 
-      <!-- Utility Controls (Theme, RTL, Consultation CTA) -->
+      <!-- Utility Controls (Theme, RTL, CTA) -->
       <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 shrink-0">
         <!-- RTL Toggle -->
         <button type="button" class="dir-toggle-btn hidden sm:flex px-2 sm:px-2.5 py-1.5 text-xs font-semibold rounded-md border border-stone-300 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-600 dark:text-stone-300 transition-colors items-center gap-1.5" title="Switch Right-to-Left / Left-to-Right">
@@ -127,11 +144,6 @@
         <!-- Know More (About Us) Link -->
         <a href="about.html" class="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Know More About Us">
           <span>Know More</span>
-        </a>
-
-        <a href="booking.html" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold shadow-md transition-all">
-          <i class="fa-solid fa-box-open text-xs"></i>
-          <span>Request Specimen Box</span>
         </a>
 
         <!-- Mobile Menu Hamburger Button -->
@@ -174,12 +186,13 @@
         <a href="index.html" class="hover:text-amber-600 py-1">Home (Residential)</a>
         <a href="home-2.html" class="hover:text-amber-600 py-1">Home 2 (Commercial Millwork)</a>
         <a href="about.html" class="hover:text-amber-600 py-1">Know More</a>
-        <a href="services.html" class="hover:text-amber-600 py-1">Services (7 Disciplines)</a>
+        <a href="services.html" class="hover:text-amber-600 py-1">Services</a>
+        <a href="case-studies.html" class="hover:text-amber-600 py-1">All Case Studies (12)</a>
         <a href="gallery.html" class="hover:text-amber-600 py-1">Portfolio Gallery</a>
         <a href="specimens.html" class="text-amber-600 font-semibold py-1">Timber & Material Library</a>
-        <a href="blog.html" class="hover:text-amber-600 py-1">Woodcraft Journal</a>
+        <a href="blog.html" class="hover:text-amber-600 py-1">Journal</a>
         <a href="booking.html" class="hover:text-amber-600 py-1">Book Consultation</a>
-        <a href="contact.html" class="hover:text-amber-600 py-1">Contact Workshop</a>
+        <a href="contact.html" class="hover:text-amber-600 py-1">Contact</a>
       </nav>
     </div>
     <div class="pt-6 border-t border-stone-200 dark:border-stone-800 space-y-3">
@@ -966,10 +979,11 @@
         <div>
           <h4 class="text-sm font-bold uppercase tracking-wider text-stone-200 mb-4">Navigation</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Our Atelier</a></li>
-            <li><a href="services.html" class="hover:text-amber-400 transition-colors">Joinery Services</a></li>
+            <li><a href="case-studies.html" class="hover:text-amber-400 transition-colors">All Case Studies (12)</a></li>
             <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Project Portfolio</a></li>
             <li><a href="specimens.html" class="text-amber-400 font-semibold transition-colors">Timber & Material Library</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Our Atelier</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition-colors">Joinery Services</a></li>
             <li><a href="blog.html" class="hover:text-amber-400 transition-colors">Technical Journal</a></li>
             <li><a href="booking.html" class="hover:text-amber-400 transition-colors">Book Consultation</a></li>
             <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Workshop & Inquiries</a></li>
