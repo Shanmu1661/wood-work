@@ -419,32 +419,32 @@ html.dark .protocol-stage-card.active-protocol-stage .stage-num {
 }
 
 /* ===================================================================
-   Uniform Page Banner Section (Consistent Equal Height Across Pages)
+   Uniform Page Banner Section (Consistent Balanced Height Across Pages)
    =================================================================== */
 .page-hero-banner {
   position: relative;
-  min-height: 440px;
+  min-height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   color: #ffffff;
   border-bottom: 1px solid rgba(87, 83, 78, 0.4);
-  padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-top: 2.75rem !important;
+  padding-bottom: 2.5rem !important;
 }
 @media (min-width: 640px) {
   .page-hero-banner {
-    min-height: 460px;
-    padding-top: 6rem;
-    padding-bottom: 4.5rem;
+    min-height: 280px;
+    padding-top: 3.25rem !important;
+    padding-bottom: 2.75rem !important;
   }
 }
 @media (min-width: 1024px) {
   .page-hero-banner {
-    min-height: 480px;
-    padding-top: 6.5rem;
-    padding-bottom: 5rem;
+    min-height: 320px;
+    padding-top: 3.75rem !important;
+    padding-bottom: 3.25rem !important;
   }
 }
 
