@@ -765,172 +765,170 @@
     </section>
 
     <!-- 15-Second Master Joinery Video Showcase Section -->
-    <section id="workshop-video" class="py-14 sm:py-20 lg:py-24 bg-stone-950 text-white relative overflow-hidden border-y border-stone-800/80 scroll-mt-28">
-      <!-- Ambient Lighting & Workshop Atmosphere -->
-      <div class="absolute inset-0 pointer-events-none z-0">
-        <div class="absolute -top-32 -right-32 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl"></div>
+    <section id="workshop-video" class="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 border-y border-stone-200 dark:border-stone-800 scroll-mt-28">
+      <!-- Subtle Workshop Background Wash -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="../assets/images/workshop-bg.jpg" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-[0.07] dark:opacity-[0.12]">
+        <div class="absolute inset-0 bg-gradient-to-r from-stone-50/95 via-stone-50/85 to-stone-50/75 dark:from-stone-950/95 dark:via-stone-950/90 dark:to-stone-950/80"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-3 sm:mb-4 backdrop-blur-md">
-            <i class="fa-solid fa-film text-amber-400"></i>
-            <span>15-Second Atelier Reel</span>
+          <!-- Left Column: Headline, Copy, Quick Selector Bar & CTAs -->
+          <div class="lg:col-span-6 space-y-6">
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-stone-900 dark:text-stone-100">
+              Architectural <span class="text-amber-600 dark:text-amber-500">Woodwork Craft</span> &amp; Precision.
+            </h2>
+
+            <p class="text-sm sm:text-base text-stone-600 dark:text-stone-400 leading-relaxed max-w-xl">
+              Transform bare interiors into enduring walnut and oak living spaces. Our master joiners combine 3D laser calibration, hand-cut dovetails, and satin hardwax oil finishes.
+            </p>
+
+            <!-- Compact Quick Selector Bar -->
+            <div class="bg-white dark:bg-stone-900 p-2 rounded-2xl shadow-lg border border-stone-200/90 dark:border-stone-800 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 max-w-xl">
+              <div class="flex-1 min-w-0">
+                <label for="reelServiceSelect" class="sr-only">Select Woodwork Service</label>
+                <select id="reelServiceSelect" class="w-full bg-white dark:bg-stone-900 text-xs sm:text-sm font-medium text-stone-800 dark:text-stone-200 px-3 py-2.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/40 cursor-pointer">
+                  <option value="service-wardrobes.html">Custom Wardrobes</option>
+                  <option value="service-tv-units.html">Floating TV Consoles</option>
+                  <option value="service-doors.html">Solid Pivot Doors</option>
+                  <option value="service-paneling.html">Acoustic Slat Paneling</option>
+                  <option value="service-kitchens.html">Luxury Kitchens</option>
+                </select>
+              </div>
+
+              <div class="hidden sm:block w-px h-7 bg-stone-200 dark:bg-stone-800 shrink-0"></div>
+
+              <div class="flex-1 min-w-0">
+                <label for="reelChapterSelect" class="sr-only">Select Reel Chapter</label>
+                <select id="reelChapterSelect" class="w-full bg-white dark:bg-stone-900 text-xs sm:text-sm font-medium text-stone-800 dark:text-stone-200 px-3 py-2.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/40 cursor-pointer">
+                  <option value="0">01 · Laser Mapping (0:00)</option>
+                  <option value="3">02 · Bench Planing (0:03)</option>
+                  <option value="6">03 · Dovetail Joinery (0:06)</option>
+                  <option value="9">04 · Organic Finish (0:09)</option>
+                  <option value="12">05 · Final Fit (0:12)</option>
+                </select>
+              </div>
+
+              <button id="reelExploreBtn" type="button" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm flex items-center justify-center gap-2 shrink-0 cursor-pointer">
+                <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                <span>Explore</span>
+              </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <a href="booking.html" class="btn-primary text-xs sm:text-sm py-3 px-5 rounded-xl shadow-md">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Book Site Consultation</span>
+              </a>
+              <a href="services.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 hover:border-amber-600 dark:hover:border-amber-500 text-stone-800 dark:text-stone-200 hover:text-amber-700 dark:hover:text-amber-400 text-xs sm:text-sm font-semibold shadow-sm transition-colors">
+                <i class="fa-solid fa-compass-drafting text-amber-600 dark:text-amber-400"></i>
+                <span>Explore Joinery Services</span>
+              </a>
+            </div>
           </div>
-          <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            Witness Master Joinery <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent">In Motion</span>
-          </h2>
-          <p class="mt-3 text-sm sm:text-base text-stone-300 leading-relaxed max-w-2xl mx-auto">
-            Step inside our workshop in 15 seconds — from 3D laser site mapping and hand-planed walnut flitches to dovetail carving, satin oil finishing, and final installation.
-          </p>
-        </div>
 
-        <!-- Video Player Card -->
-        <div class="max-w-5xl mx-auto relative rounded-xl sm:rounded-3xl overflow-hidden shadow-2xl border border-stone-700/80 bg-stone-900">
+          <!-- Right Column: Framed 15-Second Autoplaying Video Card -->
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-stone-200/80 dark:border-stone-800 bg-stone-900 aspect-[4/3] sm:aspect-video">
+              <video id="atelierVideoPlayer" class="w-full h-full object-cover block" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="../assets/images/video-showcase-poster.jpg">
+                <source src="../assets/videos/timbercraft-15s-showcase.mp4" type="video/mp4">
+                Your browser does not support HTML5 video playback.
+              </video>
 
-          <!-- 16:9 Responsive Video Stage -->
-          <div class="relative aspect-video w-full bg-black overflow-hidden">
-
-            <!-- Generated 15-Second MP4 Video Player (Autoplays inline on mobile & desktop) -->
-            <video id="atelierVideoPlayer" class="w-full h-full object-cover block" autoplay muted loop playsinline webkit-playsinline controls preload="auto" poster="../assets/images/video-showcase-poster.jpg">
-              <source src="../assets/videos/timbercraft-15s-showcase.mp4" type="video/mp4">
-              Your browser does not support HTML5 video playback.
-            </video>
-
-            <!-- Fallback Play Button (Only shown if browser/OS blocks muted autoplay) -->
-            <button id="mainVideoPlayBtn" type="button" aria-label="Play 15-second master joinery video" class="hidden absolute inset-0 m-auto w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white items-center justify-center shadow-2xl shadow-amber-600/50 hover:scale-110 active:scale-95 transition-all duration-300 z-20 focus:outline-none cursor-pointer">
-              <i class="fa-solid fa-play text-lg sm:text-2xl ml-0.5 text-white"></i>
-            </button>
-
-          </div>
-
-          <!-- 15-Second Chapter Strip -->
-          <div class="bg-stone-900 border-t border-stone-800 p-3 sm:p-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">
-            <button type="button" class="video-chapter-btn text-left p-2.5 sm:p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-amber-500/60 transition-all group cursor-pointer" data-timestamp="0">
-              <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-amber-400 mb-0.5 sm:mb-1">
-                <span>01</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300 font-mono">00:00</span>
-              </div>
-              <div class="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">Laser Calibration</div>
-            </button>
-
-            <button type="button" class="video-chapter-btn text-left p-2.5 sm:p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="3">
-              <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-amber-400 mb-0.5 sm:mb-1">
-                <span>02</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300 font-mono">00:03</span>
-              </div>
-              <div class="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">Master Benchwork</div>
-            </button>
-
-            <button type="button" class="video-chapter-btn text-left p-2.5 sm:p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="6">
-              <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-amber-400 mb-0.5 sm:mb-1">
-                <span>03</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300 font-mono">00:06</span>
-              </div>
-              <div class="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">Precision Joinery</div>
-            </button>
-
-            <button type="button" class="video-chapter-btn text-left p-2.5 sm:p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="9">
-              <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-amber-400 mb-0.5 sm:mb-1">
-                <span>04</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300 font-mono">00:09</span>
-              </div>
-              <div class="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">Organic Finish</div>
-            </button>
-
-            <button type="button" class="video-chapter-btn col-span-2 sm:col-span-1 text-left p-2.5 sm:p-3 rounded-xl bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 transition-all group cursor-pointer" data-timestamp="12">
-              <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-amber-400 mb-0.5 sm:mb-1">
-                <span>05</span>
-                <span class="text-[10px] text-stone-400 group-hover:text-amber-300 font-mono">00:12</span>
-              </div>
-              <div class="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">Living Architecture</div>
-            </button>
+              <!-- Subtle Play/Pause Toggle -->
+              <button id="videoPlayPauseBtn" type="button" aria-label="Pause or play 15-second reel" class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-stone-950/70 hover:bg-amber-600 text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-colors shadow-lg z-20 cursor-pointer">
+                <i id="videoPlayPauseIcon" class="fa-solid fa-pause text-xs"></i>
+              </button>
+            </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- Inline 15-Second Video Controller -->
+    <!-- Inline 15-Second Video & Quick Selector Controller -->
     <script>
       (function() {
         const video = document.getElementById('atelierVideoPlayer');
-        const playBtn = document.getElementById('mainVideoPlayBtn');
-        const chapterBtns = document.querySelectorAll('.video-chapter-btn');
+        const toggleBtn = document.getElementById('videoPlayPauseBtn');
+        const toggleIcon = document.getElementById('videoPlayPauseIcon');
+        const chapterSelect = document.getElementById('reelChapterSelect');
+        const serviceSelect = document.getElementById('reelServiceSelect');
+        const exploreBtn = document.getElementById('reelExploreBtn');
 
         if (!video) return;
 
-        function setActiveChapter(index) {
-          chapterBtns.forEach(function(btn, idx) {
-            if (idx === index) {
-              btn.classList.remove('border-stone-800');
-              btn.classList.add('border-amber-500/60', 'bg-stone-800/80');
-            } else {
-              btn.classList.remove('border-amber-500/60', 'bg-stone-800/80');
-              btn.classList.add('border-stone-800');
-            }
-          });
-        }
-
-        function showFallbackPlay() {
-          if (!playBtn) return;
-          playBtn.classList.remove('hidden');
-          playBtn.classList.add('flex');
-        }
-
-        function hideFallbackPlay() {
-          if (!playBtn) return;
-          playBtn.classList.add('hidden');
-          playBtn.classList.remove('flex');
+        function updateIcon() {
+          if (!toggleIcon) return;
+          if (video.paused) {
+            toggleIcon.classList.remove('fa-pause');
+            toggleIcon.classList.add('fa-play');
+          } else {
+            toggleIcon.classList.remove('fa-play');
+            toggleIcon.classList.add('fa-pause');
+          }
         }
 
         function attemptAutoplay() {
           video.muted = true;
-          const playPromise = video.play();
-          if (playPromise && typeof playPromise.then === 'function') {
-            playPromise.then(hideFallbackPlay).catch(showFallbackPlay);
+          const p = video.play();
+          if (p && typeof p.then === 'function') {
+            p.then(updateIcon).catch(updateIcon);
           }
         }
 
         function seekAndPlay(time) {
-          hideFallbackPlay();
           if (video.readyState >= 1) {
             video.currentTime = time;
-            video.play().catch(showFallbackPlay);
+            video.play().then(updateIcon).catch(updateIcon);
           } else {
             video.addEventListener('loadedmetadata', function onMeta() {
               video.removeEventListener('loadedmetadata', onMeta);
               video.currentTime = time;
-              video.play().catch(showFallbackPlay);
+              video.play().then(updateIcon).catch(updateIcon);
             });
             video.load();
           }
         }
 
-        video.addEventListener('playing', hideFallbackPlay);
+        video.addEventListener('play', updateIcon);
+        video.addEventListener('pause', updateIcon);
 
         video.addEventListener('timeupdate', function() {
-          const idx = Math.min(4, Math.floor(video.currentTime / 3));
-          setActiveChapter(idx);
+          if (!chapterSelect) return;
+          const slot = String(Math.min(4, Math.floor(video.currentTime / 3)) * 3);
+          if (chapterSelect.value !== slot) {
+            chapterSelect.value = slot;
+          }
         });
 
-        if (playBtn) {
-          playBtn.addEventListener('click', function() {
-            seekAndPlay(video.currentTime || 0);
+        if (toggleBtn) {
+          toggleBtn.addEventListener('click', function() {
+            if (video.paused) {
+              video.play().then(updateIcon).catch(updateIcon);
+            } else {
+              video.pause();
+              updateIcon();
+            }
           });
         }
 
-        chapterBtns.forEach(function(btn, idx) {
-          btn.addEventListener('click', function() {
-            const time = parseFloat(this.getAttribute('data-timestamp') || '0');
-            setActiveChapter(idx);
-            seekAndPlay(time);
+        if (chapterSelect) {
+          chapterSelect.addEventListener('change', function() {
+            seekAndPlay(parseFloat(this.value || '0'));
           });
-        });
+        }
+
+        if (exploreBtn && serviceSelect) {
+          exploreBtn.addEventListener('click', function() {
+            if (serviceSelect.value) {
+              window.location.href = serviceSelect.value;
+            }
+          });
+        }
 
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', attemptAutoplay);
