@@ -128,3 +128,27 @@ html.dark .stat-card-wood {
   background: #1d1611;
   border-color: #342720;
 }
+
+/* Hamburger Button & Mobile Drawer Hover Effects (Dark Mode) */
+html.dark #menuToggle:hover {
+  border-color: #f59e0b;
+  color: #fbbf24;
+  background-color: rgba(245, 158, 11, 0.14);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+html.dark #closeMobileMenu:hover {
+  background-color: rgba(245, 158, 11, 0.16);
+  color: #fbbf24;
+}
+
+html.dark #mobileMenu nav a.text-amber-600 {
+  background-color: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+}
+
+html.dark #mobileMenu nav a:hover,
+html.dark #mobileMenu nav a:focus-visible {
+  background-color: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+}

@@ -543,3 +543,50 @@ html.dark .sector-btn:hover {
     overflow-x: auto;
   }
 }
+
+/* ===================================================================
+   Hamburger Button & Mobile Drawer Hover Effects
+   =================================================================== */
+#menuToggle,
+#closeMobileMenu {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#menuToggle:hover {
+  border-color: #d97706;
+  color: #b45309;
+  background-color: rgba(217, 119, 6, 0.08);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.15);
+  transform: translateY(-1px);
+}
+
+#menuToggle:active {
+  transform: scale(0.96);
+}
+
+#closeMobileMenu:hover {
+  background-color: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+}
+
+#mobileMenu nav {
+  gap: 0.35rem;
+}
+
+#mobileMenu nav a {
+  display: block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+#mobileMenu nav a.text-amber-600 {
+  background-color: rgba(217, 119, 6, 0.1);
+}
+
+#mobileMenu nav a:hover,
+#mobileMenu nav a:focus-visible {
+  background-color: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+  transform: translateX(4px);
+}

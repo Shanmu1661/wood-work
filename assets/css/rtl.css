@@ -76,6 +76,10 @@ html[dir="rtl"] #mobileMenu {
 html[dir="rtl"] #mobileMenu.open {
   transform: translateX(0);
 }
+html[dir="rtl"] #mobileMenu nav a:hover,
+html[dir="rtl"] #mobileMenu nav a:focus-visible {
+  transform: translateX(-4px);
+}
 
 /* Breadcrumb Divider */
 html[dir="rtl"] .breadcrumb-separator {
