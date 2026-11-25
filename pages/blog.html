@@ -138,7 +138,7 @@
         </button>
 
         <!-- Know More (About Us) Link -->
-        <a href="about.html" class="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Know More About Us">
+        <a href="about.html" class="hidden lg:inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 text-xs font-semibold rounded-md bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-sm shrink-0" title="Know More About Us">
           <span>Know More</span>
         </a>
 
@@ -152,7 +152,7 @@
 
   <!-- Mobile Drawer -->
   <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
-  <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between hidden transition-transform duration-300 lg:hidden">
+  <div id="mobileMenu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-stone-900 z-50 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto hidden transition-transform duration-300 lg:hidden">
     <div>
             <div class="flex items-center justify-between pb-5 border-b border-stone-200 dark:border-stone-800">
         <a href="index.html" class="flex items-center gap-2.5 focus:outline-none">
@@ -173,7 +173,7 @@
         </button>
       </div>
 
-      <!-- Mobile Controls: RTL and Dark Mode Bar inside Hamburger Menu -->
+      <!-- Mobile Controls: RTL, Dark Mode, and Know More Bar inside Hamburger Menu -->
       <div class="grid grid-cols-2 gap-2.5 pt-4 pb-4 border-b border-stone-100 dark:border-stone-800">
         <button type="button" class="dir-toggle-btn py-2 px-3 text-xs font-semibold rounded-lg border border-stone-200 dark:border-stone-700 hover:border-amber-600 text-stone-700 dark:text-stone-300 flex items-center justify-center gap-2 bg-stone-50 dark:bg-stone-800/60 transition-colors shadow-sm" title="Switch Right-to-Left / Left-to-Right">
           <i class="fa-solid fa-globe text-amber-600 text-xs"></i>
@@ -183,6 +183,9 @@
           <i class="fa-solid fa-moon theme-toggle-icon text-xs"></i>
           <span class="text-xs">Theme</span>
         </button>
+        <a href="about.html" class="col-span-2 py-2 px-3 text-xs font-semibold rounded-lg bg-amber-600 hover:bg-amber-700 text-white flex items-center justify-center gap-1.5 transition-colors shadow-sm" title="Know More About Us">
+          <span>Know More</span>
+        </a>
       </div>
       <nav class="mt-6 flex flex-col gap-4 font-medium text-base text-stone-700 dark:text-stone-200">
         <a href="index.html" class="hover:text-amber-600 py-1">Home (Residential)</a>
